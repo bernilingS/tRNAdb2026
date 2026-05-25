@@ -61,12 +61,18 @@
 \theoremstyle{thmstylethree}%
 \newtheorem{definition}{Definition}
 
-%\usepackage{draftwatermark}
-%\SetWatermarkText{Draft}
+
+
+\newcommand{\todo}[1]{\scriptsize\color{red}#1}
+
+
+
+\usepackage{draftwatermark}
+\SetWatermarkText{Draft}
 %%Uncomment  \usepackage{draftwatermark} and \SetWatermarkText{Draft} to watermark your PDF as a draft
 \begin{document}
 
-\journaltitle{Journal Title Here}
+\journaltitle{Nucleic Acid Research}
 \DOI{DOI added during production}
 \copyrightyear{YEAR}
 \pubyear{YEAR}
@@ -87,9 +93,9 @@
 \author[4]{Ella Cassidy}
 \author[5]{Joern P\"{u}tz}
 \author[6]{Peter F. Stadler}
-\author[7]{Stephan H. Bernhart\ORCID{0000-0000-0000-0000}}
+\author[7]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
-\address[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgname{}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
 \address[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[4]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
@@ -98,7 +104,7 @@
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[7]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[7]{\orgdiv{LeiCeM - Leipzig Center of Metabolism}, \orgname{Leipzig University}, \orgaddress{\street{Ritterstr. 26}, \postcode{04109}, \state{Saxony}, \country{Germany}}}
 
 \corresp[$\ast$]{Corresponding author. \href{email:email-id.com}{email-id.com}}
 
@@ -116,7 +122,20 @@
 %\textbf{Supplementary information:} Supplementary data are available at \textit{Journal Name}
 %online.}
 
-\abstract{Check the journal's online author guidelines for guidance on requirements for the abstract and other components of the submitted manuscript. Abstracts must be able to stand alone and so cannot contain citations to the paper's references, equations, etc. Que cum aut etum qui ium dolupta ssequia autati odis demporepe ad et es alit rem repudaerae min et volorum re volupta nobit volectur aut fuga.} 
+\abstract{Check the journal's online author guidelines for guidance on requirements for the abstract and other components of the submitted manuscript. Abstracts must be able to stand alone and so cannot contain citations to the paper's references, equations, etc.
+\todo{The tRNAdb database published by Jühling et al. over 15 years ago has been used extensively throughout its lifespan, accumulating more than 1000 citations. Here, we present tRNAdb 2.0, an updated version hosted at Leipzig University. The dataset of tRNAdb 2.0 represents an approximately 10-fold increase compared with the legacy tRNAdb and contains over 400,000 new mitochondrial and nuclear tRNA sequences together with the unaltered legacy dataset. Importantly, identifiers and metadata of the legacy dataset remain consistent with the original database, ensuring that previously published references remain valid and findable. The expanded dataset integrates publicly available tRNA annotations and sequences generated using contemporary prediction pipelines followed by semiautomated curation to ensure annotation quality and consistency. In addition, cross-references to external resources such as GtRNAdb facilitate interoperability with existing tRNA annotation frameworks. We provide a modern web-based frontend for intuitive and efficient access to tRNAdb 2.0, together with an API that enables automated data retrieval and integration into bioinformatics workflows.
+%Users can create persistent
+%collections of sequences that are stored across sessions without requiring
+%prior registration or login. These collections can be exported to
+%different file formats using customizable metadata fields tailored to
+%individual use cases. For each sequence, a detailed overview page is
+%available containing an updated visualization of the secondary structure,
+%taxonomic information, functionally annotated structural features, and
+%cross-reference information.
+To support transparent scientific
+documentation and reproducibility across future updates, we implemented a
+versioning system for both current and future database releases.}
+} 
 
 \keywords{tRNA sequence, tRNA structure, database, tRNA modifications}
 
@@ -145,7 +164,7 @@
 \section{Introduction}
 The introduction introduces the context and summarizes the manuscript. It is importantly to clearly state the contributions
 of this piece of work.
-
+\todo{Since the publication of the first ``Compilation of tRNA sequences and sequences of tRNA genes'' in 2005 \cite{sprinzl:2005}} and its extension as the tRNAdb 2009\cite{juehling:2009}, a number of databases either dedicated to or containing tRNA sequences and genomic locations have been published (\cite{gtrnadb, trnadb-ce, modomics}. However, when it was discontinued due to techical reasons in 2024, the 2009 implementation was still widely used by the community. We therefore endevoured to not only put the tRNAdb on a solid techical foundation again, but also to extend its content by leveraging published tRNA sequences from later databases as well as by applying more modern search tools \cite{infernal} as well as more sophisticated models for these search tools\cite{mitos2}  
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 This is an example of a new paragraph with a numbered footnote\footnote{\url{https://www.academic.oup.com/}} and a second footnote marker.\footnote{Example of footnote text.}
@@ -1002,3 +1021,4 @@ col1 text & col2 text & col3 text \\
 
 
 \end{document}
+As a constantly increasing number of complete genomes is published, it becomes necessary to transfer existing sequence compilations to state-of-the-art IT infrastructure to cope with the challenges of the post-genomic era. One of the most abundant groups of nucleic acids are tRNA molecules, being present in all types of cells and organelles. Unique features of these molecules include (i) the high degree of structural conservation, (ii) the plethora of cellular factors tRNAs interact with, and (iii) the largest diversity and highest density of nucleoside modifications found in nature. Furthermore, with respect to phylogeny, tRNAs offer a unique complexity: since each cell and eukaryotic organelle has a cohort of related but distinct tRNA species, phylogenetic analyses permit an integrated view on an entire set of tRNAs that underwent coevolution, rather than being restricted to comparison of a single RNA species. Hence, a tRNA database must fulfil specific criteria in order to address these features. The tRNAdb, with one of the largest numbers of entries among RNA databases, is not only an excellent model system for implementing and validating algorithms and processes of automated nucleic acid data transfer, but also for the development of novel sequence analysis tools (1). In its re-structured version, the tRNAdb meets the demands of present-day web-based interfaces and provides a basis for integration of structure-function relationships and additional information on evolution and phylogeny.

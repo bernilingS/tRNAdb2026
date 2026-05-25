@@ -1,0 +1,7 @@
+# tRNAdb2026
+#DEAD-LINES: from https://academic.oup.com/nar/pages/Ms_Prep_Database
+1. July: Check suitability # To check the suitability of the proposed submission, the authors should contact Prof. Daniel J. Rigden, Executive Editor of the NAR Database Issue, at nardatabase@gmail.com by July 1st at the latest.
+
+15.8 : New submitters The deadline for new articles describing databases not previously described in NAR is August 15th. Manuscripts should not be submitted before June 1. New submitters. Pre-submission inquiries for the description of NEW databases should include the URL of a fully functional database and a brief description of the database. The authors must describe how their database is different from and substantially better than all similar resources
+
+15.9: Returning submitters. Pre-submission inquiries for the updated descriptions of databases that had been previously featured in the NAR Database Issue should include the database URL and a brief description of the improvements made to the database since its last publication. Update papers must report significant improvements and advances over previous papers. Update papers will be considered only after 18 months since the previous publication and should typically be no more than 4-6 journal pages in length. Please contact Prof. Rigden if you plan a longer paper or would like to submit an update paper sooner than after 18 months. The deadline for updates on database articles that have appeared previously in NAR is September 15th. Manuscripts should not be submitted before June 1st.

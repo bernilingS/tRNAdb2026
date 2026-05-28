@@ -164,15 +164,15 @@ versioning system for both current and future database releases.}
 \section{Introduction}
 The introduction introduces the context and summarizes the manuscript. It is importantly to clearly state the contributions
 of this piece of work.
-\todo{Since the publication of the first ``Compilation of tRNA sequences and sequences of tRNA genes'' in 2005 \cite{sprinzl:2005}} and its extension as the tRNAdb 2009\cite{juehling:2009}, a number of databases either dedicated to or containing tRNA sequences and genomic locations have been published (\cite{gtrnadb, trnadb-ce, modomics}. However, when it was discontinued due to techical reasons in 2024, the 2009 implementation was still widely used by the community. We therefore endevoured to not only put the tRNAdb on a solid techical foundation again, but also to extend its content by leveraging published tRNA sequences from later databases as well as by applying more modern search tools \cite{infernal} as well as more sophisticated models for these search tools\cite{mitos2}  
+\todo{Since the publication of the first ``Compilation of tRNA sequences and sequences of tRNA genes'' in 2005 \cite{sprinzl:2005}} and its extension as the tRNAdb 2009\cite{juehling:2009}, a number of databases either dedicated to or containing tRNA sequences and genomic locations have been published (\cite{gtrnadb, trnadb-ce, modomics}. However, when it was discontinued due to techical reasons in 2024, the 2009 implementation was still widely used by the community. We therefore endevoured to not only put the tRNAdb on a solid techical foundation again, but also to extend its content by leveraging published tRNA sequences from later databases as well as by applying more modern search tools \cite{infernal} as well as more sophisticated models for these search tools\cite{mitos2}.  
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 This is an example of a new paragraph with a numbered footnote\footnote{\url{https://www.academic.oup.com/}} and a second footnote marker.\footnote{Example of footnote text.}
 
 
 
-\section{This is an example for first level head - section head}\label{sec2}
-
+\section{Technical stuff about the database}\label{sec2}
+\todo{Bruno}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (refer Section~\ref{sec5}).
 
 \subsection{This is an example for second level head - subsection head}\label{subsec1}
@@ -192,11 +192,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{This is an example for first level head}\label{sec3}
+\section{Inclusion of new data}\label{sec3}
 
-\subsection{This is an example for second level head - subsection head}\label{subsec2}
+\subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
+We expanded the mitochondrial tRNAs included into tRNAdb. We downloaded a total of 16,630 mitochondrial sequences as well as their annotations from ?NCBI? genbank. We used Mitos2\cite{mitos2} without detection of proteins and rRNA and the refseq89m on each mitochondrion to detect the tRNAs. We subsequently compared our findings to the annotations from genbank, and kept any tRNA that matched exactly. For small location discrepancies, we checked whether the acceptor stem sturcture predicted by infernal looked reasonable and kept the Mitos2 predicted location if it did. For strand discrepancies, we kept Mitos2 predicted strands if no suitable anticodon for the predicted tRNA was in the annotated anticodon stem and loop. This resulted in  \tode{a number} of predicted tRNAs.
 
-\subsubsection{This is an example for third level head - subsubsection head}\label{subsubsec2}
+\subsection{Genomic tRNAs}\label{subsecgenomictRNA}
+For genomic tRNAs, we downloaded sequences, locations and genome ids from the gtRNA database\cite{gtrnadb}.
+\subsection{modified tRNAs}\label{subsecmodifiedtRNA}
+Modified tRNA sequences as well as their genomic variants were downloaded from the MODOMIC\cite{modomics} database and directly from the pdb. We removed sequences from the pdb that only had a total of one modification at the first or last base. We decided to keep legacy one letter codes and also to not use chinese characters for our one letter codes, so we added new one letter codes for  modifications not already in tRNAdb 2009. 
+\subsection{Alignemnt and quality control}
+For all novel sequences, we used infernal to align sequences to the respective tRNA covariance models (eukaryotic, bacterial or archaeal models from tRNAscan for nuclear tRNAs, the respective Mitos2 models for mitochondrial tRNAs). When an anticodon was annotated, we compared the annotated one with the one implicitly found by infernal (as center of the anticodon loop). To filter suspiciously large D-loops and T-loops, we took the maximum length of the respective loop in tRNAdb 2009, added 1 (resulting in \todo{X and Y for D and T loops respectively})and discarded a total of  \todo{X} tRNAs with longer loops.     
+\subsubsection{Data acquisition}\label{subsubsec2}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 

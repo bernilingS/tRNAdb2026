@@ -64,7 +64,8 @@
 
 
 \newcommand{\todo}[1]{\scriptsize\color{red}#1}
-
+\newcommand{\PFS}[1]{\begingroup\color{blue}#1\endgroup}
+\newcommand{\TODO}[1]{\begingroup\color{red}#1\endgroup}
 
 
 \usepackage{draftwatermark}
@@ -162,18 +163,44 @@ versioning system for both current and future database releases.}
 %\end{epigraph}
 
 \section{Introduction}
-The introduction introduces the context and summarizes the manuscript. It is importantly to clearly state the contributions
-of this piece of work.
-\todo{Since the publication of the first ``Compilation of tRNA sequences and sequences of tRNA genes'' in 2005 \cite{sprinzl:2005}} and its extension as the tRNAdb 2009\cite{juehling:2009}, a number of databases either dedicated to or containing tRNA sequences and genomic locations have been published (\cite{gtrnadb, trnadb-ce, modomics}. However, when it was discontinued due to techical reasons in 2024, the 2009 implementation was still widely used by the community. We therefore endevoured to not only put the tRNAdb on a solid techical foundation again, but also to extend its content by leveraging published tRNA sequences from later databases as well as by applying more modern search tools \cite{infernal} as well as more sophisticated models for these search tools\cite{mitos2}.  
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%The introduction introduces the context and summarizes the manuscript. It
+%is importantly to clearly state the contributions of this piece of work.
 
-This is an example of a new paragraph with a numbered footnote\footnote{\url{https://www.academic.oup.com/}} and a second footnote marker.\footnote{Example of footnote text.}
+\PFS{There has been increasing interest in tRNAs promoted in particular by
+  an increasingly broad portfolio of roles beyond their primary function of
+  mediating the genetic code. Some 10,000 publications now link tRNAs with
+  various aspects of cancer, and similar number is concerned with the
+  evolution of tRNAs and their processing.  A solid, well-curated body data
+  is therefore is a key resource for an increasing research community.}
+Since the publication of the first ``Compilation of tRNA sequences and
+sequences of tRNA genes'' in 2005 \cite{sprinzl:2005} and its extension as
+the \texttt{tRNAdb} 2009\cite{juehling:2009}, a number of databases either
+dedicated to or containing tRNA sequences and genomic locations have been
+published (\cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
+  \texttt{tRNAdb} was interrupted due to technical isses in 2024/2025, the
+  data were still widely used and we received a large number of requests
+  for its continued existence. We not only re-implemented the
+  \texttt{tRNAdb} on a solid technical foundadtion, we also extend its
+  user-interface by integrating \texttt{infernal} \cite{infernal} as search
+  tool and offering comprehensive support for mitochondrial tRNAs based on
+  \texttt{mitos2} \cite{mitos2}.}
+
+    
+
+%% This is an example of a new paragraph with a numbered
+%% footnote\footnote{\url{https://www.academic.oup.com/}} and a second
+%% footnote marker.\footnote{Example of footnote text.}
 
 
 
 \section{Technical stuff about the database}\label{sec2}
-\todo{Bruno}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum (refer Section~\ref{sec5}).
+\todo{Bruno} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+est laborum (refer Section~\ref{sec5}).
 
 \subsection{This is an example for second level head - subsection head}\label{subsec1}
 
@@ -195,17 +222,95 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 \section{Inclusion of new data}\label{sec3}
 
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
-We expanded the mitochondrial tRNAs included into tRNAdb. We downloaded a total of 16,630 mitochondrial sequences as well as their annotations from ?NCBI? genbank. We used Mitos2\cite{mitos2} without detection of proteins and rRNA and the refseq89m on each mitochondrion to detect the tRNAs. We subsequently compared our findings to the annotations from genbank, and kept any tRNA that matched exactly. For small location discrepancies, we checked whether the acceptor stem sturcture predicted by infernal looked reasonable and kept the Mitos2 predicted location if it did. For strand discrepancies, we kept Mitos2 predicted strands if no suitable anticodon for the predicted tRNA was in the annotated anticodon stem and loop. This resulted in  \tode{a number} of predicted tRNAs.
 
-\subsection{Genomic tRNAs}\label{subsecgenomictRNA}
-For genomic tRNAs, we downloaded sequences, locations and genome ids from the gtRNA database\cite{gtrnadb}.
+We expanded the mitochondrial tRNAs included into tRNAdb. We downloaded a
+total of 16,630 mitochondrial genome sequences as well as their annotations
+from NCBI Genbank \TODO{or RefSeq? Version?}. We used \texttt{Mitos2}
+\cite{mitos2} without detection of proteins and rRNA and the refseq89m on
+each mitochondrion to detect the tRNAs. We then compared the predicted
+sequences with the GenBank annotation. All tRNAs that matched exactly were
+added to the \texttt{trnaDB}. In case of small discrepancies of location,
+we checked whether the structure of the acceptor stem predicted by
+\texttt{infernal} passed human curation. If so, the sequence predicted by
+\cite{mitos2} was deemed corrected and retained. In case of discrepancies
+in the assignment of the strand (reading direction), we retained the
+\cite{mitos2} prediction if no plausible anticodon could be identified
+for the in n the annotated anticodon stem and loop of the Refseq entry.
+In total. this resulted in  \todo{a number} of predicted tRNAs that were
+added to the \texttt{tRNAdb}. 
+
+\subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
+For genomic tRNAs, we downloaded sequences, locations and genome ids from
+the gtRNA database\cite{gtrnadb}.
+
 \subsection{modified tRNAs}\label{subsecmodifiedtRNA}
-Modified tRNA sequences as well as their genomic variants were downloaded from the MODOMIC\cite{modomics} database and directly from the pdb. We removed sequences from the pdb that only had a total of one modification at the first or last base. We decided to keep legacy one letter codes and also to not use chinese characters for our one letter codes, so we added new one letter codes for  modifications not already in tRNAdb 2009. 
+Modified tRNA sequences as well as their genomic variants were downloaded
+from the MODOMIC\cite{modomics} database and directly from the pdb. We
+removed sequences from the pdb that only had \PFS{had only a single
+  modification}, which was located at the first or last base of the
+retrieved sequence. \PFS{In order display alignments properly} we
+decided to keep legacy one letter codes for modifications. For the same
+reason we did not use chinese characters as 1-letter codes, and instead
+\PFS{extended the dictionary of one letter codes} for modifications not
+already present in tRNAdb 2009. \TODO{maybe give a couple of examples here}
+
 \subsection{Alignemnt and quality control}
-For all novel sequences, we used infernal to align sequences to the respective tRNA covariance models (eukaryotic, bacterial or archaeal models from tRNAscan for nuclear tRNAs, the respective Mitos2 models for mitochondrial tRNAs). When an anticodon was annotated, we compared the annotated one with the one implicitly found by infernal (as center of the anticodon loop). To filter suspiciously large D-loops and T-loops, we took the maximum length of the respective loop in tRNAdb 2009, added 1 (resulting in \todo{X and Y for D and T loops respectively})and discarded a total of  \todo{X} tRNAs with longer loops.     
+For all novel sequences, we used \texttt{infernal} to align sequences to
+the respective tRNA covariance models (eukaryotic, bacterial or archaeal
+models from tRNAscan for nuclear tRNAs, the respective Mitos2 models for
+mitochondrial tRNAs). When an anticodon was annotated, we compared the
+annotated one with the one implicitly found by infernal (as center of the
+anticodon loop). To filter suspiciously large D-loops and T-loops, we took
+the maximum length of the respective in tRNAdb 2009, added 1
+(resulting in \todo{X and Y for D and T loops respectively}) and discarded a
+total of \todo{X} tRNAs with longer loops.
+
+
+
+
+
 \subsubsection{Data acquisition}\label{subsubsec2}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+\section{Conclusion}
+
+Some Conclusions here.
+
+\section{Conflicts of interest}
+The authors declare that they have no competing interests.
+
+\section{Funding}
+This work is supported in part by funds from the National Funding Body (NFB: \# XXXXXXX and \# YYYYYYY).
+
+\section{Data availability}
+The data underlying this article are available in [repository name, eg, the GenBank Nucleotide Database] at [URL], and can be accessed with [unique identifier, eg, accession number, deposition number].
+
+\section{Author contributions statement}
+
+Must include all authors, identified by initials, for example:
+S.R. and D.A. conceived the experiment(s),  S.R. conducted the experiment(s), S.R. and D.A. analysed the results.  S.R. and D.A. wrote and reviewed the manuscript.
+
+\section{Acknowledgments}
+The authors thank the anonymous reviewers for their valuable suggestions. This work is supported in part by funds from the National Science Foundation (NSF: \# 1636933 and \# 1920920).
+
+
+\bibliographystyle{oup-plain}
+\bibliography{reference}
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% TEMPLATE SHIT BELOW %%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
 
 \subsubsection{Level three heading}
 

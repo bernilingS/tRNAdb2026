@@ -92,9 +92,10 @@
 \author[2]{Frank J\"{u}hling}
 \author[3]{Thomas Spicher}
 \author[4]{Ella Cassidy}
-\author[5]{Joern P\"{u}tz}
-\author[6]{Peter F. Stadler}
-\author[7]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
+\author[2,5]{Joern P\"{u}tz}
+\author[6]{Mario M\"{o}rl}
+\author[1,4,7,8,9]{Peter F. Stadler}
+\author[10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
 \address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgname{}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
 \address[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
@@ -102,10 +103,10 @@
 \address[4]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[5]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[7]{\orgdiv{LeiCeM - Leipzig Center of Metabolism}, \orgname{Leipzig University}, \orgaddress{\street{Ritterstr. 26}, \postcode{04109}, \state{Saxony}, \country{Germany}}}
+\address[7]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[8]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[9]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[10]{\orgdiv{LeiCeM - Leipzig Center of Metabolism}, \orgname{Leipzig University}, \orgaddress{\street{Ritterstr. 26}, \postcode{04109}, \state{Saxony}, \country{Germany}}}
 
 \corresp[$\ast$]{Corresponding author. \href{email:email-id.com}{email-id.com}}
 
@@ -180,10 +181,7 @@ published (\cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
   \texttt{tRNAdb} was interrupted due to technical isses in 2024/2025, the
   data were still widely used and we received a large number of requests
   for its continued existence. We not only re-implemented the
-  \texttt{tRNAdb} on a solid technical foundadtion, we also extend its
-  user-interface by integrating \texttt{infernal} \cite{infernal} as search
-  tool and offering comprehensive support for mitochondrial tRNAs based on
-  \texttt{mitos2} \cite{mitos2}.}
+  \texttt{tRNAdb} on a solid technical foundadtion, we also included an API for automatic data retrievance. Furthermore, we extended its content by including leveraging existing nuclear tRNAs from the gtRNA database as well as mitochondrial tRNAs we identified using \texttt{mitos2}\cite{mitos2} and additional specialized approaches.}
 
     
 
@@ -260,10 +258,7 @@ the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective Mitos2 models for
 mitochondrial tRNAs). When an anticodon was annotated, we compared the
 annotated one with the one implicitly found by infernal (as center of the
-anticodon loop). To filter suspiciously large D-loops and T-loops, we took
-the maximum length of the respective in tRNAdb 2009, added 1
-(resulting in \todo{X and Y for D and T loops respectively}) and discarded a
-total of \todo{X} tRNAs with longer loops.
+anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7 nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make the four cut-offs.
 
 
 

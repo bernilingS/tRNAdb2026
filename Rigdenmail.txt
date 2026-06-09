@@ -1,0 +1,14 @@
+Suitability check tRNAdb 2026
+
+Dear Prof. Rigden,
+
+We write to inquire about the suitability of a new version of the tRNAdb 2009 for the NAR database issue. The tRNAdatabase 2009 has ammassed over a 1000 citations since its publication, but had to be taken off-line for security reasons in 2024.
+After a technical overhaul, we were able to put the tRNAdb back on-line early in 2026. We added an API for automatic data retrieval as well as increased the number of tRNAs included by about a factor of 10.
+We therefore are convinced that an update of the 2009 database paper is indicated, and hope that you concur.
+
+We have added an abstract??
+Sincerely,
+
+
+
+

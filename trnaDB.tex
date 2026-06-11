@@ -239,8 +239,10 @@ added to the \texttt{tRNAdb}.
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
 For genomic tRNAs, we downloaded sequences, locations and genome ids from
-the gtRNA database\cite{gtrnadb}.
-
+the gtRNA database\cite{gtrnadb}. \todo{ Ella? We downloaded X heimdall archaeal assemblies
+  and their annotations from the Bacterial and Viral Bioinformatics REsource Center (BV-BRC)\cite{bvbr}.
+  We used tRNAscan-SE 2.0 \cite{tRNAscan} to identify tRNA candidates and compared to the annotated tRNAs.  
+}
 \subsection{modified tRNAs}\label{subsecmodifiedtRNA}
 Modified tRNA sequences as well as their genomic variants were downloaded
 from the MODOMIC\cite{modomics} database and directly from the pdb. We
@@ -258,7 +260,7 @@ the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective Mitos2 models for
 mitochondrial tRNAs). When an anticodon was annotated, we compared the
 annotated one with the one implicitly found by infernal (as center of the
-anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7 nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make the four cut-offs.
+anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7 nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make one of the four cut-offs.
 
 
 

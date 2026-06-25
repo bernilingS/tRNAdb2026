@@ -8,7 +8,7 @@ After a major technical overhaul we were able deploy the tRNAdb again in early 2
 
 The number of tRNA sequences currently available is an increase by about a factor of 10 compared to the original tRNAdb 2009. We are therefore convinced that an update of the 2009 database paper "tRNAdb 2009: compilation of tRNA sequences and tRNA genes" is indicated, and hope that you concur. The updated tRNAdb is reachable at https://tdb.bioinf.uni-leipzig.de/ and is still undergoing minor revision.   
 
-We also attached an abstract for the tRNAdb2026 below.
+We have also attached an abstract for the tRNAdb2026 below.
 
 Sincerely,
 Peter F. Stadler and co-authors

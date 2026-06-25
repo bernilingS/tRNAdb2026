@@ -1,16 +1,22 @@
-Suitability of tRNAdb 2026
+Re: Suitability of tRNAdb 2026
 
 Dear Prof. Rigden,
 
 We write to inquire about the suitability of a new version of the tRNAdb 2009 by Jühling et al. for the NAR 2027 database issue. The tRNAdb 2009 has ammassed over a 1000 citations since its publication, but had to be taken off-line for security reasons in 2024.
 
-After a major technical overhaul we were able deploy the tRNAdb again in early 2026 together with a redesigned website, and an API for automatic data retrieval. Besides technical updates, we collected and curated a large number of tRNA sequences and made them available together with the original dataset. 
+After a major technical overhaul we were able deploy the tRNAdb again in early 2026 together with a redesigned website, and an API for automatic data retrieval. Besides technical updates, we collected and curated approximately 180 000 nuclear tRNA sequences as well as 300 000 mitochondrial tRNA sequences and made them available together with the original dataset. 
 
 The number of tRNA sequences currently available is an increase by about a factor of 10 compared to the original tRNAdb 2009. We are therefore convinced that an update of the 2009 database paper "tRNAdb 2009: compilation of tRNA sequences and tRNA genes" is indicated, and hope that you concur. The updated tRNAdb is reachable at https://tdb.bioinf.uni-leipzig.de/ and is still undergoing minor revision.   
 
+We also attached an abstract for the tRNAdb2026 below.
 
-We have added an abstract?? Have we?
 Sincerely,
+Peter F. Stadler and co-authors
+
+
+Abstract
+
+The tRNAdb database published by Jühling et al. over 15 years ago has been used extensively throughout its lifespan, accumulating more than 1000 citations. Here, we present tRNAdb 2.0, an updated version hosted at Leipzig University. The dataset of tRNAdb 2.0 represents an approximately 10-fold increase compared with the legacy tRNAdb and contains over 400,000 new mitochondrial and nuclear tRNA sequences together with the unaltered legacy dataset. Importantly, identifiers and metadata of the legacy dataset remain consistent with the original database, ensuring that previously published references remain valid and findable. The expanded dataset integrates publicly available tRNA annotations and sequences generated using contemporary prediction pipelines followed by semiautomated curation to ensure annotation quality and consistency. In addition, cross-references to external resources such as GtRNAdb facilitate interoperability with existing tRNA annotation frameworks. We provide a modern web-based frontend for intuitive and efficient access to tRNAdb 2.0, together with an API that enables automated data retrieval and integration into bioinformatics workflows. To support transparent scientific documentation and reproducibility across future updates, we implemented a versioning system for both current and future database releases.
 
 
 

@@ -251,6 +251,15 @@ reason we did not use chinese characters as 1-letter codes, and instead
 \PFS{extended the dictionary of one letter codes} for modifications not
 already present in tRNAdb 2009. \TODO{maybe give a couple of examples here}
 
+\BJS{
+\subsection{Archaeal tRNAs}
+Archaeal genomes were sourced from the  \TODO{BV-BRC} database and filtered using \TODO{\texttt{CheckM2 1.0.1}}. We used genomes exhibiting completeness of at least $85\%$, contamination below $5\%$, excluding genomes with duplicate assemblies (verified by duplicate MD5 checksum on sequence content \TODO{of contigs/scaffolds?}) for further processing. This left $977$ archaeal genomes, of which $228$ genomes were linked to unique NCBI taxonomy IDs. These archaeal genomes are spread across four clades within archaea: Asgard (22), DPANN (29), TACK(122), and Euryarchaeota (55).
+
+Notably, we did not rely on the BV-BRC annotation of tRNA genes as we found it inconsistent with the most up-to-date version of \texttt{tRNAscan-SE}, see Figure XX\TODO{Pick of ellas vis and explain benchmark briefly in caption} for a brief summary of inconsistencies. Furthermore, tRNA-Ile2 is systematically mislabelled as tRNA-Met in BV-BRC (see, for example, \TODO{link ID here}), which can be explained by the \TODO{agmatidine blind spot which has been recently discusse in detail in REF}.
+	
+We used \TODO{\texttt{tRNAscan-SE 2.0.12}} in archaeal mode together with its supplied tRNA model for annotation in all remaining genomes. For the annotation of selenocysteine, a \TODO{custom TRNAinf-arch-SeC??} model was used as \TODO{archaeal tRNA-SeC exhibit an atypical secondary structure which is captured poorly by the standard \texttt{tRNAscan-SE} archaeal model [REF]}. To provide an independent validation, tRNA sequences annotated by \texttt{tRNAscan-SE} were scored with \texttt{cmsearch 1.1.5} using the \texttt{TRNAinf-arch} and \texttt{TRNAinf-arch-SeC} model again. We retained sequences exhibiting \TODO{whats the threshold for both?} score. In total, we obtained $40\ 738$ tRNA genes across $228$ unique taxa with \texttt{tRNAscan-SE}, of which $721$ genes were annotated as ``pseudogenes'', and $249$ as undetermined or with undetermined nucleotides as anticodon. Both were not considered for inclusion in tRNAdb. Still, of the $228$ unique archaeal species, $214$ were not represented in the 2009 tRNAdb. This expands the archaeal tRNA coverage of tRNAdb 2.0 substantially when compared to its predecessor. \TODO{Maybe quick note about expansion of archaeal taxonomy and more genomes available?}
+}
+
 \subsection{Alignemnt and quality control}
 For all novel sequences, we used \texttt{infernal} \TODO{version, ref} to align sequences to
 the respective tRNA covariance models (eukaryotic, bacterial or archaeal

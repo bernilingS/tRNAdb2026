@@ -91,15 +91,16 @@
 \author[2]{Frank J\"{u}hling}
 \author[3]{Thomas Spicher}
 \author[4]{Ella Cassidy}
-\author[2,5]{Joern P\"{u}tz}
-\author[6]{Mario M\"{o}rl}
-\author[1,4,7,8,9]{Peter F. Stadler}
+\author[5]{Maximilian Feussner}
+\author[2,6]{Joern P\"{u}tz}
+\author[7]{Mario M\"{o}rl}
+\author[1,4,8,9]{Peter F. Stadler}
 \author[10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
 \address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgname{}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
-\address[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[2]{\orgdiv{Inserm, Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[4]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[4]{\orgdiv{Bioinformatics Group, Department for Computer Science}, \orgname{Leipzig University}, \orgaddress{\streetH\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 \address[5]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[7]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
@@ -123,7 +124,7 @@
 %\textbf{Supplementary information:} Supplementary data are available at \textit{Journal Name}
 %online.}
 
-\abstract{Check the journal's online author guidelines for guidance on requirements for the abstract and other components of the submitted manuscript. Abstracts must be able to stand alone and so cannot contain citations to the paper's references, equations, etc. The tRNAdb database published by Jühling et al. over 15 years ago has been used extensively throughout its lifespan, accumulating more than 1000 citations. Here, we present tRNAdb 2.0, an updated version hosted at Leipzig University. The dataset of tRNAdb 2.0 represents an approximately 10-fold increase compared with the legacy tRNAdb and contains over 400,000 new mitochondrial and nuclear tRNA sequences together with the unaltered legacy dataset. Importantly, identifiers and metadata of the legacy dataset remain consistent with the original database, ensuring that previously published references remain valid and findable. The expanded dataset integrates publicly available tRNA annotations and sequences generated using contemporary prediction pipelines followed by semiautomated curation to ensure annotation quality and consistency. In addition, cross-references to external resources such as GtRNAdb facilitate interoperability with existing tRNA annotation frameworks. We provide a modern web-based frontend for intuitive and efficient access to tRNAdb 2.0, together with an API that enables automated data retrieval and integration into bioinformatics workflows.
+\abstract{\TODO{Check the journal's online author guidelines for guidance on requirements for the abstract and other components of the submitted manuscript. Abstracts must be able to stand alone and so cannot contain citations to the paper's references, equations, etc.} The tRNAdb database published by Jühling et al. over 15 years ago has been used extensively throughout its lifespan, accumulating more than 1000 citations. Here, we present tRNAdb 2026, an updated version hosted at Leipzig University. The dataset of tRNAdb 2026 represents an approximately 10-fold increase compared with the legacy tRNAdb and contains over 400,000 new mitochondrial and nuclear tRNA sequences together with the unaltered legacy dataset. Importantly, identifiers and metadata of the legacy dataset remain consistent with the original database, ensuring that previously published references remain valid and findable. The expanded dataset integrates publicly available tRNA annotations and sequences generated using contemporary prediction pipelines followed by semiautomated curation to ensure annotation quality and consistency. In addition, cross-references to external resources such as GtRNAdb facilitate interoperability with existing tRNA annotation frameworks. We provide a modern web-based frontend for intuitive and efficient access to tRNAdb 2026, together with an API that enables automated data retrieval and integration into bioinformatics workflows.
 %Users can create persistent
 %collections of sequences that are stored across sessions without requiring
 %prior registration or login. These collections can be exported to
@@ -132,8 +133,7 @@
 %available containing an updated visualization of the secondary structure,
 %taxonomic information, functionally annotated structural features, and
 %cross-reference information.
-To support transparent scientific
-documentation and reproducibility across future updates, we implemented a
+To support transparent scientific documentation and reproducibility across future updates, we implemented a
 versioning system for both current and future database releases.} 
 
 \keywords{tRNA sequence, tRNA structure, database, tRNA modifications}
@@ -146,9 +146,9 @@ versioning system for both current and future database releases.}
 
 \boxedtext{Key Messages}{
 \begin{itemize}
-\item Key boxed text here.
-\item Key boxed text here.
-\item Key boxed text here.
+\item The tRNAdb has been greatly expanded
+\item We provide a modern web based front end for tRNAdb
+\item We provide API and version control
 \end{itemize}}
 
 \maketitle
@@ -168,7 +168,7 @@ versioning system for both current and future database releases.}
   an increasingly broad portfolio of roles beyond their primary function of
   mediating the genetic code. Some 10,000 publications now link tRNAs with
   various aspects of cancer, and similar number is concerned with the
-  evolution of tRNAs and their processing.  A solid, well-curated body data
+  evolution of tRNAs and their processing.  A solid, well-curated body of data
   is therefore is a key resource for an increasing research community.}
 Since the publication of the first ``Compilation of tRNA sequences and
 sequences of tRNA genes'' in 2005 \cite{sprinzl:2005} and its extension as
@@ -178,7 +178,7 @@ published (\cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
   \texttt{tRNAdb} was interrupted due to technical issues in 2024/2025, the
   data were still widely used and we received a large number of requests
   for its continued existence. We not only re-implemented the
-  \texttt{tRNAdb} on a solid technical foundation, we also included an API for automatic data retrievance. Furthermore, we extended its content by including leveraging existing nuclear tRNAs from the gtRNA database as well as mitochondrial tRNAs we identified using \texttt{mitos2}\cite{mitos2} and additional specialized approaches.}
+  \texttt{tRNAdb} on a solid technical foundation, we also included an API for automatic data retrievance. Furthermore, we extended its content by leveraging existing nuclear tRNAs from the gtRNA database as well as mitochondrial, archaeal and phage derived tRNAs we identified using \texttt{mitos2}\cite{mitos2}, \texttt{tRNAscan-SE 2.0}\cite{tRNAscan} and additional specialized approaches.}
 
     
 
@@ -243,7 +243,7 @@ the gtRNA database\cite{gtrnadb}. \todo{ Ella? We downloaded X heimdall archaeal
 \subsection{modified tRNAs}\label{subsecmodifiedtRNA}
 Modified tRNA sequences as well as their genomic variants were downloaded
 from the MODOMIC\cite{modomics} database and directly from the pdb. We
-removed sequences from the pdb \PFS{had only a single
+removed sequences from the pdb that \PFS{had only a single
   modification} located at the first or last base of the
 retrieved sequence. \PFS{In order display alignments properly} we
 decided to keep legacy one letter codes for modifications. For the same
@@ -262,6 +262,8 @@ Notably, we did not rely on the BV-BRC annotation of tRNA genes as we found it i
 	
 We used \TODO{\texttt{tRNAscan-SE 2.0.12}} in archaeal mode together with its supplied tRNA model for annotation in all remaining genomes. For the annotation of selenocysteine, a \TODO{custom TRNAinf-arch-SeC??} model was used as \TODO{archaeal tRNA-SeC exhibit an atypical secondary structure which is captured poorly by the standard \texttt{tRNAscan-SE} archaeal model [REF]}. To provide an independent validation, tRNA sequences annotated by \texttt{tRNAscan-SE} were scored with \texttt{cmsearch 1.1.5} using the \texttt{TRNAinf-arch} and \texttt{TRNAinf-arch-SeC} model again. We retained sequences exhibiting \TODO{whats the threshold for both?} score. In total, we obtained $40\ 738$ tRNA genes across $228$ unique taxa with \texttt{tRNAscan-SE}, of which $721$ genes were annotated as ``pseudogenes'', and $249$ as undetermined or with undetermined nucleotides as anticodon. Both were not considered for inclusion in tRNAdb. Still, of the $228$ unique archaeal species, $214$ were not represented in the 2009 tRNAdb. This expands the archaeal tRNA coverage of tRNAdb 2.0 substantially when compared to its predecessor. \TODO{Maybe quick note about expansion of archaeal taxonomy and more genomes available?}
 }
+\subsection{Phage tRNAs}
+Bacteriophage derived tRNAs
 
 \subsection{Alignemnt and quality control}
 For all novel sequences, we used \texttt{infernal} \TODO{version, ref} to align sequences to

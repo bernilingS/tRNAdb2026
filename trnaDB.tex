@@ -100,8 +100,8 @@
 \address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgname{}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
 \address[2]{\orgdiv{Inserm, Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[4]{\orgdiv{Bioinformatics Group, Department for Computer Science}, \orgname{Leipzig University}, \orgaddress{\streetH\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
-\address[5]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[4]{\orgdiv{Bioinformatics Group, Department for Computer Science}, \orgname{Leipzig University}, \orgaddress{\street {H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
+\address[5]{\orgdiv{Botnar Institute of Immune Engineering}, \orgname{}, \orgaddress{\street{Street}, \postcode{}, \state{Basel}, \country{Switzerland}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[7]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[8]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
@@ -218,28 +218,39 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
 
-We expanded the mitochondrial tRNAs included into tRNAdb. We downloaded a
+To expanded the mitochondrial tRNAs included into tRNAdb, we downloaded a
 total of 16,630 mitochondrial genome sequences as well as their annotations
 from NCBI Genbank \TODO{or RefSeq? Version?}. We used \texttt{Mitos2}
-\cite{mitos2} without detection of proteins and rRNA and the refseq89m on
+\cite{mitos2} without detection of proteins and rRNA and the refseq89m models on
 each mitochondrion to detect the tRNAs. We then compared the predicted
 sequences with the GenBank annotation. All tRNAs that matched exactly were
 added to the \texttt{trnaDB}. In case of small discrepancies of location,
 we checked whether the structure of the acceptor stem predicted by
 \texttt{infernal} passed human curation. If so, the sequence predicted by
-\cite{mitos2} was deemed corrected and retained. In case of discrepancies
-in the assignment of the strand (reading direction), we retained the
+\cite{mitos2} was deemed correct and included into the database. In case of discrepancies in the assignment of the strand (reading direction), we retained the
 \cite{mitos2} prediction if no plausible anticodon could be identified
-for the in n the annotated anticodon stem and loop of the Refseq entry.
-In total. this resulted in  \todo{a number} of predicted tRNAs that were
+in the anticodon stem and loop of the annotated Refseq entry.
+In total, this resulted in  \todo{a number} of nover predicted mtRNAs that were
 added to the \texttt{tRNAdb}. 
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
 For genomic tRNAs, we downloaded sequences, locations and genome ids from
-the gtRNA database\cite{gtrnadb}. \todo{ Ella? We downloaded X heimdall archaeal assemblies
-  and their annotations from the Bacterial and Viral Bioinformatics REsource Center (BV-BRC)\cite{bvbrc}.
-  We used tRNAscan-SE 2.0 \cite{tRNAscan} to identify tRNA candidates and compared to the annotated tRNAs.  
+the gtRNA database\cite{gtrnadb}. 
+
+\BJS{
+\subsection{Archaeal tRNAs}
+Archaeal genomes were sourced from the  \TODO{BV-BRC} database and filtered using \TODO{\texttt{CheckM2 1.0.1}}. We used genomes exhibiting completeness of at least $85\%$, contamination below $5\%$, excluding genomes with duplicate assemblies (verified by duplicate MD5 checksum on sequence content \TODO{of contigs/scaffolds?}) for further processing. This left $977$ archaeal genomes, of which $228$ genomes were linked to unique NCBI taxonomy IDs. These archaeal genomes are spread across four clades within archaea: Asgard (22), DPANN (29), TACK(122), and Euryarchaeota (55).
+
+Notably, we did not rely on the BV-BRC annotation of tRNA genes as we found it inconsistent with the most up-to-date version of \texttt{tRNAscan-SE}, see Figure XX\TODO{Pick of ellas vis and explain benchmark briefly in caption} for a brief summary of inconsistencies. Furthermore, tRNA-Ile2 is systematically mislabelled as tRNA-Met in BV-BRC (see, for example, \TODO{link ID here}), which can be explained by the \TODO{agmatidine blind spot which has been recently discusse in detail in REF}.
+	
+We used \TODO{\texttt{tRNAscan-SE 2.0.12}} in archaeal mode together with its supplied tRNA model for annotation in all remaining genomes. For the annotation of selenocysteine, a \TODO{custom TRNAinf-arch-SeC??} model was used as \TODO{archaeal tRNA-SeC exhibit an atypical secondary structure which is captured poorly by the standard \texttt{tRNAscan-SE} archaeal model [REF]}. To provide an independent validation, tRNA sequences annotated by \texttt{tRNAscan-SE} were scored with \texttt{cmsearch 1.1.5} using the \texttt{TRNAinf-arch} and \texttt{TRNAinf-arch-SeC} model again. We retained sequences exhibiting \TODO{whats the threshold for both?} score. In total, we obtained $40\ 738$ tRNA genes across $228$ unique taxa with \texttt{tRNAscan-SE}, of which $721$ genes were annotated as ``pseudogenes'', and $249$ as undetermined or with undetermined nucleotides as anticodon. Both were not considered for inclusion in tRNAdb. Still, of the $228$ unique archaeal species, $214$ were not represented in the 2009 tRNAdb. This expands the archaeal tRNA coverage of tRNAdb 2.0 substantially when compared to its predecessor. \TODO{Maybe quick note about expansion of archaeal taxonomy and more genomes available?}
 }
+
+\subsection{Phage tRNAs}
+Complete genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus (https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/ [www.ncbi.nlm.nih.gov]; accessed 17 August 2026). Putative tRNA genes
+were identified using tRNAscan-SE v2.0.12 in bacterial mode. Predicted tRNAs were retained only if they were 70–90 nt in length, had an overall tRNAscan-SE score >60, and had both HMM and secondary-structure scores >10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
+
+
 \subsection{modified tRNAs}\label{subsecmodifiedtRNA}
 Modified tRNA sequences as well as their genomic variants were downloaded
 from the MODOMIC\cite{modomics} database and directly from the pdb. We
@@ -254,16 +265,7 @@ A list of all modifications with the one letter codes used in tRNAdb and MODOMIC
 Modified mitochondrial tRNA sequences from \emph{h.sapiens}\cite{humanmtRNA} and \emph{b.taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structure annotation. 
 
 
-\BJS{
-\subsection{Archaeal tRNAs}
-Archaeal genomes were sourced from the  \TODO{BV-BRC} database and filtered using \TODO{\texttt{CheckM2 1.0.1}}. We used genomes exhibiting completeness of at least $85\%$, contamination below $5\%$, excluding genomes with duplicate assemblies (verified by duplicate MD5 checksum on sequence content \TODO{of contigs/scaffolds?}) for further processing. This left $977$ archaeal genomes, of which $228$ genomes were linked to unique NCBI taxonomy IDs. These archaeal genomes are spread across four clades within archaea: Asgard (22), DPANN (29), TACK(122), and Euryarchaeota (55).
 
-Notably, we did not rely on the BV-BRC annotation of tRNA genes as we found it inconsistent with the most up-to-date version of \texttt{tRNAscan-SE}, see Figure XX\TODO{Pick of ellas vis and explain benchmark briefly in caption} for a brief summary of inconsistencies. Furthermore, tRNA-Ile2 is systematically mislabelled as tRNA-Met in BV-BRC (see, for example, \TODO{link ID here}), which can be explained by the \TODO{agmatidine blind spot which has been recently discusse in detail in REF}.
-	
-We used \TODO{\texttt{tRNAscan-SE 2.0.12}} in archaeal mode together with its supplied tRNA model for annotation in all remaining genomes. For the annotation of selenocysteine, a \TODO{custom TRNAinf-arch-SeC??} model was used as \TODO{archaeal tRNA-SeC exhibit an atypical secondary structure which is captured poorly by the standard \texttt{tRNAscan-SE} archaeal model [REF]}. To provide an independent validation, tRNA sequences annotated by \texttt{tRNAscan-SE} were scored with \texttt{cmsearch 1.1.5} using the \texttt{TRNAinf-arch} and \texttt{TRNAinf-arch-SeC} model again. We retained sequences exhibiting \TODO{whats the threshold for both?} score. In total, we obtained $40\ 738$ tRNA genes across $228$ unique taxa with \texttt{tRNAscan-SE}, of which $721$ genes were annotated as ``pseudogenes'', and $249$ as undetermined or with undetermined nucleotides as anticodon. Both were not considered for inclusion in tRNAdb. Still, of the $228$ unique archaeal species, $214$ were not represented in the 2009 tRNAdb. This expands the archaeal tRNA coverage of tRNAdb 2.0 substantially when compared to its predecessor. \TODO{Maybe quick note about expansion of archaeal taxonomy and more genomes available?}
-}
-\subsection{Phage tRNAs}
-Bacteriophage derived tRNAs
 
 \subsection{Alignemnt and quality control}
 For all novel sequences, we used \texttt{infernal} \TODO{version, ref} to align sequences to
@@ -275,9 +277,9 @@ anticodon loop). To filter tRNAs with suspicious structural features, we also ch
 
 
 
-\subsubsection{Data acquisition}\label{subsubsec2}
+%\subsubsection{Data acquisition}\label{subsubsec2}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \BJS{
 \section{Implementation}
@@ -354,18 +356,20 @@ Some Conclusions here.
 The authors declare that they have no competing interests.
 
 \section{Funding}
+This work was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-3105/1 - 533765739,
 This work is supported in part by funds from the National Funding Body (NFB: \# XXXXXXX and \# YYYYYYY).
 
 \section{Data availability}
 The data underlying this article are available in [repository name, eg, the GenBank Nucleotide Database] at [URL], and can be accessed with [unique identifier, eg, accession number, deposition number].
 
 \section{Author contributions statement}
-
+BJS developed front and back end of the database. SHB and PFS designed the new scope of the database. SHB, EC, MF, and TS searched and identified new tRNAs, FJ, MM,  and JP provided data and helped porting the database. SHB and TS performed data cleansing and data preprocessing. SHB  developed the scripts for automated image generation.
 Must include all authors, identified by initials, for example:
 S.R. and D.A. conceived the experiment(s),  S.R. conducted the experiment(s), S.R. and D.A. analyzed the results.  S.R. and D.A. wrote and reviewed the manuscript.
 
 \section{Acknowledgments}
-The authors thank the anonymous reviewers for their valuable suggestions. This work is supported in part by funds from the National Science Foundation (NSF: \# 1636933 and \# 1920920).
+%The authors thank the anonymous reviewers for their valuable suggestions.
+%This work is supported in part by funds from the National Science Foundation (NSF: \# 1636933 and \# 1920920).
 
 
 \bibliographystyle{oup-plain}

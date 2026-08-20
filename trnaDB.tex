@@ -96,7 +96,7 @@
 \author[2,6]{Joern P\"{u}tz}
 \author[7]{Mario M\"{o}rl}
 \author[1,4,8,9]{Peter F. Stadler}
-\author[10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
+\author[8,10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
 \address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgname{}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
 \address[2]{\orgdiv{Inserm, Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{FRance}}}
@@ -105,7 +105,7 @@
 \address[5]{\orgdiv{Botnar Institute of Immune Engineering - BIIE}, \orgname{}, \orgaddress{\street{Klingelbergstr. 48}, \postcode{4056}, \state{Basel}, \country{Switzerland}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[7]{\orgdiv{Institute of Biochemistry}, \orgname{Leipzig University}, \orgaddress{\street{Johannisallee 23}, \postcode{04103}, \state{Saxony}, \country{Germany}}}
-\address[8]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[8]{\orgdiv{Interdisciplinary Center for Bioinformatics - IZBI}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 \address[9]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[10]{\orgdiv{LeiCeM - Leipzig Center of Metabolism}, \orgname{Leipzig University}, \orgaddress{\street{Ritterstr. 26}, \postcode{04109}, \state{Saxony}, \country{Germany}}}
 
@@ -338,6 +338,20 @@ A download manager allows to export individual collections, or every saved colle
 For every tRNA sequence entry in our database, a "Details" page is available (see Figure \ref{Fig:Detail}. This page contains general information (e.g., unique identifier, origin, amino acid, anticodon), taxonomic information, sequence and structure, crosslinking information, and additional metadata if available. Furthermore, a standardized visualization of the secondary structure with a highlighted anticodon is displayed for every entry.  %The visualizations were generated using a custom made script employing R2R\cite{R2R}.
 
 We implemented a searchable taxonomy browser which displays an expandable tree view of the NCBI taxonomic database. Every node in the taxonomy tree is annotated with its scientific name according to NCBI taxonomy as well as its unique NCBI taxonomy ID. The taxonomy browser only displays clades and species, for which there are tRNA sequences present in tRNAdb. For every entry in the taxonomy browser, the number of tRNA sequences separated by origin (nuclear DNA, nuclear RNA, mitochondrial DNA) is displayed. \TODO{Every node in the taxonomy browser contains a button which allows to search tRNAdb for sequences belonging to this clade/species.}
+
+\section{Statistics}
+If tRNA sequences are shared between species, they can be included multiple times in the tRNAdb. Thus, besides the total number of entries, we also report the number of unique tRNA sequences included in the database. For mitochondrial tRNAs,  330,261 total entries comprise of 219,388 sequences. The vast majority of these come from metazoa (see Fig \ref{Tax}a), which reflects the distribution of mitochondrial genomes in refseq. The genomic part of the database contains a total of  228,955 entries comprising 93,257 unique sequences. The manority are bacterial tRNAs. However, the difference in numbers is much lower for unique sequences than for all entries (Fig \ref{Tax}b). This may be due to many bacterial strains sharing tRNA sequences.
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{taxonomicdistributions.pdf}
+  \caption{\label{Tax}Distribution of taxa. a: mitochondrial tRNAs at kingdom level. b: genomic tRNAs at domain level.}
+\end{figure}
+
+The most abundant tRNA in the genomic tRNAdb part is Leu with 23,995 entries and 10,233 unique sequences. Besides the non-standard Supressor and SeC tRNAs, His has the fewest entries with 5,290 (but 2,305 unique sequences), while Phe and Trp have the fewest unique sequences with 2,093 (but 5,855 and 5,579 entries, respectively). Of note, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig. \ref{Aminoacidamounts}a).
+Mitochondrial tRNAs show a much more even distribution with respect to their abundance, ranging from 14,692 entries for Glu to 16,734 entries for Met, with the exception of Ser1 and Leu1, which are the only amino acids that come in two different forms in many mitochondria. Lys is the only amino acid where there is a notable amount of a secondary anticodon (Fig \ref{Aminoacidamounts}b).
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{MitoandGenomicAminoacidamounts.pdf}
+  \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and anticodon in the tRNAdb. a) genomic tRNA sequences. b) mitochondrial tRNA sequences.}
+\end{figure}
 
 %\OLD{
 %The tRNAdb website provides user-friendly access to the tRNA data stored in our database and can be functionally separated into three subpages: ``Search'', ``Details'', and ``Taxonomy Tree''.

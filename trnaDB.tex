@@ -90,7 +90,7 @@
 \author[1,*]{Bruno J. Schmidt}
 \author[2]{Frank J\"{u}hling}
 \author[3]{Thomas Spicher}
-\author[4]{Ella Cassidy}
+\author[4,9]{Ella Cassidy}
 \author[5]{Maximilian Feussner}
 \author[5]{Chase L. Beisel}
 \author[2,6]{Joern P\"{u}tz}
@@ -98,16 +98,17 @@
 \author[1,4,8,9]{Peter F. Stadler}
 \author[8,10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
-\address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgname{}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
-\address[2]{\orgdiv{Inserm, Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{FRance}}}
+\address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
+\address[2]{\orgdiv{Inserm, Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{France}}}
 \address[3]{\orgdiv{Theoretical biochemistry group, Department for theoretical Chemistry}, \orgname{University of Vienna}, \orgaddress{\street{W\"{a}hringer Str. 17}, \postcode{1090}, \state{Vienna}, \country{Austria}}}
 \address[4]{\orgdiv{Bioinformatics Group, Department for Computer Science}, \orgname{Leipzig University}, \orgaddress{\street {H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 \address[5]{\orgdiv{Botnar Institute of Immune Engineering - BIIE}, \orgname{}, \orgaddress{\street{Klingelbergstr. 48}, \postcode{4056}, \state{Basel}, \country{Switzerland}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[7]{\orgdiv{Institute of Biochemistry}, \orgname{Leipzig University}, \orgaddress{\street{Johannisallee 23}, \postcode{04103}, \state{Saxony}, \country{Germany}}}
 \address[8]{\orgdiv{Interdisciplinary Center for Bioinformatics - IZBI}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
-\address[9]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
+\address[9]{\orgdiv{Center for Scalabale Data Analytics and Artificial Intelligence}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 \address[10]{\orgdiv{LeiCeM - Leipzig Center of Metabolism}, \orgname{Leipzig University}, \orgaddress{\street{Ritterstr. 26}, \postcode{04109}, \state{Saxony}, \country{Germany}}}
+
 
 \corresp[$\ast$]{Corresponding author. \href{email:email-id.com}{email-id.com}}
 
@@ -239,14 +240,14 @@ the gtRNA database\cite{gtrnadb}.
 
 \BJS{
 \subsection{Archaeal tRNAs}
-Archaeal genomes were sourced from the  \TODO{BV-BRC} database and filtered using \TODO{\texttt{CheckM2 1.0.1}}. We used genomes exhibiting completeness of at least $85\%$, contamination below $5\%$, excluding genomes with duplicate assemblies (verified by duplicate MD5 checksum on sequence content \TODO{of contigs/scaffolds?}) for further processing. This left $977$ archaeal genomes, of which $228$ genomes were linked to unique NCBI taxonomy IDs. These archaeal genomes are spread across four clades within archaea: Asgard (22), DPANN (29), TACK(122), and Euryarchaeota (55).
 
-Notably, we did not rely on the BV-BRC annotation of tRNA genes as we found it inconsistent with the most up-to-date version of \texttt{tRNAscan-SE}, see Figure XX\TODO{Pick of ellas vis and explain benchmark briefly in caption} for a brief summary of inconsistencies. Furthermore, tRNA-Ile2 is systematically mislabelled as tRNA-Met in BV-BRC (see, for example, \TODO{link ID here}), which can be explained by the \TODO{agmatidine blind spot which has been recently discusse in detail in REF}.
-	
-We used \TODO{\texttt{tRNAscan-SE 2.0.12}} in archaeal mode together with its supplied tRNA model for annotation in all remaining genomes. For the annotation of selenocysteine, a \TODO{custom TRNAinf-arch-SeC??} model was used as \TODO{archaeal tRNA-SeC exhibit an atypical secondary structure which is captured poorly by the standard \texttt{tRNAscan-SE} archaeal model [REF]}. To provide an independent validation, tRNA sequences annotated by \texttt{tRNAscan-SE} were scored with \texttt{cmsearch 1.1.5} using the \texttt{TRNAinf-arch} and \texttt{TRNAinf-arch-SeC} model again. We retained sequences exhibiting \TODO{whats the threshold for both?} score. In total, we obtained $40\ 738$ tRNA genes across $228$ unique taxa with \texttt{tRNAscan-SE}, of which $721$ genes were annotated as ``pseudogenes'', and $249$ as undetermined or with undetermined nucleotides as anticodon. Both were not considered for inclusion in tRNAdb. Still, of the $228$ unique archaeal species, $214$ were not represented in the 2009 tRNAdb. This expands the archaeal tRNA coverage of tRNAdb 2.0 substantially when compared to its predecessor. \TODO{Maybe quick note about expansion of archaeal taxonomy and more genomes available?}
+Archaeal genomes were sourced from the  BV-BRC database \url{https://www.bv-brc.org}. Predictions were ran on good quality genomes, as assessed by CheckM2 ($\geq$85\% complete, $<$5\% contaminated)\cite{checkm2}. These archaeal genomes cover a broad taxonomic range and include all major archaeal superphyla (Asgard, DPANN, TACK, and Euryarchaeota).
+We did not rely on the BV-BRC annotation of tRNA genes, as we found it inconsistent with predictions using the most up-to-date version of \texttt{tRNAscan-SE 2.0.12}\cite{tRNAscan}. Notably, tRNA-Ile2 is often mislabelled as tRNA-Met in BV-BRC. This is the most frequent mismatch we observed (34\%). This likely reflects the agmatidine wobble-base modification unique to archaea \cite{tRNAscan}, highlighting the necessity to use domain specific models.
+Therefore all genomes were annotated using {\texttt{tRNAscan-SE 2.0.12}} in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure poorly captured by general domain specific models \cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with cmsearch 1.1.5 \cite{infernal}, against tRNAinf-arch and tRNAinf-arch-SeC models. 
+Overall, tRNA genes from 228 unique archaeal genomes were added, of which 214 were not represented in the 2009 tRNAdb, substantially expanding archaeal coverage relative to the legacy dataset.
 }
 
-\subsection{Phage tRNAs}
+\subsection{Phage tRNAs} 
 Complete genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}; accessed 17 August 2026). Putative tRNA genes
 were identified using tRNAscan-SE v2.0.12 in bacterial mode. Predicted tRNAs were retained only if they were 70–90 nt in length, had an overall tRNAscan-SE score >60, and had both HMM and secondary-structure scores >10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
 

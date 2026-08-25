@@ -241,9 +241,9 @@ the gtRNA database\cite{gtrnadb}.
 
 \subsection{Archaeal tRNAs}
 
-Archaeal genomes were sourced from the  BV-BRC database \url{https://www.bv-brc.org}, accessed October 2024. Predictions were ran on good quality genomes, as assessed by CheckM2 ($\geq$85\% complete, $<$5\% contaminated)\cite{checkm2}. These archaeal genomes cover a broad taxonomic range and include all major archaeal superphyla (Asgard, DPANN, TACK, and Euryarchaeota).
+Archaeal genomes were sourced from the  BV-BRC database \url{https://www.bv-brc.org}, accessed October 2024. Predictions were ran on good quality genomes, as assessed by {\texttt{CheckM2}} ($\geq$85\% complete, $<$5\% contaminated)\cite{checkm2}. These archaeal genomes cover a broad taxonomic range and include all major archaeal superphyla (Asgard, DPANN, TACK, and Euryarchaeota).
 We did not rely on the BV-BRC annotation of tRNA genes, as we found it inconsistent with predictions using the most up-to-date version of \texttt{tRNAscan-SE 2.0.12}\cite{tRNAscan}. Notably, tRNA-Ile2 is often mislabelled as tRNA-Met in BV-BRC, the most frequent mismatch we observed in isotype assignment (34\%). This likely reflects the agmatidine wobble-base modification unique to archaea \cite{tRNAscan}, highlighting the necessity to use domain specific models.
-Therefore all genomes were annotated using {\texttt{tRNAscan-SE 2.0.12}} in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure \cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with cmsearch 1.1.5 \cite{infernal}, against tRNAinf-arch and tRNAinf-arch-SeC models. 
+Therefore all genomes were annotated using {\texttt{tRNAscan-SE 2.0.12}} in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure \cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with {\texttt{cmsearch 1.1.5}} \cite{infernal}, against tRNAinf-arch and tRNAinf-arch-SeC models. 
 Overall, tRNA genes from 228 unique archaeal genomes were added, of which 214 were not represented in the 2009 tRNAdb, substantially expanding archaeal coverage relative to the legacy dataset.
 
 

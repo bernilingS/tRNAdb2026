@@ -243,13 +243,13 @@ the gtRNA database\cite{gtrnadb}.
 
 Archaeal genomes were sourced from the  BV-BRC database \url{https://www.bv-brc.org}, accessed October 2024. Predictions were ran on good quality genomes, as assessed by {\texttt{CheckM2}} ($\geq$85\% complete, $<$5\% contaminated)\cite{checkm2}. These archaeal genomes cover a broad taxonomic range and include all major archaeal superphyla (Asgard, DPANN, TACK, and Euryarchaeota).
 We did not rely on the BV-BRC annotation of tRNA genes, as we found it inconsistent with predictions using the most up-to-date version of \texttt{tRNAscan-SE 2.0.12}\cite{tRNAscan}. Notably, tRNA-Ile2 is often mislabelled as tRNA-Met in BV-BRC, the most frequent mismatch we observed in isotype assignment (34\%). This likely reflects the agmatidine wobble-base modification unique to archaea \cite{tRNAscan}, highlighting the necessity to use domain specific models.
-Therefore all genomes were annotated using {\texttt{tRNAscan-SE 2.0.12}} in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure \cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with {\texttt{cmsearch 1.1.5}} \cite{infernal}, against tRNAinf-arch and tRNAinf-arch-SeC models. 
+Therefore all genomes were annotated using {\texttt{tRNAscan-SE}} in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure \cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with {\texttt{cmsearch 1.1.5}} \cite{infernal}, against tRNAinf-arch and tRNAinf-arch-SeC models. 
 Overall, tRNA genes from 228 unique archaeal genomes were added, of which 214 were not represented in the 2009 tRNAdb, substantially expanding archaeal coverage relative to the legacy dataset.
 
 
 \subsection{Phage tRNAs} 
 Complete genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}; accessed 17 August 2026). Putative tRNA genes
-were identified using tRNAscan-SE v2.0.12 in bacterial mode. Predicted tRNAs were retained only if they were 70–90 nt in length, had an overall tRNAscan-SE score >60, and had both HMM and secondary-structure scores >10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
+were identified using {\texttt{tRNAscan-SE v2.0.12}} \cite{tRNAscan} in bacterial mode. Predicted tRNAs were retained only if they were 70–90nt in length, had an overall tRNAscan-SE inf score $>$60, and had both HMM and secondary-structure scores $>$10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
 
 
 \subsection{modified tRNAs}\label{subsecmodifiedtRNA}
@@ -261,17 +261,17 @@ retrieved sequence. \PFS{In order display alignments properly} we
 decided to keep legacy one letter codes for modifications.  
 We \PFS{extended the dictionary of one letter codes} for modifications not
 already present in tRNAdb 2009. For these modifications, we also identified the name of the compound using the  pdb entry. We then extracted InChikeys and InChis from PubChem \cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database page}.
-Modified mitochondrial tRNA sequences from \emph{h.sapiens}\cite{humanmtRNA} and \emph{b.taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structure annotation. 
+Modified mitochondrial tRNA sequences from \emph{H. sapiens}\cite{humanmtRNA} and \emph{B. taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structure annotation. 
 
 
 
 
-\subsection{Alignemnt and quality control}
-For all novel sequences, we used \texttt{infernal} \TODO{version, ref} to align sequences to
+\subsection{Alignment and quality control}
+For all novel sequences, we used \texttt{infernal} \cite{infernal} to align sequences to
 the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective Mitos2 models for
 mitochondrial tRNAs). When an anticodon was annotated, we compared the
-annotated one with the one implicitly found by infernal (as center of the
+annotated anticodon with the one found by infernal (at center of the
 anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7 nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make one of the four cut-offs.
 
 
@@ -323,7 +323,7 @@ No prior registration, and no personal information (e.g., email address, API key
 The tRNAdb website (see Figure \ref{Fig:Website}) can be found at \url{https://tdb.bioinf.uni-leipzig.de/}. It provides user-friendly access to the tRNA data stored in our database and can be functionally separated into three subpages: ``Search'', ``Details'', and ``Taxonomy Tree''.
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Webserver_homo_ala.png}
-  \caption{Example for the tRNAdb website, showing the first page of the results for a search for \emph{homo sapiens} Alanine tRNAs\label{Fig:Website}}
+  \caption{Example for the tRNAdb website, showing the first page of the results for a search for \emph{Homo sapiens} Alanine tRNAs\label{Fig:Website}}
 \end{figure}
 The main functionality of the website is the ``search´´ page which allows users to filter tRNA by organism, origin (e.g., nuclear DNA, nuclear RNA, mitochondrial DNA) amino acid, anticodon, membership of taxonomic clades, external references (publications, genome IDs, external datasources) as well as sequence motifs and structural constraints. Species can be filtered precisely via NCBI taxonomy ID as well as their scientific species name and species synonyms as annotated in the NCBI taxonomy database. For every species with tRNA sequences present in tRNAdb, their taxonomic lineage, as annotated in the NCBI taxonomy database, is stored and tRNA belonging to a specific clade can be obtained by using the ``Clade´´ field of the search page. 
 

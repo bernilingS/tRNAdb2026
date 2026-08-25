@@ -220,11 +220,11 @@ published (\cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
 
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
 
-To expanded the mitochondrial tRNAs included into tRNAdb, we downloaded a
-total of 16,630 mitochondrial genome sequences as well as their annotations
-from NCBI Nucleotide \url{https://www.ncbi.nlm.nih.gov/nucleotide/} (downloaded October 2024). We used \texttt{Mitos2}\cite{mitos2} without detection of proteins and rRNA and the refseq89m models on 
-each mitochondrion to detect the tRNAs. We then compared the predicted
-sequences with the GenBank annotation. All tRNAs that matched exactly were
+To expand the set of mitochondrial tRNAs included in the \texttt{tRNAdb}, a
+total of 16,630 mitochondrial genome sequences as well as their annotations were downloaded
+from \texttt{NCBI Nucleotide} \url{https://www.ncbi.nlm.nih.gov/nucleotide/}, downloaded October 2024. We used \texttt{Mitos2}\cite{mitos2} without detection of proteins and rRNA and the refseq89m models on 
+each mitochondrion to detect the tRNAs. The predicted
+sequences were then compared to the NCBI annotation. All tRNAs that matched exactly were
 added to the \texttt{trnaDB}. In case of small discrepancies of location,
 we checked whether the structure of the acceptor stem predicted by
 \texttt{infernal} passed human curation. If so, the sequence predicted by

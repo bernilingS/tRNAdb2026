@@ -166,21 +166,21 @@ versioning system for both current and future database releases.}
 %The introduction introduces the context and summarizes the manuscript. It
 %is importantly to clearly state the contributions of this piece of work.
 
-\PFS{There has been increasing interest in tRNAs promoted in particular by
+\PFS{There has been growing interest in tRNAs, promoted by
   an increasingly broad portfolio of roles beyond their primary function of
-  mediating the genetic code. Some 10,000 publications now link tRNAs with
-  various aspects of cancer, and similar number is concerned with the
+  mediating the genetic code. Some 10 000 publications now link tRNAs with
+  various aspects of cancer, with similar numbers concerning the aspect of 
   evolution of tRNAs and their processing.  A solid, well-curated body of data
   is therefore is a key resource for an increasing research community.}
 Since the publication of the first ``Compilation of tRNA sequences and
-sequences of tRNA genes'' in 2005 \cite{sprinzl:2005} and its extension as
-the \texttt{tRNAdb} 2009\cite{juehling:2009}, a number of databases either
-dedicated to or containing tRNA sequences and genomic locations have been
-published (\cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
+sequences of tRNA genes'' in 2005 \cite{sprinzl:2005}, and its extension as
+the tRNAdb 2009\cite{juehling:2009}, a number of databases either
+dedicated to, or containing tRNA sequences, have been
+published \cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
   tRNAdb was interrupted due to technical issues in 2024/2025, the
-  data were still widely used and we received a large number of requests
+  data was still widely used, and we received a large number of requests
   for its continued existence. We not only re-implemented the
-  tRNAdb on a solid technical foundation, we also included an API for automatic data retrievance. Furthermore, we extended its content by leveraging existing nuclear tRNAs from the gtRNA database as well as mitochondrial, archaeal and phage derived tRNAs we identified using MITOS2\cite{mitos2}, \texttt{tRNAscan-SE 2.0}\cite{tRNAscan} and additional specialized approaches.}
+  tRNAdb on a solid technical foundation, we also included an API for automatic data retrievance. Furthermore, we extended its content by leveraging existing nuclear tRNAs from the gtRNA database as well as mitochondrial, archaeal and phage derived tRNAs we identified using MITOS2 \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan} and additional specialized approaches.}
 
     
 
@@ -231,12 +231,11 @@ infernal \cite{infernal} passed human curation. If so, the sequence predicted by
 MITOS2 was deemed correct and included into the database. In case of discrepancies in the assignment of the strand (reading direction), we retained the
 MITOS2 prediction if no plausible anticodon could be identified
 in the anticodon stem and loop of the annotated RefSeq entry.
-In total, this resulted in  \todo{a number} of novel predicted mtRNAs that were
-added to the tRNAdb. 
+
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
 For genomic tRNAs, we downloaded sequences, locations and genome ids from
-the gtRNA database \cite{gtrnadb}. 
+the GtRNAdb database \cite{gtrnadb}. 
 
 
 \subsection{Archaeal tRNAs}
@@ -254,7 +253,7 @@ were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode. Pre
 
 \subsection{modified tRNAs}\label{subsecmodifiedtRNA}
 Modified tRNA sequences, as well as their genomic variants, were downloaded
-from the MODOMIC \cite{modomics} database and the PDB. 
+from the MODOMIC \cite{modomics} database and the Protein Data Bank (PDB). 
 Sequences retrieved from the PDB having only a single modification located at the first or last base, were removed. 
 \PFS{In order display alignments properly}, legacy one letter codes for modifications were retained.  
 The dictionary of one letter codes for modifications was extended to include any that were not present in the legacy tRNAdb 2009.
@@ -269,7 +268,7 @@ For all novel sequences, we used Infernal \cite{infernal} to align sequences to
 the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective MITOS2 models for
 mitochondrial tRNAs). When an anticodon was annotated, we compared the
-annotated anticodon with the one found by infernal (at center of the
+annotated anticodon with the one found by Infernal (at center of the
 anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make one of the four cut-offs.
 
 

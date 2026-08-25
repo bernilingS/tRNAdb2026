@@ -248,7 +248,7 @@ Overall, tRNA genes from 228 unique archaeal genomes were added, of which 214 we
 
 
 \subsection{Phage tRNAs} 
-Complete genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus (\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}), accessed 17 August 2026. Putative tRNA genes
+Genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus (\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}), accessed 17 August 2026. Putative tRNA genes
 were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode. Predicted tRNAs were retained only if they were 70–90nt in length, had an overall tRNAscan-SE inf score $>$60, and had both HMM and secondary-structure scores $>$10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
 
 
@@ -257,8 +257,8 @@ Modified tRNA sequences, as well as their genomic variants, were downloaded
 from the MODOMIC \cite{modomics} database and the PDB. 
 Sequences retrieved from the PDB having only a single modification located at the first or last base, were removed. 
 \PFS{In order display alignments properly}, legacy one letter codes for modifications were retained.  
-We \PFS{extended the dictionary of one letter codes} for modifications not
- present in tRNAdb 2009. For these novel modifications, we also identified the name of the compound using the  PDB entry. The InChikeys and InChis were extracted from PubChem \cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database page}.
+The dictionary of one letter codes for modifications was extended to include any that were not present in the legacy tRNAdb 2009.
+For these novel modifications, we also identified the name of the compound using the  PDB entry. The InChikeys and InChis were extracted from PubChem \cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database page}.
 Modified mitochondrial tRNA sequences from \emph{H. sapiens}\cite{humanmtRNA} and \emph{B. taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structural annotation. 
 
 

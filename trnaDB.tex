@@ -221,7 +221,7 @@ published \cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
 
 To expand the set of mitochondrial tRNAs included in the tRNAdb, a
-total of 16 630 mitochondrial genome sequences, as well as their annotations were downloaded
+total of 16,630 mitochondrial genome sequences, as well as their annotations were downloaded
 from NCBI Nucleotide \url{https://www.ncbi.nlm.nih.gov/nucleotide/}, accessed October 2024. We used MITOS2 \cite{mitos2} without detection of proteins and rRNA and the refseq89m models on 
 each mitochondrion to detect the tRNAs. The predicted
 sequences were then compared to the NCBI annotation. All tRNAs that matched exactly were
@@ -231,7 +231,7 @@ infernal \cite{infernal} passed human curation. If so, the sequence predicted by
 MITOS2 was deemed correct and included into the database. In case of discrepancies in the assignment of the strand (reading direction), we retained the
 MITOS2 prediction if no plausible anticodon could be identified
 in the anticodon stem and loop of the NCBI annotation.
-After filtering, this resulted in 305,905 novel predicted mtRNAs that were
+After filtering (see below), this resulted in 305,905 novel predicted mtRNAs that were
 added to the \texttt{tRNAdb}. 
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
@@ -244,7 +244,7 @@ the GtRNAdb database \cite{gtrnadb}.  \TODO{After filtering, we could add 216,85
 Archaeal genomes were sourced from the  BV-BRC database \url{https://www.bv-brc.org}, accessed October 2024. Predictions were ran on good quality genomes, as assessed by CheckM2 ($\geq$85\% complete, $<$5\% contaminated)\cite{checkm2}. These archaeal genomes cover a broad taxonomic range and include all major archaeal superphyla (Asgard, DPANN, TACK, and Euryarchaeota).
 We did not rely on the BV-BRC annotation of tRNA genes, as we found it inconsistent with predictions using the most up-to-date version of tRNAscan-SE 2.0.12 \cite{tRNAscan}. Notably, tRNA-Ile2 is often mislabelled as tRNA-Met in BV-BRC, the most frequent mismatch we observed in isotype assignment (34\%). This likely reflects the agmatidine wobble-base modification unique to archaea \cite{tRNAscan}, highlighting the necessity to use domain specific models.
 Therefore all genomes were annotated using tRNAscan-SE in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure \cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with Infernal \cite{infernal}, against tRNAinf-arch and tRNAinf-arch-SeC models. 
-Overall, tRNA genes from 228 unique archaeal genomes were added, of which 214 were not represented in the 2009 tRNAdb, substantially expanding archaeal coverage relative to the legacy dataset.
+After filtering, \TODO{X} tRNA genes from 228 unique archaeal genomes were added, of which 214 were not represented in the 2009 tRNAdb, substantially expanding archaeal coverage relative to the legacy dataset.
 
 
 \subsection{Phage tRNAs} 
@@ -258,7 +258,7 @@ from the MODOMIC \cite{modomics} database and the Protein Data Bank (PDB).
 Sequences retrieved from the PDB having only a single modification located at the first or last base, were removed. 
 \PFS{In order display alignments properly}, legacy one letter codes for modifications were retained.  
 The dictionary of one letter codes for modifications was extended to include any that were not present in the legacy tRNAdb 2009.
-For these novel modifications, we also identified the name of the compound using the  PDB entry. The InChikeys and InChis were extracted from PubChem \cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database page}.
+For these novel modifications, we also identified the name of the compound using the  PDB entry. The InChikeys and InChis were extracted from PubChem \cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database webpage}.
 Modified mitochondrial tRNA sequences from \emph{H. sapiens}\cite{humanmtRNA} and \emph{B. taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structural annotation. 
 
 
@@ -270,7 +270,7 @@ the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective MITOS2 models for
 mitochondrial tRNAs). When an anticodon was annotated, we compared the
 annotated anticodon with the one found by Infernal (at center of the
-anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make one of the four cut-offs.
+anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7nt. For the other structural features, we took the maximum length of the respective structural feature in tRNAdb 2009, added 1 (resulting in 18 and 28 nt for D and T loops respectively and 5 nt between D and AC stem) and discarded a total of \todo{404} tRNAs that did not make one of the four thresholds.
 
 
 
@@ -293,7 +293,7 @@ tRNAdb 2.0 was completely reimplemented as a three tier application consisting o
 %\subsection{Data Storage, Retrieval, and Updates}
 \subsection{Data model and provenance}
 
-For easy retrieval and global searches, sequences and their most relevant data are stored within a single, fully indexed relation enabling efficient filtering across all sequence categories and attributes. This includes nucleotide sequence, secondary structure, anticodon, amino acid and origin (i.e., nuclear DNA, nuclear RNA, mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information which is obtained from the NCBI taxonomy database. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e. species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez} to resolve their current taxonomic information.
+For easy retrieval and global searches, sequences and their most relevant data are stored within a single, fully indexed relation enabling efficient filtering across all sequence categories and attributes. This includes nucleotide sequence, secondary structure, anticodon, amino acid and origin (i.e., nuclear DNA, \TODO{nuclear} RNA, mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e. species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez} to resolve their current taxonomic information.
 %together with the \texttt{biopython} \texttt{entrez} package to query NCBI taxonomy API for updated taxonomic information for tRNAdb legacy sequences. 
 
 The updated relational schema supports a release versioning system which separates the legacy dataset and data contained in tRNAdb 2.0 update. Every sequence present in tRNAdb has a version identifier attached which links it to the first release it appeared in tRNAdb together with relevant release information. For every release, data sources (i.e., origin database and version) and software (with corresponding version) used are documented. Additionally, every tRNAdb release is described with a public version string that is exposed on the ``Details'' page of individual entries, and is also available as an export field. The public version string contains a short description how the sequences published in this particular release were obtained. \TODO{A more detailed description, e.g., software and datasources is available on the ``Documentation and Help'' page of tRNAdb.  Sequences in tRNAdb can be filtered by their corresponding release version, allowing users to browse exclusively legacy data, or current releases.}
@@ -323,7 +323,7 @@ The tRNAdb website (see Figure \ref{Fig:Website}) can be found at \url{https://t
   \includegraphics[width=0.45\textwidth]{Webserver_homo_ala.png}
   \caption{Example for the tRNAdb website, showing the first page of the results for a search for \emph{Homo sapiens} Alanine tRNAs\label{Fig:Website}}
 \end{figure}
-The main functionality of the website is the ``search´´ page which allows users to filter tRNA by organism, origin (e.g., nuclear DNA, nuclear RNA, mitochondrial DNA) amino acid, anticodon, membership of taxonomic clades, external references (publications, genome IDs, external datasources) as well as sequence motifs and structural constraints. Species can be filtered precisely via NCBI taxonomy ID as well as their scientific species name and species synonyms as annotated in the NCBI taxonomy database. For every species with tRNA sequences present in tRNAdb, their taxonomic lineage, as annotated in the NCBI taxonomy database, is stored and tRNA belonging to a specific clade can be obtained by using the ``Clade´´ field of the search page. 
+The main functionality of the website is the ``search´´ page which allows users to filter tRNA by organism, origin (e.g., nuclear DNA, \TODO{modified RNA}, mitochondrial DNA) amino acid, anticodon, membership of taxonomic clades, external references (publications, genome IDs, external datasources) as well as sequence motifs and structural constraints. Species can be filtered precisely via NCBI taxonomy ID as well as their scientific species name and species synonyms as annotated in the NCBI taxonomy database. For every species with tRNA sequences present in tRNAdb, their taxonomic lineage, as annotated in the NCBI taxonomy database, is stored and tRNA belonging to a specific clade can be obtained by using the ``Clade´´ field of the search page. 
 
 Upon a successful search, the user is presented with a paginated list of fitting tRNA sequences with a snapshot of data available for every sequence: origin, organism, amino acid, anticodon and its structurally annotated nucleotide sequence (separated into acceptor stem, D-loop, D-stem, etc.). Every result entry, or every entry matching the current search request, can be stored in a temporary selection which can be committed to persistent storage as a named collection for later access or download. 
 
@@ -338,7 +338,7 @@ We implemented a searchable taxonomy browser which displays an expandable tree v
 
 \section{Statistics}
 
-Duplicated sequences are treated on a species level, hence the same tRNA sequence can occur multiple times in tRNAdb for different species. Thus, besides the total number of entries, we also report the number of unique tRNA sequences included in the database. For mitochondrial tRNAs,  330 261 total entries are comprised of 219 388 unique sequences. The vast majority of these originate in metazoa (see Fig \ref{Tax}a), which reflects the distribution of mitochondrial genomes in RefSeq. The genomic part of the database contains a total of 228,955 entries comprising 93,257 unique sequences. The majority, precisely 149,749 non-unique sequences, are bacterial tRNAs. However, the difference of genomic tRNA representation in tRNAdb is much smaller for unique sequences, see Fig~\ref{Tax}b. 
+Duplicated sequences are treated on a species level, hence the same tRNA sequence can occur multiple times in tRNAdb for different species. Thus, besides the total number of entries, we report the number of unique tRNA sequences included in the database. For mitochondrial tRNAs,  330 261 total entries are comprised of 219 388 unique sequences. The vast majority of these originate in metazoa (see Fig \ref{Tax}a), which reflects the distribution of mitochondrial genomes in RefSeq. The genomic part of the database contains a total of 228,955 entries comprising 93,257 unique sequences. The majority, precisely 149,749 non-unique sequences, are bacterial tRNAs. However, the difference of genomic tRNA representation in tRNAdb is much smaller for unique sequences, see Fig~\ref{Tax}b.  
 %This may be due to many bacterial strains sharing tRNA sequences.
 %If tRNA sequences are shared between species, they can be included multiple times in the tRNAdb. 
 
@@ -347,8 +347,8 @@ Duplicated sequences are treated on a species level, hence the same tRNA sequenc
   \caption{\label{Tax}Distribution of taxa. a: mitochondrial tRNAs at kingdom level. b: genomic tRNAs at domain level.}
 \end{figure}
 
-The most abundant tRNA in the genomic tRNAdb part is Leu with 23 995 entries and 10 233 unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with 5 290 (but 2 305 unique sequences), while Phe and Trp have the fewest unique sequences with 2 093 (but 5 855 and 5 579 entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}a).
-Mitochondrial tRNAs show a comparatively even distribution with respect to their abundance, ranging from 14 692 entries for Glu to 16 734 entries for Met, with the exception of Ser1 and Leu1, which are the only amino acids that come in two different forms in many mitochondria. Mitochondrial tRNA for Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}b).
+The most abundant tRNA in the genomic tRNAdb part is Leu with 23,995 entries and 10,233 unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with 5,290 (but 2,305 unique sequences), while Phe and Trp have the fewest unique sequences with 2,093 (but 5,855 and 5,579 entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}a).
+Mitochondrial tRNAs show a comparatively even distribution with respect to their abundance, ranging from 14,692 entries for Glu to 16,734 entries for Met, with the exception of Ser1 and Leu1, which code for the two amino acids that have two tRNAs in many mitochondria. Mitochondrial tRNA  Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}b).
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{MitoandGenomicAminoacidamounts.pdf}
   \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and anticodon in the tRNAdb. a) genomic tRNA sequences. b) mitochondrial tRNA sequences.}
@@ -370,7 +370,8 @@ Mitochondrial tRNAs show a comparatively even distribution with respect to their
 
 \section{Conclusion}
 
-Some Conclusions here.
+%Some Conclusions here.
+We modernized and greatly expanded the tRNA database, thus further providing an important ressource for the tRNA community.
 
 \section{Conflicts of interest}
 The authors declare that they have no competing interests.

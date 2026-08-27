@@ -1,0 +1,8 @@
+id	version_id	version_comment	database_type	total_sequences
+1	1.0	Original tRNAdb dataset.	mt-tRNA_DNA	30525
+1	1.0	Original tRNAdb dataset.	tRNA_DNA	12099
+1	1.0	Original tRNAdb dataset.	tRNA_RNA	623
+2	2.0_nuclear	gtRNAdb 2.0 integration	tRNA_DNA	188630
+3	2.0_mitochondrial	NULL	mt-tRNA_DNA	305905
+4	2.0_archaea	NULL	tRNA_DNA	21127
+5	2.0_viral	NULL	tRNA_DNA	7099

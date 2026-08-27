@@ -1,0 +1,570 @@
+tax	tax_name	parent_name	parent_class_order	count(*)
+178306	Pyrobaculum aerophilum str. IM2	Archaea	domain	37
+2246	Haloferax volcanii	Archaea	domain	2
+2188	Methanococcus voltae	Archaea	domain	5
+2261	Pyrococcus furiosus	Archaea	domain	1
+2287	Saccharolobus solfataricus	Archaea	domain	6
+2269	Thermofilum pendens	Archaea	domain	2
+2320	Methanopyrus kandleri	Archaea	domain	4
+2238	Haloarcula marismortui	Archaea	domain	2
+2303	Thermoplasma acidophilum	Archaea	domain	1
+2252	Haloferax mediterranei	Archaea	domain	1
+272557	Aeropyrum pernix K1	Archaea	domain	45
+224325	Archaeoglobus fulgidus DSM 4304	Archaea	domain	46
+64091	Halobacterium salinarum NRC-1	Archaea	domain	46
+187420	Methanothermobacter thermautotrophicus str. Delta H	Archaea	domain	37
+243232	Methanocaldococcus jannaschii DSM 2661	Archaea	domain	34
+39152	Methanococcus maripaludis	Archaea	domain	35
+29283	Halorubrum distributum	Archaea	domain	1
+272844	Pyrococcus abyssi GE5	Archaea	domain	46
+186497	Pyrococcus furiosus DSM 3638	Archaea	domain	46
+70601	Pyrococcus horikoshii OT3	Archaea	domain	46
+273057	Saccharolobus solfataricus P2	Archaea	domain	45
+273075	Thermoplasma acidophilum DSM 1728	Archaea	domain	44
+273116	Thermoplasma volcanium GSS1	Archaea	domain	45
+192952	Methanosarcina mazei Go1	Archaea	domain	51
+273063	Sulfurisphaera tokodaii str. 7	Archaea	domain	45
+190192	Methanopyrus kandleri AV19	Archaea	domain	30
+419665	Methanococcus aeolicus Nankai-3	Archaea	domain	33
+188937	Methanosarcina acetivorans C2A	Archaea	domain	50
+323259	Methanospirillum hungatei JF-1	Archaea	domain	47
+228908	Nanoarchaeum equitans Kin4-M	Archaea	domain	38
+399550	Staphylothermus marinus F1	Archaea	domain	44
+330779	Sulfolobus acidocaldarius DSM 639	Archaea	domain	43
+2271	Thermoproteus tenax	Archaea	domain	5
+2242	Halobacterium salinarum	Archaea	domain	3
+44930	Natronobacterium gregoryi	Archaea	domain	1
+2257	Natronomonas pharaonis	Archaea	domain	1
+2162	Methanobacterium formicicum	Archaea	domain	1
+83982	Methanobacterium thermaggregans	Archaea	domain	1
+2190	Methanocaldococcus jannaschii	Archaea	domain	35
+2187	Methanococcus vannielii	Archaea	domain	16
+2223	Methanothrix soehngenii	Archaea	domain	1
+2180	Methanothermus fervidus	Archaea	domain	12
+2203	Methanospirillum hungatei	Archaea	domain	1
+2264	Thermococcus celer	Archaea	domain	4
+2247	Halorubrum lacusprofundi	Archaea	domain	1
+2248	Halorubrum saccharovorum	Archaea	domain	1
+2234	Archaeoglobus fulgidus	Archaea	domain	45
+35743	Halorubrum sodomense	Archaea	domain	1
+63740	Halorubrum vacuolatum	Archaea	domain	1
+266835	Mesorhizobium japonicum MAFF 303099	Bacteria	domain	47
+192222	Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819	Bacteria	domain	35
+224326	Borreliella burgdorferi B31	Bacteria	domain	33
+85963	Helicobacter pylori J99	Bacteria	domain	36
+85962	Helicobacter pylori 26695	Bacteria	domain	36
+155864	Escherichia coli O157:H7 str. EDL933	Bacteria	domain	64
+83334	Escherichia coli O157:H7	Bacteria	domain	62
+243277	Vibrio cholerae O1 biovar El Tor str. N16961	Bacteria	domain	55
+224308	Bacillus subtilis subsp. subtilis str. 168	Bacteria	domain	54
+107806	Buchnera aphidicola str. APS (Acyrthosiphon pisum)	Bacteria	domain	32
+83331	Mycobacterium tuberculosis CDC1551	Bacteria	domain	45
+122586	Neisseria meningitidis MC58	Bacteria	domain	47
+122587	Neisseria meningitidis Z2491	Bacteria	domain	38
+272561	Chlamydia trachomatis D/UW-3/CX	Bacteria	domain	37
+83333	Escherichia coli K-12	Bacteria	domain	49
+138677	Chlamydia pneumoniae J138	Bacteria	domain	38
+38504	Ureaplasma parvum serovar 3	Bacteria	domain	30
+272631	Mycobacterium leprae TN	Bacteria	domain	45
+158879	Staphylococcus aureus subsp. aureus N315	Bacteria	domain	43
+224324	Aquifex aeolicus VF5	Bacteria	domain	42
+89584	Gluconacetobacter liquefaciens	Bacteria	domain	4
+224914	Brucella melitensis bv. 1 str. 16M	Bacteria	domain	47
+272944	Rickettsia conorii str. Malish 7	Bacteria	domain	33
+272562	Clostridium acetobutylicum ATCC 824	Bacteria	domain	43
+170187	Streptococcus pneumoniae TIGR4	Bacteria	domain	36
+160490	Streptococcus pyogenes M1 GAS	Bacteria	domain	36
+243161	Chlamydia muridarum str. Nigg	Bacteria	domain	37
+195102	Clostridium perfringens str. 13	Bacteria	domain	41
+169963	Listeria monocytogenes EGD-e	Bacteria	domain	46
+272626	Listeria innocua Clip11262	Bacteria	domain	50
+190650	Caulobacter vibrioides CB15	Bacteria	domain	43
+160492	Xylella fastidiosa 9a5c	Bacteria	domain	73
+243274	Thermotoga maritima MSB8	Bacteria	domain	46
+1148	Synechocystis sp. PCC 6803	Bacteria	domain	40
+208964	Pseudomonas aeruginosa PAO1	Bacteria	domain	45
+243276	Treponema pallidum subsp. pallidum str. Nichols	Bacteria	domain	45
+272843	Pasteurella multocida subsp. multocida str. Pm70	Bacteria	domain	35
+272634	Mycoplasmoides pneumoniae M129	Bacteria	domain	37
+243273	Mycoplasmoides genitalium G37	Bacteria	domain	36
+243230	Deinococcus radiodurans R1 = ATCC 13939 = DSM 20539	Bacteria	domain	46
+2108	Mycoplasma sp.	Bacteria	domain	1
+1131	Synechococcus sp.	Bacteria	domain	3
+520	Bordetella pertussis	Bacteria	domain	1
+382	Sinorhizobium meliloti	Bacteria	domain	2
+658	Photobacterium leiognathi subsp. leiognathi	Bacteria	domain	2
+100226	Streptomyces coelicolor A3(2)	Bacteria	domain	56
+2102	Mycoplasma mycoides	Bacteria	domain	15
+193	Azospirillum lipoferum	Bacteria	domain	3
+880447	Mycoplasma leachii PG50	Bacteria	domain	2
+436	Novacetimonas hansenii	Bacteria	domain	2
+339	Xanthomonas campestris	Bacteria	domain	1
+418699	Azoarcus olearius	Bacteria	domain	2
+2155	Phytoplasma sp.	Bacteria	domain	1
+33995	Komagataeibacter europaeus	Bacteria	domain	2
+38323	Bartonella henselae	Bacteria	domain	1
+774	Bartonella bacilliformis	Bacteria	domain	2
+659	Photobacterium phosphoreum	Bacteria	domain	2
+90371	Salmonella enterica subsp. enterica serovar Typhimurium	Bacteria	domain	5
+303	Pseudomonas putida	Bacteria	domain	1
+7	Azorhizobium caulinodans	Bacteria	domain	1
+782	Rickettsia prowazekii	Bacteria	domain	3
+41	Stigmatella aurantiaca	Bacteria	domain	4
+274	Thermus thermophilus	Bacteria	domain	5
+2104	Mycoplasmoides pneumoniae	Bacteria	domain	33
+1422	Geobacillus stearothermophilus	Bacteria	domain	1
+139	Borreliella burgdorferi	Bacteria	domain	34
+54571	Streptomyces venezuelae	Bacteria	domain	1
+115711	Chlamydia pneumoniae AR39	Bacteria	domain	38
+71421	Haemophilus influenzae Rd KW20	Bacteria	domain	41
+899	Desulfomicrobium baculatum	Bacteria	domain	1
+1525	Neomoorella thermoacetica	Bacteria	domain	1
+435	Acetobacter aceti	Bacteria	domain	2
+813	Chlamydia trachomatis	Bacteria	domain	40
+384	Rhizobium leguminosarum	Bacteria	domain	1
+1488	Clostridium acetobutylicum	Bacteria	domain	1
+1502	Clostridium perfringens	Bacteria	domain	1
+1584	Lactobacillus delbrueckii	Bacteria	domain	1
+1911	Streptomyces griseus	Bacteria	domain	2
+2133	Spiroplasma citri	Bacteria	domain	3
+115713	Chlamydia pneumoniae CWL029	Bacteria	domain	38
+1219	Prochlorococcus marinus	Bacteria	domain	1
+358	Agrobacterium tumefaciens	Bacteria	domain	1
+1309	Streptococcus mutans	Bacteria	domain	1
+1397	Niallia circulans	Bacteria	domain	1
+1773	Mycobacterium tuberculosis	Bacteria	domain	2
+1889	Streptomyces ambofaciens	Bacteria	domain	1
+633	Yersinia pseudotuberculosis	Bacteria	domain	1
+1639	Listeria monocytogenes	Bacteria	domain	2
+1638	Listeria ivanovii	Bacteria	domain	2
+548	Klebsiella aerogenes	Bacteria	domain	1
+2336	Thermotoga maritima	Bacteria	domain	5
+223283	Pseudomonas syringae pv. tomato str. DC3000	Bacteria	domain	39
+260799	Bacillus anthracis str. Sterne	Bacteria	domain	60
+282458	Staphylococcus aureus subsp. aureus MRSA252	Bacteria	domain	44
+258594	Rhodopseudomonas palustris CGA009	Bacteria	domain	46
+243265	Photorhabdus laumondii subsp. laumondii TTO1	Bacteria	domain	51
+264201	Candidatus Protochlamydia amoebophila UWE25	Bacteria	domain	34
+83332	Mycobacterium tuberculosis H37Rv	Bacteria	domain	45
+262768	Onion yellows phytoplasma OY-M	Bacteria	domain	30
+257309	Corynebacterium diphtheriae NCTC 13129	Bacteria	domain	44
+264462	Bdellovibrio bacteriovorus HD100	Bacteria	domain	35
+283166	Bartonella henselae str. Houston-1	Bacteria	domain	40
+198094	Bacillus anthracis str. Ames	Bacteria	domain	55
+290434	Borreliella bavariensis PBi	Bacteria	domain	31
+226186	Bacteroides thetaiotaomicron VPI-5482	Bacteria	domain	52
+228410	Nitrosomonas europaea ATCC 19718	Bacteria	domain	41
+243090	Rhodopirellula baltica SH 1	Bacteria	domain	72
+209261	Salmonella enterica subsp. enterica serovar Typhi str. Ty2	Bacteria	domain	49
+227882	Streptomyces avermitilis MA-4680 = NBRC 14893	Bacteria	domain	57
+199310	Escherichia coli CFT073	Bacteria	domain	52
+224915	Buchnera aphidicola str. Bp (Baizongia pistaciae)	Bacteria	domain	32
+226900	Bacillus cereus ATCC 14579	Bacteria	domain	53
+227377	Coxiella burnetii RSA 493	Bacteria	domain	42
+193567	Streptococcus pyogenes SSI-1	Bacteria	domain	37
+265669	Listeria monocytogenes serotype 4b str. F2365	Bacteria	domain	45
+191218	Bacillus anthracis str. A2012	Bacteria	domain	22
+203907	Candidatus Blochmanniella floridana	Bacteria	domain	37
+283165	Bartonella quintana str. Toulouse	Bacteria	domain	39
+281309	[Bacillus thuringiensis] serovar konkukian str. 97-27	Bacteria	domain	49
+62977	Acinetobacter baylyi ADP1	Bacteria	domain	38
+163164	Wolbachia endosymbiont of Drosophila melanogaster	Bacteria	domain	34
+243275	Treponema denticola ATCC 35405	Bacteria	domain	41
+262724	Thermus thermophilus HB27	Bacteria	domain	47
+267747	Cutibacterium acnes KPA171202	Bacteria	domain	45
+265311	Mesoplasma florum L1	Bacteria	domain	28
+233413	Mycobacterium tuberculosis variant bovis AF2122/97	Bacteria	domain	45
+882	Nitratidesulfovibrio vulgaris str. Hildenborough	Bacteria	domain	51
+222523	Bacillus cereus ATCC 10987	Bacteria	domain	63
+273123	Yersinia pseudotuberculosis IP 32953	Bacteria	domain	45
+229193	Yersinia pestis biovar Microtus str. 91001	Bacteria	domain	47
+292459	Symbiobacterium thermophilum IAM 14863	Bacteria	domain	68
+257363	Rickettsia typhi str. Wilmington	Bacteria	domain	33
+242619	Porphyromonas gingivalis W83	Bacteria	domain	46
+281090	Leifsonia xyli subsp. xyli str. CTCB07	Bacteria	domain	45
+257314	Lactobacillus johnsonii NCC 533	Bacteria	domain	52
+243231	Geobacter sulfurreducens PCA	Bacteria	domain	44
+807	Bartonella elizabethae	Bacteria	domain	2
+190485	Xanthomonas campestris pv. campestris str. ATCC 33913	Bacteria	domain	46
+273068	Caldanaerobacter subterraneus subsp. tengcongensis MB4	Bacteria	domain	52
+197221	Thermosynechococcus vestitus BP-1	Bacteria	domain	42
+198466	Streptococcus pyogenes MGAS315	Bacteria	domain	34
+211110	Streptococcus agalactiae NEM316	Bacteria	domain	35
+196620	Staphylococcus aureus subsp. aureus MW2	Bacteria	domain	44
+196627	Corynebacterium glutamicum ATCC 13032	Bacteria	domain	49
+272947	Rickettsia prowazekii str. Madrid E	Bacteria	domain	33
+198804	Buchnera aphidicola str. Sg (Schizaphis graminum)	Bacteria	domain	32
+190304	Fusobacterium nucleatum subsp. nucleatum ATCC 25586	Bacteria	domain	33
+194439	Chlorobaculum tepidum TLS	Bacteria	domain	47
+1203463	Xanthomonas citri subsp. citri 306	Bacteria	domain	47
+803	Bartonella quintana	Bacteria	domain	2
+2095	Mycoplasma capricolum	Bacteria	domain	28
+2097	Mycoplasmoides genitalium	Bacteria	domain	34
+266834	Sinorhizobium meliloti 1021	Bacteria	domain	43
+220341	Salmonella enterica subsp. enterica serovar Typhi str. CT18	Bacteria	domain	50
+176299	Agrobacterium fabrum str. C58	Bacteria	domain	44
+272635	Mycoplasmopsis pulmonis UAB CTIP	Bacteria	domain	29
+103690	Nostoc sp. PCC 7120 = FACHB-418	Bacteria	domain	60
+267608	Ralstonia pseudosolanacearum GMI1000	Bacteria	domain	48
+99287	Salmonella enterica subsp. enterica serovar Typhimurium str. LT2	Bacteria	domain	51
+272558	Halalkalibacterium halodurans C-125	Bacteria	domain	45
+235279	Helicobacter hepaticus ATCC 51449	Bacteria	domain	13
+233150	Mycoplasmoides gallisepticum str. R	Bacteria	domain	31
+183190	Xylella fastidiosa Temecula1	Bacteria	domain	45
+218496	Tropheryma whipplei TW08/27	Bacteria	domain	46
+203267	Tropheryma whipplei str. Twist	Bacteria	domain	45
+176280	Staphylococcus epidermidis ATCC 12228	Bacteria	domain	47
+220668	Lactiplantibacillus plantarum WCFS1	Bacteria	domain	52
+226185	Enterococcus faecalis V583	Bacteria	domain	48
+212717	Clostridium tetani E88	Bacteria	domain	39
+224911	Bradyrhizobium diazoefficiens USDA 110	Bacteria	domain	48
+214092	Yersinia pestis CO92	Bacteria	domain	47
+210007	Streptococcus mutans UA159	Bacteria	domain	40
+208435	Streptococcus agalactiae 2603V/R	Bacteria	domain	36
+198214	Shigella flexneri 2a str. 301	Bacteria	domain	59
+211586	Shewanella oneidensis MR-1	Bacteria	domain	48
+221109	Oceanobacillus iheyensis HTE831	Bacteria	domain	40
+189518	Leptospira interrogans serovar Lai str. 56601	Bacteria	domain	37
+196164	Corynebacterium efficiens YS-314	Bacteria	domain	49
+204722	Brucella suis 1330	Bacteria	domain	39
+206672	Bifidobacterium longum NCC2705	Bacteria	domain	54
+187410	Yersinia pestis KIM10+	Bacteria	domain	49
+235	Brucella abortus	Bacteria	domain	4
+28095	Burkholderia gladioli	Bacteria	domain	2
+294	Pseudomonas fluorescens	Bacteria	domain	2
+13373	Burkholderia mallei	Bacteria	domain	2
+149539	Salmonella enterica subsp. enterica serovar Enteritidis	Bacteria	domain	2
+730	[Haemophilus] ducreyi	Bacteria	domain	1
+703	Plesiomonas shigelloides	Bacteria	domain	1
+1927	Streptomyces rimosus	Bacteria	domain	5
+197	Campylobacter jejuni	Bacteria	domain	6
+300	Ectopseudomonas mendocina	Bacteria	domain	2
+155892	Caulobacter vibrioides	Bacteria	domain	2
+29461	Brucella suis	Bacteria	domain	2
+29459	Brucella melitensis	Bacteria	domain	2
+867	Ruminobacter amylophilus	Bacteria	domain	1
+2148	Acholeplasma laidlawii	Bacteria	domain	25
+160	Treponema pallidum	Bacteria	domain	45
+529	Brucella anthropi	Bacteria	domain	2
+329	Ralstonia pickettii	Bacteria	domain	2
+301	Ectopseudomonas oleovorans	Bacteria	domain	2
+727	Haemophilus influenzae	Bacteria	domain	51
+40324	Stenotrophomonas maltophilia	Bacteria	domain	2
+269084	Synechococcus elongatus PCC 6301	Bacteria	domain	2
+1143	Synechocystis sp.	Bacteria	domain	42
+1304	Streptococcus salivarius	Bacteria	domain	1
+1313	Streptococcus pneumoniae	Bacteria	domain	1
+1916	Streptomyces lividans	Bacteria	domain	16
+28448	Komagataeibacter xylinus	Bacteria	domain	2
+2334	Bacillus sp. PS3	Bacteria	domain	5
+2134	Spiroplasma melliferum	Bacteria	domain	10
+839	Xylanibacter ruminicola	Bacteria	domain	2
+777	Coxiella burnetii	Bacteria	domain	2
+292	Burkholderia cepacia	Bacteria	domain	4
+28081	Bordetella sp.	Bacteria	domain	1
+442	Gluconobacter oxydans	Bacteria	domain	2
+1354	Enterococcus hirae	Bacteria	domain	1
+1280	Staphylococcus aureus	Bacteria	domain	27
+1585	Lactobacillus delbrueckii subsp. bulgaricus	Bacteria	domain	10
+210	Helicobacter pylori	Bacteria	domain	36
+1358	Lactococcus lactis	Bacteria	domain	10
+1423	Bacillus subtilis	Bacteria	domain	43
+1579	Lactobacillus acidophilus	Bacteria	domain	2
+1582	Lacticaseibacillus casei	Bacteria	domain	2
+28038	Latilactobacillus curvatus	Bacteria	domain	2
+920	Acidithiobacillus ferrooxidans	Bacteria	domain	2
+1587	Lactobacillus helveticus	Bacteria	domain	2
+1246	Leuconostoc lactis	Bacteria	domain	1
+29549	Rhodothermus marinus	Bacteria	domain	2
+287	Pseudomonas aeruginosa	Bacteria	domain	7
+562	Escherichia coli	Bacteria	domain	47
+1245	Leuconostoc mesenteroides	Bacteria	domain	1
+1769	Mycobacterium leprae	Bacteria	domain	3
+644	Aeromonas hydrophila	Bacteria	domain	7
+1207	Trichodesmium sp.	Bacteria	domain	2
+8519	Sceloporus occidentalis	Eukaryota	domain	18
+7980	Formosania lacustris	Eukaryota	domain	22
+9031	Gallus gallus	Eukaryota	domain	203
+10116	Rattus norvegicus	Eukaryota	domain	58
+10090	Mus musculus	Eukaryota	domain	36
+9770	Balaenoptera physalus	Eukaryota	domain	22
+9771	Balaenoptera musculus	Eukaryota	domain	22
+9913	Bos taurus	Eukaryota	domain	24
+9711	Halichoerus grypus	Eukaryota	domain	20
+9720	Phoca vitulina	Eukaryota	domain	22
+8049	Gadus morhua	Eukaryota	domain	27
+9809	Rhinoceros unicornis	Eukaryota	domain	22
+7213	Ceratitis capitata	Eukaryota	domain	6
+8576	Chilabothrus subflavus	Eukaryota	domain	4
+8508	Sphenodon punctatus	Eukaryota	domain	4
+8485	Malaclemys terrapin	Eukaryota	domain	5
+8400	Aquarana catesbeiana	Eukaryota	domain	12
+8467	Caretta caretta	Eukaryota	domain	5
+8502	Crocodylus porosus	Eukaryota	domain	5
+8496	Alligator mississippiensis	Eukaryota	domain	34
+8355	Xenopus laevis	Eukaryota	domain	35
+5755	Acanthamoeba castellanii	Eukaryota	domain	10
+7668	Strongylocentrotus purpuratus	Eukaryota	domain	22
+8839	Anas platyrhynchos	Eukaryota	domain	11
+7166	Anopheles quadrimaculatus	Eukaryota	domain	22
+7656	Paracentrotus lividus	Eukaryota	domain	23
+8790	Dromaius novaehollandiae	Eukaryota	domain	1
+7603	Asterias forbesi	Eukaryota	domain	11
+7962	Cyprinus carpio	Eukaryota	domain	23
+7769	Myxine glutinosa	Eukaryota	domain	9
+6941	Rhipicephalus microplus	Eukaryota	domain	1
+69492	Tinamus tao	Eukaryota	domain	1
+5476	Candida albicans	Eukaryota	domain	5
+5888	Paramecium tetraurelia	Eukaryota	domain	2
+5886	Paramecium primaurelia	Eukaryota	domain	2
+6116	Metridium senile	Eukaryota	domain	1
+5791	Badhamia polycephala	Eukaryota	domain	1
+5661	Leishmania donovani	Eukaryota	domain	1
+44689	Dictyostelium discoideum	Eukaryota	domain	21
+5833	Plasmodium falciparum	Eukaryota	domain	38
+7830	Scyliorhinus canicula	Eukaryota	domain	21
+8797	Rhea americana	Eukaryota	domain	21
+6579	Pecten maximus	Eukaryota	domain	5
+9986	Oryctolagus cuniculus	Eukaryota	domain	23
+9606	Homo sapiens	Eukaryota	domain	387
+9793	Equus asinus	Eukaryota	domain	19
+9319	Osphranter robustus	Eukaryota	domain	21
+9600	Pongo pygmaeus	Eukaryota	domain	25
+9593	Gorilla gorilla	Eukaryota	domain	22
+711329	Rena dulcis	Eukaryota	domain	9
+9597	Pan paniscus	Eukaryota	domain	28
+9598	Pan troglodytes	Eukaryota	domain	334
+7748	Lampetra fluviatilis	Eukaryota	domain	8
+9557	Papio hamadryas	Eukaryota	domain	21
+9590	Symphalangus syndactylus	Eukaryota	domain	11
+9365	Erinaceus europaeus	Eukaryota	domain	24
+9580	Hylobates lar	Eukaryota	domain	21
+463521	Plestiodon egregius	Eukaryota	domain	11
+8801	Struthio camelus	Eukaryota	domain	19
+9796	Equus caballus	Eukaryota	domain	23
+83000	Olisthodiscus luteus	Eukaryota	domain	2
+5141	Neurospora crassa	Eukaryota	domain	7
+162425	Aspergillus nidulans	Eukaryota	domain	26
+1156965	Wickerhamomyces canadensis	Eukaryota	domain	51
+5691	Trypanosoma brucei	Eukaryota	domain	16
+2769	Chondrus crispus	Eukaryota	domain	21
+3562	Spinacia oleracea	Eukaryota	domain	17
+3350	Pinus thunbergii	Eukaryota	domain	32
+4097	Nicotiana tabacum	Eukaryota	domain	30
+3847	Glycine max	Eukaryota	domain	11
+4577	Zea mays	Eukaryota	domain	46
+4530	Oryza sativa	Eukaryota	domain	39
+3111	Prototheca wickerhamii	Eukaryota	domain	28
+3124	Coleochaete orbicularis	Eukaryota	domain	2
+4129	Cuscuta reflexa	Eukaryota	domain	6
+3197	Marchantia polymorpha	Eukaryota	domain	59
+4932	Saccharomyces cerevisiae	Eukaryota	domain	148
+2771	Cyanidium caldarium	Eukaryota	domain	6
+2767	Antithamnion sp.	Eukaryota	domain	2
+3031	Cryptomonas sp.	Eukaryota	domain	3
+3039	Euglena gracilis	Eukaryota	domain	28
+3037	Euglena longa	Eukaryota	domain	15
+3072	Pseudochlorella pringsheimii	Eukaryota	domain	5
+1514140	Trieres chinensis	Eukaryota	domain	39
+3188	Picochlorum eukaryotum (nom. inval.)	Eukaryota	domain	2
+3055	Chlamydomonas reinhardtii	Eukaryota	domain	15
+2885	Pylaiella littoralis	Eukaryota	domain	5
+2762	Cyanophora paradoxa	Eukaryota	domain	8
+284593	Nakaseomyces glabratus CBS 138	Eukaryota	domain	47
+36329	Plasmodium falciparum 3D7	Eukaryota	domain	44
+31033	Takifugu rubripes	Eukaryota	domain	263
+7004	Locusta migratoria	Eukaryota	domain	27
+27779	Protopterus dolloi	Eukaryota	domain	22
+7612	Pisaster ochraceus	Eukaryota	domain	15
+9361	Dasypus novemcinctus	Eukaryota	domain	21
+8501	Crocodylus niloticus	Eukaryota	domain	11
+52435	Coleonyx variegatus	Eukaryota	domain	11
+335395	Actinemys marmorata	Eukaryota	domain	5
+8469	Chelonia mydas	Eukaryota	domain	5
+7245	Drosophila yakuba	Eukaryota	domain	22
+9807	Ceratotherium simum	Eukaryota	domain	20
+43455	Cathartes aura	Eukaryota	domain	10
+7957	Carassius auratus	Eukaryota	domain	21
+7227	Drosophila melanogaster	Eukaryota	domain	149
+7460	Apis mellifera	Eukaryota	domain	22
+7160	Aedes albopictus	Eukaryota	domain	9
+7594	Patiria pectinifera	Eukaryota	domain	25
+8855	Cairina moschata	Eukaryota	domain	11
+8499	Caiman crocodilus	Eukaryota	domain	11
+7740	Branchiostoma lanceolatum	Eukaryota	domain	21
+6550	Mytilus edulis	Eukaryota	domain	23
+8574	Boa constrictor	Eukaryota	domain	6
+6239	Caenorhabditis elegans	Eukaryota	domain	243
+7640	Arbacia lixula	Eukaryota	domain	20
+6253	Ascaris suum	Eukaryota	domain	22
+6192	Fasciola hepatica	Eukaryota	domain	8
+42349	Albinaria caerulea	Eukaryota	domain	21
+4232	Helianthus annuus	Eukaryota	domain	20
+63400	Trichophyton benhamiae	Eukaryota	domain	8
+284813	Encephalitozoon cuniculi GB-M1	Eukaryota	domain	46
+5478	Nakaseomyces glabratus	Eukaryota	domain	23
+9544	Macaca mulatta	Eukaryota	domain	3
+9552	Macaca sinica	Eukaryota	domain	3
+9548	Macaca radiata	Eukaryota	domain	3
+9545	Macaca nemestrina	Eukaryota	domain	3
+9540	Macaca arctoides	Eukaryota	domain	3
+9581	Hylobates sp.	Eukaryota	domain	3
+9447	Lemur catta	Eukaryota	domain	3
+1868482	Carlito syrichta	Eukaryota	domain	3
+9521	Saimiri sciureus	Eukaryota	domain	3
+9546	Macaca sylvanus	Eukaryota	domain	3
+9541	Macaca fascicularis	Eukaryota	domain	3
+40843	Macaca tonkeana	Eukaryota	domain	3
+9542	Macaca fuscata	Eukaryota	domain	3
+54602	Macaca thibetana	Eukaryota	domain	4
+54601	Macaca silenus	Eukaryota	domain	3
+54600	Macaca nigra	Eukaryota	domain	3
+9551	Macaca assamensis	Eukaryota	domain	3
+9538	Erythrocebus patas	Eukaryota	domain	3
+49226	Larix x marschlinsii	Eukaryota	domain	2
+48157	Pseudoechria curvicolla	Eukaryota	domain	4
+1906844	Wallacemonas collosoma	Eukaryota	domain	4
+2567821	Dibothriocephalus nihonkaiensis	Eukaryota	domain	3
+5221	Trimorphomyces papilionaceus	Eukaryota	domain	3
+2587412	Podospora anserina	Eukaryota	domain	8
+5551	Trichophyton rubrum	Eukaryota	domain	9
+13608	Mantoniella squamata	Eukaryota	domain	1
+5684	Leptomonas seymouri	Eukaryota	domain	2
+5656	Crithidia fasciculata	Eukaryota	domain	2
+99802	Spirometra erinaceieuropaei	Eukaryota	domain	3
+64606	Sparganum proliferum	Eukaryota	domain	3
+8020	Oncorhynchus masou	Eukaryota	domain	2
+3728	Sinapis alba	Eukaryota	domain	6
+7244	Drosophila virilis	Eukaryota	domain	3
+4543	Cenchrus americanus	Eukaryota	domain	1
+3180	Spirogyra maxima	Eukaryota	domain	1
+9267	Didelphis virginiana	Eukaryota	domain	1
+9269	Marmosa	Eukaryota	domain	1
+9271	Philander	Eukaryota	domain	1
+42725	Metachirus nudicaudatus	Eukaryota	domain	2
+8255	Paralichthys olivaceus	Eukaryota	domain	11
+4792	Phytophthora nicotianae	Eukaryota	domain	1
+8022	Oncorhynchus mykiss	Eukaryota	domain	3
+907741	Philantomba maxwellii	Eukaryota	domain	2
+9917	Boselaphus tragocamelus	Eukaryota	domain	2
+9897	Aepyceros melampus	Eukaryota	domain	2
+43334	Mazama americana	Eukaryota	domain	1
+64668	Lagopus muta	Eukaryota	domain	1
+9534	Chlorocebus aethiops	Eukaryota	domain	1
+9883	Hydropotes inermis	Eukaryota	domain	2
+9805	Diceros bicornis	Eukaryota	domain	2
+103582	Cephalorhynchus commersonii	Eukaryota	domain	3
+37171	Damaliscus pygargus dorcas	Eukaryota	domain	2
+9860	Cervus elaphus	Eukaryota	domain	5
+5889	Paramecium aurelia	Eukaryota	domain	3
+29844	Penicillium urticae	Eukaryota	domain	7
+5908	Tetrahymena pyriformis	Eukaryota	domain	8
+31871	Lethenteron zanandreai	Eukaryota	domain	1
+7750	Lampetra planeri	Eukaryota	domain	1
+37197	Aspidoscelis uniparens	Eukaryota	domain	3
+6662	Artemia sp.	Eukaryota	domain	2
+746128	Aspergillus fumigatus	Eukaryota	domain	4
+4513	Hordeum vulgare	Eukaryota	domain	7
+3339	Pinus contorta	Eukaryota	domain	2
+4102	Petunia x hybrida	Eukaryota	domain	1
+3635	Gossypium hirsutum	Eukaryota	domain	1
+4089	Nicotiana debneyi	Eukaryota	domain	1
+3879	Medicago sativa	Eukaryota	domain	1
+4558	Sorghum bicolor	Eukaryota	domain	2
+3885	Phaseolus vulgaris	Eukaryota	domain	9
+5689	Leishmania tarentolae	Eukaryota	domain	10
+3873	Lupinus luteus	Eukaryota	domain	4
+8341	Siren intermedia	Eukaryota	domain	1
+3659	Cucumis sativus	Eukaryota	domain	1
+3906	Vicia faba	Eukaryota	domain	7
+9823	Sus scrofa	Eukaryota	domain	3
+9378	Suncus murinus	Eukaryota	domain	3
+9947	Tragelaphus imberbis	Eukaryota	domain	2
+9958	Oryx gazella	Eukaryota	domain	2
+66434	Madoqua kirkii	Eukaryota	domain	2
+9962	Kobus ellipsiprymnus	Eukaryota	domain	2
+69308	Eudorcas thomsonii	Eukaryota	domain	2
+31287	Dictyostelium mucoroides	Eukaryota	domain	2
+7091	Bombyx mori	Eukaryota	domain	5
+69830	Asterina amurensis	Eukaryota	domain	1
+7240	Drosophila simulans	Eukaryota	domain	2
+4032	Pelargonium zonale	Eukaryota	domain	1
+4681	Allium ampeloprasum	Eukaryota	domain	1
+3032	Hanusia phi	Eukaryota	domain	3
+3329	Picea abies	Eukaryota	domain	1
+2585209	Trichonephila clavipes	Eukaryota	domain	4
+5665	Leishmania mexicana	Eukaryota	domain	1
+4113	Solanum tuberosum	Eukaryota	domain	7
+28007	Phytomonas sp.	Eukaryota	domain	1
+2929754	Myodes rufocanus	Eukaryota	domain	1
+8150	Tropheus moorii	Eukaryota	domain	1
+283035	Sander lucioperca	Eukaryota	domain	1
+8168	Perca fluviatilis	Eukaryota	domain	1
+13489	Dicentrarchus labrax	Eukaryota	domain	3
+9863	Cervus nippon	Eukaryota	domain	2
+9872	Odocoileus hemionus	Eukaryota	domain	2
+7904	Acipenser transmontanus	Eukaryota	domain	2
+36748	Orobanche minor	Eukaryota	domain	1
+8456	Typhlonectes natans	Eukaryota	domain	1
+8404	Lithobates pipiens	Eukaryota	domain	1
+8337	Plethodon yonahlossee	Eukaryota	domain	1
+8453	Ichthyophis bannanicus	Eukaryota	domain	1
+43481	Epicrionops sp.	Eukaryota	domain	1
+8381	Eleutherodactylus cuneatus	Eukaryota	domain	1
+7883	Lepidosiren paradoxa	Eukaryota	domain	1
+8296	Ambystoma mexicanum	Eukaryota	domain	1
+4039	Daucus carota	Eukaryota	domain	1
+1004253	Williopsis mrakii	Eukaryota	domain	7
+4896	Schizosaccharomyces pombe	Eukaryota	domain	99
+5802	Eimeria tenella	Eukaryota	domain	1
+3054	Chlamydomonas moewusii	Eukaryota	domain	1
+5811	Toxoplasma gondii	Eukaryota	domain	6
+3702	Arabidopsis thaliana	Eukaryota	domain	226
+44322	Limtongozyma cylindracea	Eukaryota	domain	1
+85549	Artemia salina	Eukaryota	domain	1
+7602	Asterias amurensis	Eukaryota	domain	2
+3708	Brassica napus	Eukaryota	domain	2
+39655	Pseudoregma bambucicola	Eukaryota	domain	1
+4903	Williopsis jadinii	Eukaryota	domain	1
+34358	Maudiozyma exigua	Eukaryota	domain	2
+4481	Aegilops crassa	Eukaryota	domain	1
+4493	Aegilops columnaris	Eukaryota	domain	1
+3950	Oenothera berteroana	Eukaryota	domain	3
+4093	Nicotiana rustica	Eukaryota	domain	11
+4929	Meyerozyma guilliermondii	Eukaryota	domain	1
+36911	Clavispora lusitaniae	Eukaryota	domain	1
+5482	Candida tropicalis	Eukaryota	domain	1
+7141	Choristoneura fumiferana	Eukaryota	domain	1
+65739	Anarhichas minor	Eukaryota	domain	1
+599730	Waltiozyma pijperi	Eukaryota	domain	3
+5911	Tetrahymena thermophila	Eukaryota	domain	5
+3712	Brassica oleracea	Eukaryota	domain	1
+4177	Epifagus virginiana	Eukaryota	domain	3
+6096	Podocoryna carnea	Eukaryota	domain	5
+2716877	Euplotes octocarinatus	Eukaryota	domain	1
+4081	Solanum lycopersicum	Eukaryota	domain	3
+3888	Lathyrus oleraceus	Eukaryota	domain	17
+3161	Tetraselmis subcordiformis	Eukaryota	domain	5
+1423826	Heterololigo bleekeri	Eukaryota	domain	15
+5480	Lodderomyces parapsilosis	Eukaryota	domain	16
+4104	Petunia sp.	Eukaryota	domain	1
+142760	Solanum lycopersicoides	Eukaryota	domain	1
+5191	Ascobolus immersus	Eukaryota	domain	3
+5076	Penicillium chrysogenum	Eukaryota	domain	4
+50518	Landoltia punctata	Eukaryota	domain	3
+28985	Kluyveromyces lactis	Eukaryota	domain	4
+3948	Oenothera sp.	Eukaryota	domain	15
+4565	Triticum aestivum	Eukaryota	domain	33
+46617	Saccharomyces douglasii	Eukaryota	domain	1
+7936	Anguilla anguilla	Eukaryota	domain	1
+6669	Daphnia pulex	Eukaryota	domain	7
+907738	Williopsis suaveolens	Eukaryota	domain	1
+8030	Salmo salar	Eukaryota	domain	3
+3726	Raphanus sativus	Eukaryota	domain	1
+52029	Chlorogonium elongatum	Eukaryota	domain	3
+10726	Tequintavirus T5	Viruses	acellular root	21
+33708	Murid gammaherpesvirus 4	Viruses	acellular root	8
+10665	Tequatrovirus T4	Viruses	acellular root	8
+31555	Paramecium bursaria Chlorella virus CVK2	Viruses	acellular root	11
+10719	Lomovskayavirus C31	Viruses	acellular root	2
+31757	Fromanvirus L5	Viruses	acellular root	3

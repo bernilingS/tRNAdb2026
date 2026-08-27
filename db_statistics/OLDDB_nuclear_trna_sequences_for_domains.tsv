@@ -1,0 +1,5 @@
+parent_name	parent_class_order	count(*)
+Archaea	domain	1088
+Bacteria	domain	6368
+Eukaryota	domain	4590
+Viruses	acellular root	53

@@ -366,7 +366,7 @@ for sequences belonging to this clade/species.
 
 To include new data into tRNAdb, we used different approaches for different
 types of tRNA for candidate identification, followed by alignment and
-quality control for all candidate entries except the \TODO{******}
+quality control for all candidate entries except for the modified mitochondrial RNAs where the published assignment of bases to canonical locations was used\cite{modtRNAbtaurus,humanmtRNA}. See Figure\,\ref{workflow}
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{workflow_figure.pdf}
@@ -392,7 +392,7 @@ curation. If so, the sequence predicted by MITOS2 was deemed correct and
 included into the database. In case of discrepancies in the assignment of
 the strand (reading direction), we retained the MITOS2 prediction if no
 plausible anticodon could be identified in the anticodon stem and loop of
-the NCBI annotation.  After filtering (see below), this resulted in 305,905
+the NCBI annotation.  After filtering (see below), this resulted in 305\,905
 novel predicted mtRNAs that were added to the \texttt{tRNAdb}.
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
@@ -452,9 +452,8 @@ anticodon loop). To filter tRNAs with suspicious structural features, we also ch
 
 \section{Statistics}
 
-{\tiny\TODO{PFS thinks the sentence can be deleted:} Here, we give a short statistics about the entries in the tRNAdb. Besides the total number of entries, we also report the number of unique tRNA sequences included in the database.}
 
-\PFS{The database lists $330\,261$ entries of mitochordrial tRNA sequences}
+\PFS{The database lists $330\,261$ entries of mitochondrial tRNA sequences}
 comprising $219\,388$ unique sequences. The vast majority of these
 originate in metazoa (see Fig.~\ref{Tax}a), which reflects the distribution
 of mitochondrial genomes at the NCBI. The genomic part of the database
@@ -506,13 +505,11 @@ In comparison to the first version of tRNAdb, we greatly expanded sequences belo
 
 %Some Conclusions here.
 The updated tRNAdb has been substantially expanded \TODO{maybe as a x fold more data?} and modernized.
-Alongside a redesigned web interface, we introduce a public API and considerably increase the number of included entries. Among these new entries, modified
-mitochondrial tRNAs and, for the first time, mitochondrial tRNAs from plants and fungi. tRNAdb thus continues to serve as an important
-resource for the tRNA community.
+Alongside a redesigned web interface, we introduce a public API and considerably increase the number of included entries. Among these new entries now are modified mitochondrial tRNAs and, for the first time, mitochondrial tRNAs from plants and fungi. tRNAdb thus continues to serve as an important resource for the tRNA community.
 
 However, because most entries in the tRNAdb stem from semi-automatic annotation, fringe cases that deviate from established tRNA properties are likely
 to be rejected, even though these are often the most biologically interesting tRNAs. We therefore rely on the community to report such
-sequences, so they can be incorporated into future releases. This feedback may in turn motivate updated search algorithms capable of
+sequences, so they can be incorporated into future releases. This feedback may in turn motivate updated search algorithms capable of 
 capturing a broader range of non-standard tRNAs.
 
 \TODO{maybe we should think about providing a web interface for people to

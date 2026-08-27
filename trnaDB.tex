@@ -95,7 +95,7 @@
 \author[5]{Chase L. Beisel}
 \author[2,6]{Joern P\"{u}tz}
 \author[7]{Mario M\"{o}rl}
-\author[1,4,8,9]{Peter F. Stadler}
+\author[1,3,4,8,9,10]{Peter F. Stadler\ORCID{0000-0002-5016-5191}}
 \author[8,10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
 \address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
@@ -127,7 +127,25 @@
 %online.}
 
 \abstract{%\TODO{Check the journal's online author guidelines for guidance on requirements for the abstract and other components of the submitted manuscript. Abstracts must be able to stand alone and so cannot contain citations to the paper's references, equations, etc.}
-The tRNAdb database published by Jühling et al. over 15 years ago has been used extensively throughout its lifespan, accumulating more than $1\,000$ citations. Here, we present tRNAdb\,2026, an updated version hosted at Leipzig University. The dataset of tRNAdb\,2026 represents an approximately 10-fold increase compared with the legacy tRNAdb and contains over 400,000 new mitochondrial and nuclear tRNA sequences together with the unaltered legacy dataset. Importantly, identifiers and metadata of the legacy dataset remain consistent with the original database, ensuring that previously published references remain valid and findable. The expanded dataset integrates publicly available tRNA annotations and sequences generated using contemporary prediction pipelines followed by semiautomated curation to ensure annotation quality and consistency. In addition, cross-references to external resources such as GtRNAdb facilitate interoperability with existing tRNA annotation frameworks. We provide a modern web-based frontend for intuitive and efficient access to tRNAdb\,2026, together with an API that enables automated data retrieval and integration into bioinformatics workflows.
+  \PFS{The tRNAdb database published more than 15 years ago originated as
+    an extension of Mathias Sprinzl's seminal collection of tRNA data
+    dating back to the late 1970s. Throughout its lifespan the tRNAdb} has
+  been used extensively, accumulating more than $1\,000$ citations. Here,
+  we present tRNAdb\,2026, an updated version hosted at Leipzig
+  University. The tRNAdb\,2026 features an approximately 10-fold increase
+  in data coverage, containing more than 400,000 new mitochondrial and
+  nuclear tRNA sequences together with the unaltered legacy
+  dataset. Importantly, identifiers and metadata of the legacy dataset
+  remain consistent with the original database, ensuring that previously
+  published references remain valid and findable. The expanded dataset
+  integrates publicly available tRNA annotations and sequences generated
+  using contemporary prediction pipelines followed by semiautomated
+  curation to ensure annotation quality and consistency. In addition,
+  cross-references to external resources such as GtRNAdb facilitate
+  interoperability with existing tRNA annotation frameworks. A modern
+  web-based frontend provides intuitive and efficient access to
+  tRNAdb\,2026, while an API enables automated data retrieval and
+  integration into bioinformatics workflows.
 %Users can create persistent
 %collections of sequences that are stored across sessions without requiring
 %prior registration or login. These collections can be exported to
@@ -136,8 +154,9 @@ The tRNAdb database published by Jühling et al. over 15 years ago has been used
 %available containing an updated visualization of the secondary structure,
 %taxonomic information, functionally annotated structural features, and
 %cross-reference information.
-To support transparent scientific documentation and reproducibility across future updates, we implemented a
-versioning system for both current and future database releases.} 
+  To support transparent scientific documentation and reproducibility
+  across future updates, we added a versioning system for both current and
+  future database releases.}
 
 \keywords{tRNA sequence, tRNA structure, database, tRNA modifications}
 
@@ -177,11 +196,17 @@ Since the publication of the first ``Compilation of tRNA sequences and
 sequences of tRNA genes'' in 2005~\cite{sprinzl:2005}, and its extension as
 the tRNAdb 2009~\cite{juehling:2009}, a number of databases either
 dedicated to, or containing tRNA sequences, have been
-published \cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
-  tRNAdb was interrupted due to technical issues in 2024/2025, the
-  data was still widely used, and we received a large number of requests
-  for its continued existence. We not only re-implemented the
-  tRNAdb on a solid technical foundation, we also included an API for automatic data retrieval. Furthermore, we extended its content by leveraging existing nuclear tRNAs from the gtRNA database as well as mitochondrial, archaeal and phage derived tRNAs we identified using MITOS2 \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan}, and additional specialized approaches.}
+published \cite{gtrnadb, trnadb-ce, modomics}.
+
+\PFS{When access to the tRNAdb was interrupted due to technical issues in
+  2024/2025, the data was still widely used. A large number of requests for
+  its continued existence prompted us to re-implemented the tRNAdb on a
+  new, solid technical foundation, and to include an API for automatic data
+  retrieval. For the present release, we extended its content by leveraging
+  existing nuclear tRNAs from the gtRNA database as well as mitochondrial,
+  archaeal and phage derived tRNAs we identified using MITOS2
+  \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan}, and additional
+  specialized approaches.}
 
     
 
@@ -230,7 +255,17 @@ published \cite{gtrnadb, trnadb-ce, modomics}. \PFS{When access to the
 
 \subsection{Infrastructure and Implementation}
 
-tRNAdb\,2026 was completely reimplemented as a three tier application consisting of a MariaDB relational database, a flask API backend, and a CSS, HTML, and javascript based web frontend. This architecture enables independent change of individual components in order to ensure simple maintenance and future extensions. In contranst to the 2009 implementation of tRNA exclusively in Java and HTML/CSS, this update places tRNAdb up to date with modern software design philosophies. Notably, the tRNAdb website utilizes the public API endpoint exclusively for searching and retrieving data. To provide reliable download of large datasets, tRNAdb supports asynchronous data compilation and transfer via dedicated export threads as well as progress reporting of ongoing export jobs via polling. 
+tRNAdb\,2026 was completely reimplemented as a three tier application
+consisting of a MariaDB relational database, a flask API backend, and a
+CSS, HTML, and javascript based web frontend. This architecture enables
+independent change of individual components in order to ensure simple
+maintenance and future extensions. In contranst to the 2009 implementation
+\PFS{(exclusively in Java and HTML/CSS), the new release aligns} tRNAdb
+with modern software design philosophies. Notably, the tRNAdb website
+utilizes the public API endpoint exclusively for searching and retrieving
+data. To provide reliable download of large datasets, tRNAdb supports
+asynchronous data compilation and transfer via dedicated export threads as
+well as progress reporting of ongoing export jobs via polling.
 
 
 %\OLD{
@@ -241,10 +276,26 @@ tRNAdb\,2026 was completely reimplemented as a three tier application consisting
 %\subsection{Data Storage, Retrieval, and Updates}
 \subsection{Data model and provenance}
 
-For easy retrieval and global searches, sequences and their most relevant data are stored within a single, fully indexed relation enabling efficient filtering across all sequence categories, attributes, and selected metadata. This includes nucleotide sequence, secondary structure, anticodon, amino acid and origin (i.e., genomic DNA, \TODO{modified} RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database\TODO{REF}. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e. species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}\TODO{REF} to resolve their current taxonomic information.
+For easy retrieval and global searches, sequences and their most relevant
+data are stored within a single, fully indexed relation enabling efficient
+filtering across all sequence categories, attributes, and selected
+metadata. This includes nucleotide sequence, secondary structure,
+anticodon, amino acid and origin (i.e., genomic DNA, \TODO{chemically modified} RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database\TODO{REF}. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}\TODO{REF} to resolve their current taxonomic information.
 %together with the \texttt{biopython} \texttt{entrez} package to query NCBI taxonomy API for updated taxonomic information for tRNAdb legacy sequences. 
 
-The updated relational schema supports a release versioning system which separates the legacy dataset and data contained in tRNAdb\,2026 update. Every sequence present in tRNAdb has a version identifier attached which links it to the first release it appeared in tRNAdb together with relevant release information. For every release, data sources (i.e., origin database and version) and software (with corresponding version) used are documented. Additionally, every tRNAdb release is described with a public version string that is exposed on the ``Details'' page of individual entries, and is also available as an export field. The public version string contains a short description how the sequences published in this particular release were obtained. \TODO{A more detailed description, e.g., software and datasources is available on the ``Documentation and Help'' page of tRNAdb.  Sequences in tRNAdb can be filtered by their corresponding release version, allowing users to browse exclusively legacy data, or current releases.}
+The updated relational schema supports a release versioning system which
+separates the legacy dataset and data contained in tRNAdb\,2026
+update. Every sequence present in tRNAdb has a version identifier attached
+which links it to the first release it appeared in tRNAdb together with
+relevant release information. For every release, data sources (i.e., origin
+database and version) and software (with corresponding version) used are
+documented. Additionally, every tRNAdb release is described with a public
+version string that is exposed on the ``Details'' page of individual
+entries, and is also available as an export field. The public version
+string contains a short description how the sequences published in this
+particular release were obtained. \TODO{A more detailed description, e.g.,
+  software and data sources is available on the ``Documentation and Help''
+  page.  Sequences in tRNAdb can be filtered by their corresponding release version, allowing users to browse exclusively legacy data, or current releases.}
 
 Subsequent releases of the tRNAdb dataset will be published with a corresponding release identifier together with the prior described release metadata. To enable a sustainable update procedure, we implemented a graphical user interface supported pipeline for import, normalization, and duplicate detection for subsequent tRNAdb versions.
 
@@ -261,7 +312,14 @@ Subsequent releases of the tRNAdb dataset will be published with a corresponding
 With this update we provide a new public HTTP interface, accessible by POST JSON requests at \texttt{https://tdb.bioinf.uni-leipzig.de/api}. The API implements \TODO{OpenAPI} specifications and a thourough documentation for users is available on the ``Documentation'' page of the tRNAdb website. Fundamentally, our API supports nearly identical search parameters as the tRNAdb website and allows filtering by any combination of origin, species, clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural motifs, reference (genome accession, external source, publication), and \TODO{version}. For many fields, multiple values can be supplied and entries matching at least one are returned. Individual records can be precisely retrieved by using the stable identifier \texttt{trna\_id} which also remained unaltered for the 2009 legacy dataset.
 
 %Internally, POST requests send to the API are parsed, an appropriate SQL statement is executed, and matching entries are returned as JSON. 
-No prior registration, and no personal information (e.g., email address, API key) has to be provided to access the tRNAdb API but user requests are limited to one request per second and at most 1000 entries are returned per request to ensure fair use. Every API response, given the request was valid, contains a \texttt{total\_results} field that states the total number of sequences matching a request and all relevant results can be retrieved paginated via an offset parameter. For requests that match a large number of records, hence bulk retrieval of tRNA sequences, a second API endpoint provides export to tsv, csv, json, or fasta which is available at \texttt{https://tdb.bioinf.uni-leipzig.de/export}. \TODO{For usage details see the documentation page of the tRNAdb website.} \TODO{OpenAPI, /api/v1, stable-ID retrieval, canonical URLs, documentation}
+No prior registration, and no personal information (e.g., email address,
+API key) \PFS{is required for} access the tRNAdb API but user requests are
+limited to one request per second and at most 1000 entries are returned per
+request to ensure fair use. Every API response, given the request was
+valid, contains a \texttt{total\_results} field that states the total
+number of sequences matching a request and all relevant results can be
+retrieved paginated via an offset parameter. For requests that match a
+large number of records, \PFS{and hence constitute} bulk retrieval of tRNA sequences, a second API endpoint provides export to tsv, csv, json, or fasta which is available at \texttt{https://tdb.bioinf.uni-leipzig.de/export}. \TODO{For usage details see the documentation page of the tRNAdb website.} \TODO{OpenAPI, /api/v1, stable-ID retrieval, canonical URLs, documentation}
 
 
 \subsection{Website}
@@ -269,9 +327,21 @@ No prior registration, and no personal information (e.g., email address, API key
 The tRNAdb web interface (see Figure \ref{Fig:Website}) can be found at \url{https://tdb.bioinf.uni-leipzig.de/}. It provides user-friendly access to the tRNA data stored in our database and can be functionally separated into three subpages: ``Search'', ``Details'', and ``Taxonomy Tree''.
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Webserver_homo_ala.png}
-  \caption{Example for the tRNAdb website, showing the first page of the results for a search for \emph{Homo sapiens} Alanine tRNAs\label{Fig:Website}}
+  \caption{Example for the tRNAdb website, showing the first page of the
+    results for a search for \emph{Homo sapiens} Alanine
+    tRNAs\label{Fig:Website}}
 \end{figure}
-The main functionality of the website is the ``Search'' page which allows users to filter tRNA by organism, origin (e.g., nuclear DNA, \TODO{modified RNA}, mitochondrial DNA) amino acid, anticodon, membership of taxonomic clades, external references (publications, genome IDs, external datasources) as well as sequence motifs and structural constraints. Species can be filtered precisely via NCBI taxonomy ID as well as their scientific species name and species synonyms as annotated in the NCBI taxonomy database. For every species with tRNA sequences present in tRNAdb, their taxonomic lineage, as annotated in the NCBI taxonomy database, is stored and tRNA belonging to a specific clade can be obtained by using the ``Clade´´ field of the search page. 
+The main functionality of the website is the ``Search'' page which allows
+users to filter tRNA by organism, origin (e.g., nuclear DNA,
+\TODO{chemically modified RNA}, mitochondrial DNA) amino acid, anticodon,
+membership of taxonomic clades, external references (publications, genome
+IDs, external datasources) as well as sequence motifs and structural
+constraints. Species can be filtered precisely via NCBI taxonomy ID as well
+as their scientific species name and species synonyms as annotated in the
+NCBI taxonomy database. For every species with tRNA sequences present in
+tRNAdb, their taxonomic lineage, as annotated in the NCBI taxonomy
+database, is stored and tRNA belonging to a specific clade can be obtained
+by using the ``Clade´´ field of the search page.
 
 Upon a successful search, the user is presented with a paginated list of fitting tRNA sequences with a snapshot of data available for every sequence: origin, organism, amino acid, anticodon and its structurally annotated nucleotide sequence (separated into acceptor stem, D-loop, D-stem, etc.). Every result entry, or every entry matching the current search request, can be stored in a temporary selection which can be committed to persistent storage as a named collection for later access or download. 
 
@@ -282,60 +352,95 @@ A download manager allows to export individual collections, or every saved colle
 \end{figure}
 For every tRNA sequence entry in our database, a "Details" page is available (see Figure \ref{Fig:Detail}. This page contains general information (e.g., unique identifier, origin, amino acid, anticodon), taxonomic information, sequence and structure, crosslinking information, and additional metadata if available. Furthermore, a standardized visualization of the secondary structure with a highlighted anticodon is displayed for every entry.  %The visualizations were generated using a custom made script employing R2R\cite{R2R}.
 
-We implemented a searchable taxonomy browser which displays an expandable tree view of the NCBI taxonomic database. Every node in the taxonomy tree is annotated with its scientific name according to NCBI taxonomy as well as its unique NCBI taxonomy ID. The taxonomy browser only displays clades and species, for which there are tRNA sequences present in tRNAdb. For every entry in the taxonomy browser, the number of tRNA sequences separated by origin (nuclear DNA, nuclear RNA, mitochondrial DNA) is displayed. Every node in the taxonomy browser contains a link, which allows to search tRNAdb for sequences belonging to this clade/species.
+We implemented a searchable taxonomy browser which displays an expandable
+tree view of the NCBI taxonomic database. Every node in the taxonomy tree
+is annotated with its scientific name according to NCBI taxonomy as well as
+its unique NCBI taxonomy ID. The taxonomy browser only displays clades and
+species, for which there are tRNA sequences present in tRNAdb. For every
+entry in the taxonomy browser, the number of tRNA sequences separated by
+origin (nuclear DNA, nuclear RNA, mitochondrial DNA) is displayed. Every
+node in the taxonomy browser contains a link, which allows to search tRNAdb
+for sequences belonging to this clade/species.
 
 \section{Inclusion of new data}\label{sec3}
 
-To include new data into tRNAdb, we used different approaches for different types of tRNA for candidate identification, followed by alignment and quality control for all candidate entries except the .
+To include new data into tRNAdb, we used different approaches for different
+types of tRNA for candidate identification, followed by alignment and
+quality control for all candidate entries except the \TODO{******}
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{workflow_figure.pdf}
-  \caption{\label{workflow} Workflow for data inclusion. Different approaches for data acquisition and pre-filtering for different sources of tRNAs as well as common filtering and alignment steps are shown.}
+  \caption{\label{workflow} Workflow for data inclusion. Different
+    approaches for data acquisition and pre-filtering for different sources
+    of tRNAs as well as common filtering and alignment steps are shown.}
 \end{figure}
 
 
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
 
-To expand the set of mitochondrial tRNAs included in the tRNAdb, a
-total of 16,630 mitochondrial genome sequences, as well as their annotations were obtained
-from NCBI Nucleotide \url{https://www.ncbi.nlm.nih.gov/nucleotide/}, accessed October 2024. We used MITOS2 \cite{mitos2} without detection of proteins and rRNA and the refseq89m models on 
-each mitochondrial genome to search for tRNAs. The predicted
-sequences were then compared to the NCBI annotation. All tRNAs that matched exactly to the NCBI annotation were added to tRNAdb. In case of discrepancies of location,
-we checked whether the structure of the acceptor stem predicted by
-infernal \cite{infernal} passed human curation. If so, the sequence predicted by
-MITOS2 was deemed correct and included into the database. In case of discrepancies in the assignment of the strand (reading direction), we retained the
-MITOS2 prediction if no plausible anticodon could be identified
-in the anticodon stem and loop of the NCBI annotation.
-After filtering (see below), this resulted in 305,905 novel predicted mtRNAs that were
-added to the \texttt{tRNAdb}. 
+To expand the set of mitochondrial tRNAs included in the tRNAdb, a total of
+16,630 mitochondrial genome sequences, as well as their annotations were
+obtained from NCBI Nucleotide
+\url{https://www.ncbi.nlm.nih.gov/nucleotide/}, accessed October 2024. We
+used MITOS2 \cite{mitos2} without detection of proteins and rRNA and the
+refseq89m models on each mitochondrial genome to search for tRNAs. The
+predicted sequences were then compared to the NCBI annotation. All tRNAs
+that matched exactly to the NCBI annotation were added to tRNAdb. In case
+of discrepancies of location, we checked whether the structure of the
+acceptor stem predicted by infernal \cite{infernal} passed human
+curation. If so, the sequence predicted by MITOS2 was deemed correct and
+included into the database. In case of discrepancies in the assignment of
+the strand (reading direction), we retained the MITOS2 prediction if no
+plausible anticodon could be identified in the anticodon stem and loop of
+the NCBI annotation.  After filtering (see below), this resulted in 305,905
+novel predicted mtRNAs that were added to the \texttt{tRNAdb}.
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
-Genomic tRNAs were sourced from the GtRNAdb, using the data release from 2024 \cite{gtrnadb}. Information retrieved included sequences, genomic locations and genome IDs.
-After filtering, 216,856 novel genomic tRNAs were added to the tRNAdb. 
-GtRNAdb contains only a limited number of archaeal tRNA entries (below 9\,000), covering a narrow taxonomic range within archaea.
-Since GtRNAdb also contains no virus-derived tRNAs, we decided to further expand tRNAdb in these two areas.
+Genomic tRNAs were sourced from the GtRNAdb, using the data release from
+2024 \cite{gtrnadb}. Information retrieved included sequences, genomic
+locations and genome IDs.  After filtering, 216,856 novel genomic tRNAs
+were added to the tRNAdb.  GtRNAdb contains only a limited number of
+archaeal tRNA entries (below 9\,000), covering a narrow taxonomic range
+within archaea.  Since GtRNAdb also contains no virus-derived tRNAs, we
+decided to further expand tRNAdb in these two areas.
 
 \subsection{Archaeal tRNAs}
 
-Archaeal genomes were sourced from the  BV-BRC database \url{https://www.bv-brc.org}, accessed October 2024. Predictions were ran on good quality genomes, as assessed by CheckM2 ($\geq$85\% complete, $<$5\% contaminated)~\cite{checkm2}. These archaeal genomes cover a broad taxonomic range and include all major archaeal superphyla (Asgard, DPANN, TACK, and Euryarchaeota).
-We did not rely on the BV-BRC annotation of tRNA genes, as we found it inconsistent with predictions using the most up-to-date version of tRNAscan-SE 2.0.12~\cite{tRNAscan}. Notably, tRNA-Ile2 is often mislabelled as tRNA-Met in BV-BRC, the most frequent mismatch we observed in isotype assignment (34\%). This likely reflects the agmatidine wobble-base modification unique to archaea~\cite{tRNAscan}, highlighting the necessity to use domain specific models.
-Therefore, all genomes were annotated using tRNAscan-SE in archaeal mode. Selenocysteine tRNAs were identified using the SeC-specific covariance model, since it has an atypical secondary structure~\cite{tRNAscan}. As independent validation, all tRNAscan predictions were re-scored with Infernal~\cite{infernal} against tRNAinf-arch and tRNAinf-arch-SeC models. 
-After filtering, \TODO{X} tRNA genes from 228 unique archaeal genomes were added, of which 214 were not represented in the 2009 tRNAdb, substantially expanding archaeal coverage relative to the legacy dataset.
+Archaeal genomes were sourced from the BV-BRC database
+\url{https://www.bv-brc.org}, accessed October 2024. Predictions were ran
+on good quality genomes, as assessed by CheckM2 ($\geq$85\% complete,
+$<$5\% contaminated)~\cite{checkm2}. These archaeal genomes cover a broad
+taxonomic range and include all major archaeal superphyla (Asgard, DPANN,
+TACK, and Euryarchaeota).  We did not rely on the BV-BRC annotation of tRNA
+genes, as we found it inconsistent with predictions using the most
+up-to-date version of tRNAscan-SE 2.0.12~\cite{tRNAscan}. Notably,
+tRNA-Ile2 is often mislabelled as tRNA-Met in BV-BRC, the most frequent
+mismatch we observed in isotype assignment (34\%). This likely reflects the
+agmatidine wobble-base modification unique to archaea~\cite{tRNAscan},
+highlighting the necessity to use domain specific models.  Therefore, all
+genomes were annotated using tRNAscan-SE in archaeal mode. Selenocysteine
+tRNAs were identified using the SeC-specific covariance model, since it has
+an atypical secondary structure~\cite{tRNAscan}. As independent validation,
+all tRNAscan predictions were re-scored with Infernal~\cite{infernal}
+against tRNAinf-arch and tRNAinf-arch-SeC models.  After filtering,
+\TODO{X} tRNA genes from 228 unique archaeal genomes were added, of which
+214 were not represented in the 2009 tRNAdb, substantially expanding
+archaeal coverage relative to the legacy dataset.
 
 
 \subsection{Phage tRNAs} 
 Genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus (\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}), accessed 17 August 2026. Putative tRNA genes
-were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode. Predicted tRNAs were retained only if they were 70–90nt in length, had an overall tRNAscan-SE inf score $>$60, and had both HMM and secondary-structure scores $>$10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
+were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode. Predicted tRNAs were retained only if they were 70–90nt in length, had an overall tRNAscan-SE \TODO{***inf***} score $>$60, and had both HMM and secondary-structure scores $>$10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
 
 
-\subsection{modified tRNAs}\label{subsecmodifiedtRNA}
+\subsection{Chemically modified tRNAs}\label{subsecmodifiedtRNA}
 Modified tRNA sequences, as well as their genomic variants, were downloaded
 from the MODOMIC \cite{modomics} database and the Protein Data Bank (PDB). 
 Sequences retrieved from the PDB having only a single modification located at the first or last base, were removed. 
 \PFS{In order display alignments properly}, legacy one letter codes for modifications were retained.  
 The dictionary of one letter codes for modifications was extended to include any that were not present in the legacy tRNAdb 2009.
 For these novel modifications, we also identified the name of the compound using the  PDB entry. The InChikeys and InChis were extracted from PubChem \cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database webpage}.
-Modified mitochondrial tRNA sequences from \emph{H. sapiens}\cite{humanmtRNA} and \emph{B. taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structural annotation.
+Modified mitochondrial tRNA sequences from \emph{H.\ sapiens}\cite{humanmtRNA} and \emph{B.\ taurus}\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structural annotation.
 
 \subsection{Alignment and quality control}
 For all novel sequences, we used Infernal \cite{infernal} to align sequences to
@@ -347,9 +452,16 @@ anticodon loop). To filter tRNAs with suspicious structural features, we also ch
 
 \section{Statistics}
 
-Here, we give a short statistics about the entries in the tRNAdb. Besides the total number of entries, we also report the number of unique tRNA sequences included in the database.
+{\tiny\TODO{PFS thinks the sentence can be deleted:} Here, we give a short statistics about the entries in the tRNAdb. Besides the total number of entries, we also report the number of unique tRNA sequences included in the database.}
 
-For mitochondrial tRNAs,  $330\,261$ total entries are comprised of $219\,388$ unique sequences. The vast majority of these originate in metazoa (see Fig \ref{Tax}a), which reflects the distribution of mitochondrial genomes at the NCBI. The genomic part of the database contains a total of $228\,955$ entries comprising $93\,257$ unique sequences. The majority, precisely $149\,749$ entries, are bacterial tRNAs. However, the difference of genomic tRNA representation in tRNAdb is much smaller for unique sequences, see Fig~\ref{Tax}b.  
+\PFS{The database lists $330\,261$ entries of mitochordrial tRNA sequences}
+comprising $219\,388$ unique sequences. The vast majority of these
+originate in metazoa (see Fig.~\ref{Tax}a), which reflects the distribution
+of mitochondrial genomes at the NCBI. The genomic part of the database
+contains a total of $228\,955$ entries comprising $93\,257$ unique
+sequences. The majority, precisely $149\,749$ entries, are bacterial
+tRNAs. However, the difference of genomic tRNA representation in tRNAdb is
+much smaller for unique sequences, see Fig~\ref{Tax}b.
 %This may be due to many bacterial strains sharing tRNA sequences.
 %If tRNA sequences are shared between species, they can be included multiple times in the tRNAdb. 
 
@@ -360,7 +472,10 @@ For mitochondrial tRNAs,  $330\,261$ total entries are comprised of $219\,388$ u
 
 The most abundant tRNA in the genomic tRNAdb part is Leu with $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}a).
 
-Mitochondrial tRNAs show a comparatively even distribution with respect to their abundance, ranging from $14\,692$ entries for Glu to $16\,734$ entries for Met, with the exception of Ser1 and Leu1, which code for the two amino acids that have two tRNAs in many mitochondria. Mitochondrial tRNA  Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}b).
+Mitochondrial tRNAs show a comparatively even distribution with respect to
+their abundance, ranging from $14\,692$ entries for Glu to $16\,734$
+entries for Met,
+\TODO{can we elaborate a sentence or two here?} with the exception of Ser1 and Leu1, which code for the two amino acids that have two tRNAs in many mitochondria. Mitochondrial tRNA  Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}b).
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{MitoandGenomicAminoacidamounts.pdf}
   \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and anticodon. a) mitochondrial tRNA sequences b) genomic tRNA sequences. Light gray shows number of all sequences, dark gray number of unique sequences.}
@@ -399,6 +514,10 @@ However, because most entries in the tRNAdb stem from semi-automatic annotation,
 to be rejected, even though these are often the most biologically interesting tRNAs. We therefore rely on the community to report such
 sequences, so they can be incorporated into future releases. This feedback may in turn motivate updated search algorithms capable of
 capturing a broader range of non-standard tRNAs.
+
+\TODO{maybe we should think about providing a web interface for people to
+  look at wierd fringe cases?} 
+
 
 \section{Conflicts of interest}
 The authors declare that they have no competing interests.

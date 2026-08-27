@@ -285,7 +285,14 @@ For every tRNA sequence entry in our database, a "Details" page is available (se
 We implemented a searchable taxonomy browser which displays an expandable tree view of the NCBI taxonomic database. Every node in the taxonomy tree is annotated with its scientific name according to NCBI taxonomy as well as its unique NCBI taxonomy ID. The taxonomy browser only displays clades and species, for which there are tRNA sequences present in tRNAdb. For every entry in the taxonomy browser, the number of tRNA sequences separated by origin (nuclear DNA, nuclear RNA, mitochondrial DNA) is displayed. Every node in the taxonomy browser contains a link, which allows to search tRNAdb for sequences belonging to this clade/species.
 
 \section{Inclusion of new data}\label{sec3}
- 
+
+To include new data into tRNAdb, we used different approaches for different types of tRNA for candidate identification, followed by alignment and quality control for all candidate entries except the .
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{workflow_figure.pdf}
+  \caption{\label{workflow} Workflow for data inclusion. Different approaches for data acquisition and pre-filtering for different sources of tRNAs as well as common filtering and alignment steps are shown.}
+\end{figure}
+
 
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
 

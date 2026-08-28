@@ -160,7 +160,7 @@
 
 \keywords{tRNA sequence, tRNA structure, database, tRNA modifications}
 
-\keywords[Abbreviations]{Ala: Alanine, Arg: Arginine, Asn: Asparagine, Asp: Aspartic acid, Cys: Cysteine, Glu: Glutamic acid, Gln: Glutamine, Gly: Glycine, His: Histidine, Ile: Isoleucine, Leu: Leucine, Lys: Lysine, Met: Methionine, Phe: Phenylalanine, Pro: Proline, Ser: Serine, SeC: Selenocysteine, Thr: Threonine, Trp: Tryptophan, Tyr: Tyrosine, Val: Valine, Sup:Supressor, AC: Anticodon}
+\keywords[Abbreviations]{Ala: Alanine, Arg: Arginine, Asn: Asparagine, Asp: Aspartic acid, Cys: Cysteine, Glu: Glutamic acid, Gln: Glutamine, Gly: Glycine, His: Histidine, Ile: Isoleucine, Leu: Leucine, Lys: Lysine, Met: Methionine, Phe: Phenylalanine, Pro: Proline, Ser: Serine, SeC: Selenocysteine, Thr: Threonine, Trp: Tryptophan, Tyr: Tyrosine, Val: Valine, Sup:Supressor, AC: Anticodon, NCBI: National Center for Biotechnology Information, API: Application Programming Interface, PDB: Protein Data Bank, BV-BRC: Bacterial and Viral Bioinformatics Resource Center}
 
 %\otherabstract[Additional Abstract]{Use this element for elements such as Graphical abstract, Lay summary, Translated abstract etc. Que cum aut etum qui ium dolupta ssequia autati odis demporepe ad et es alit rem repudaerae min et volorum re volupta nobit volectur aut fuga.}
 %
@@ -201,7 +201,7 @@ published \cite{gtrnadb, trnadb-ce, modomics}.
 \PFS{When access to the tRNAdb was interrupted due to technical issues in
   2024/2025, the data was still widely used. A large number of requests for
   its continued existence prompted us to re-implemented the tRNAdb on a
-  new, solid technical foundation, and to include an API for automatic data
+  new, solid technical foundation, and to include an Application Programming Interface (API) for automatic data
   retrieval. For the present release, we extended its content by leveraging
   existing nuclear tRNAs from the gtRNA database as well as mitochondrial,
   archaeal and phage derived tRNAs we identified using MITOS2
@@ -280,7 +280,7 @@ For easy retrieval and global searches, sequences and their most relevant
 data are stored within a single, fully indexed relation enabling efficient
 filtering across all sequence categories, attributes, and selected
 metadata. This includes nucleotide sequence, secondary structure,
-anticodon, amino acid and origin (i.e., genomic DNA, chemically modified RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database~\cite{ncbitaxonomy2020}. To facilitate legacy compatibility, the original tRNA dataset~\cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump 2026-06-01, accessed 10 June 2026, to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}~\cite{biopython2009} to resolve their current taxonomic information.
+anticodon, amino acid and origin (i.e., genomic DNA, chemically modified RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the National Center for Biotechnology Information (NCBI) taxonomy database~\cite{ncbitaxonomy2020}. To facilitate legacy compatibility, the original tRNA dataset~\cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump 2026-06-01, accessed 10 June 2026, to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}~\cite{biopython2009} to resolve their current taxonomic information.
 %together with the \texttt{biopython} \texttt{entrez} package to query NCBI taxonomy API for updated taxonomic information for tRNAdb legacy sequences. 
 
 The updated relational schema supports a release versioning system which
@@ -405,7 +405,7 @@ decided to further expand tRNAdb in these two areas.
 
 \subsection{Archaeal tRNAs}
 
-Archaeal genomes were sourced from the BV-BRC database~\cite{bvbrc2022}, accessed October 2024. Only good quality genomes were retained for further analysis, and genome quality was assessed by CheckM2 ($\geq$85\% complete,
+Archaeal genomes were sourced from the Bacterial and Viral Bioinformatics Resource Center (BV-BRC) database~\cite{bvbrc2022}, accessed October 2024. Only good quality genomes were retained for further analysis, and genome quality was assessed by CheckM2 ($\geq$85\% complete,
 $<$5\% contaminated)~\cite{checkm2}. These archaeal genomes cover a broad
 taxonomic range and include all major archaeal superphyla (Asgard, DPANN,
 TACK, and Euryarchaeota).  We did not rely on the BV-BRC annotation of tRNA

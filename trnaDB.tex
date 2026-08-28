@@ -280,7 +280,7 @@ For easy retrieval and global searches, sequences and their most relevant
 data are stored within a single, fully indexed relation enabling efficient
 filtering across all sequence categories, attributes, and selected
 metadata. This includes nucleotide sequence, secondary structure,
-anticodon, amino acid and origin (i.e., genomic DNA, \TODO{chemically modified} RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database\TODO{REF}. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}\TODO{REF} to resolve their current taxonomic information.
+anticodon, amino acid and origin (i.e., genomic DNA, chemically modified RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database\TODO{REF}. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}\TODO{REF} to resolve their current taxonomic information.
 %together with the \texttt{biopython} \texttt{entrez} package to query NCBI taxonomy API for updated taxonomic information for tRNAdb legacy sequences. 
 
 The updated relational schema supports a release versioning system which
@@ -469,12 +469,13 @@ much smaller for unique sequences, see Fig~\ref{Tax}b.
   \caption{\label{Tax}Number of tRNA sequences per clade. a: mitochondrial tRNAs at kingdom level. b: genomic tRNAs at domain level. Light gray shows number of all sequences, dark gray number of unique sequences.}
 \end{figure}
 
-The most abundant tRNA in the genomic tRNAdb part is Leu with $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}a).
-
-Mitochondrial tRNAs show a comparatively even distribution with respect to
+Mitochondrial tRNAs show a relatively even distribution with respect to
 their abundance, ranging from $14\,692$ entries for Glu to $16\,734$
-entries for Met,
-\TODO{can we elaborate a sentence or two here?} with the exception of Ser1 and Leu1, which code for the two amino acids that have two tRNAs in many mitochondria. Mitochondrial tRNA  Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}b).
+entries for Met. The relatively even distribution can also be seen in the unique sequences: Asp has the most with 12\,446, while Ser2 has the least amount of unique sequences with 10\,184. The exception to these even distributions are Leu1 (10\,857 entries, 6\,209 unique sequences) and to a smaller extent Ser1 (12\,979 and 9\,457, resp.), which code for the two amino acids that have two tRNAs in many mitochondria. Mitochondrial tRNA  Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}a).
+
+In contrast, genomic tRNAs show a much wider variety in their abundance, with the most abundant being Leu with $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the number of entries as well as the number of unique sequences per amino acid strongly correlates with the number of main (n$> 100$) anticodons an amino acids uses ($\rho > 0.93, p< 10^{-8}$ for both). 
+
+
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{MitoandGenomicAminoacidamounts.pdf}
   \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and anticodon. a) mitochondrial tRNA sequences b) genomic tRNA sequences. Light gray shows number of all sequences, dark gray number of unique sequences.}

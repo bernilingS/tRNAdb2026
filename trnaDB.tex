@@ -280,7 +280,7 @@ For easy retrieval and global searches, sequences and their most relevant
 data are stored within a single, fully indexed relation enabling efficient
 filtering across all sequence categories, attributes, and selected
 metadata. This includes nucleotide sequence, secondary structure,
-anticodon, amino acid and origin (i.e., genomic DNA, \TODO{chemically modified} RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database\TODO{REF}. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump \TODO{VERSION,DATE} to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}\TODO{REF} to resolve their current taxonomic information.
+anticodon, amino acid and origin (i.e., genomic DNA, \TODO{chemically modified} RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the NCBI taxonomy database~\cite{ncbitaxonomy2020}. To facilitate legacy compatibility, the original tRNA dataset~\cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump 2026-06-01, accessed 10 June 2026, to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}~\cite{biopython2009} to resolve their current taxonomic information.
 %together with the \texttt{biopython} \texttt{entrez} package to query NCBI taxonomy API for updated taxonomic information for tRNAdb legacy sequences. 
 
 The updated relational schema supports a release versioning system which
@@ -319,7 +319,7 @@ request to ensure fair use. Every API response, given the request was
 valid, contains a \texttt{total\_results} field that states the total
 number of sequences matching a request and all relevant results can be
 retrieved paginated via an offset parameter. For requests that match a
-large number of records, \PFS{and hence constitute} bulk retrieval of tRNA sequences, a second API endpoint provides export to tsv, csv, json, or fasta which is available at \texttt{https://tdb.bioinf.uni-leipzig.de/export}. \TODO{For usage details see the documentation page of the tRNAdb website.} \TODO{OpenAPI, /api/v1, stable-ID retrieval, canonical URLs, documentation}
+large number of records, \PFS{and hence constitute} bulk retrieval of tRNA sequences, a second API endpoint provides export to tsv, csv, json, or fasta which is available at \texttt{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb identifier every entry is connected to is stable, hence over changing releases, existing identifiers will not change and remain relevant for retrieval purposes. For usage details see the documentation page of the tRNAdb website. \TODO{OpenAPI, /api/v1, stable-ID retrieval, canonical URLs}
 
 
 \subsection{Website}
@@ -423,13 +423,13 @@ tRNAs were identified using the SeC-specific covariance model, since it has
 an atypical secondary structure~\cite{tRNAscan}. As independent validation,
 all tRNAscan predictions were re-scored with Infernal~\cite{infernal}
 against tRNAinf-arch and tRNAinf-arch-SeC models.  After filtering,
-\TODO{X} tRNA genes from 228 unique archaeal genomes were added, of which
+$21\,127$ tRNA genes from 228 unique archaeal genomes were added, of which
 214 were not represented in the 2009 tRNAdb, substantially expanding
 archaeal coverage relative to the legacy dataset.
 
 
 \subsection{Phage tRNAs} 
-Genome sequences of all viruses annotated with the host term ``Bacteria'' were downloaded from the NCBI Virus (\url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}), accessed 17 August 2026. Putative tRNA genes
+Genome sequences of all viruses annotated with the host term ``Bacteria'' were obtained from NCBI Virus~\cite{ncbivirus}, accessed 17 August 2026. Putative tRNA genes
 were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode. Predicted tRNAs were retained only if they were 70–90nt in length, had an overall tRNAscan-SE \TODO{***inf***} score $>$60, and had both HMM and secondary-structure scores $>$10. Predictions with undefined isotypes or classified as pseudogenes were excluded.
 
 

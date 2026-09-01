@@ -102,7 +102,7 @@
 \address[2]{\orgdiv{Inserm, Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{France}}}
 \address[3]{\orgdiv{Theoretical biochemistry group, Department for theoretical Chemistry}, \orgname{University of Vienna}, \orgaddress{\street{W\"{a}hringer Str. 17}, \postcode{1090}, \state{Vienna}, \country{Austria}}}
 \address[4]{\orgdiv{Bioinformatics Group, Department for Computer Science}, \orgname{Leipzig University}, \orgaddress{\street {H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
-\address[5]{\orgdiv{Botnar Institute of Immune Engineering - BIIE}, \orgname{}, \orgaddress{\street{Klingelbergstr. 48}, \postcode{4056}, \state{Basel}, \country{Switzerland}}}
+\address[5]{\orgdiv{Botnar Institute of Immune Engineering}, \orgname{}, \orgaddress{\street{Klingelbergstr. 48}, \postcode{4056}, \state{Basel}, \country{Switzerland}}}
 \address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
 \address[7]{\orgdiv{Institute of Biochemistry}, \orgname{Leipzig University}, \orgaddress{\street{Johannisallee 23}, \postcode{04103}, \state{Saxony}, \country{Germany}}}
 \address[8]{\orgdiv{Interdisciplinary Center for Bioinformatics - IZBI}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
@@ -160,7 +160,8 @@
 
 \keywords{tRNA sequence, tRNA structure, database, tRNA modifications}
 
-\keywords[Abbreviations]{Ala: Alanine, Arg: Arginine, Asn: Asparagine, Asp: Aspartic acid, Cys: Cysteine, Glu: Glutamic acid, Gln: Glutamine, Gly: Glycine, His: Histidine, Ile: Isoleucine, Leu: Leucine, Lys: Lysine, Met: Methionine, Phe: Phenylalanine, Pro: Proline, Ser: Serine, SeC: Selenocysteine, Thr: Threonine, Trp: Tryptophan, Tyr: Tyrosine, Val: Valine, Sup:Supressor, AC: Anticodon, NCBI: National Center for Biotechnology Information, API: Application Programming Interface, PDB: Protein Data Bank, BV-BRC: Bacterial and Viral Bioinformatics Resource Center}
+\keywords[Abbreviations]{%Ala: Alanine, Arg: Arginine, Asn: Asparagine, Asp: Aspartic acid, Cys: Cysteine, Glu: Glutamic acid, Gln: Glutamine, Gly: Glycine, His: Histidine, Ile: Isoleucine, Leu: Leucine, Lys: Lysine, Met: Methionine, Phe: Phenylalanine, Pro: Proline, Ser: Serine,  Thr: Threonine, Trp: Tryptophan, Tyr: Tyrosine, Val: Valine,
+SeC: Selenocysteine, Sup:Supressor, AC: Anticodon, NCBI: National Center for Biotechnology Information, API: Application Programming Interface, PDB: Protein Data Bank, BV-BRC: Bacterial and Viral Bioinformatics Resource Center}
 
 %\otherabstract[Additional Abstract]{Use this element for elements such as Graphical abstract, Lay summary, Translated abstract etc. Que cum aut etum qui ium dolupta ssequia autati odis demporepe ad et es alit rem repudaerae min et volorum re volupta nobit volectur aut fuga.}
 %
@@ -285,12 +286,10 @@ anticodon, amino acid and origin (i.e., genomic DNA, chemically modified RNA, an
 
 The updated relational schema supports a release versioning system which
 separates the legacy dataset and data contained in tRNAdb\,2026
-update. Every sequence present in tRNAdb has a version identifier attached
-which links it to the first release it appeared in tRNAdb together with
-relevant release information. For every release, data sources (i.e., origin
+update. Every entry in tRNAdb has a version identifier indicating the first tRNAdb release it appeared in. For every release, data sources (i.e., origin
 database and version) and software (with corresponding version) used are
 documented. Additionally, every tRNAdb release is described with a public
-version string that is exposed on the ``Details'' page of individual
+version string that is displayed on the ``Details'' page of individual
 entries, and is also available as an export field. The public version
 string contains a short description how the sequences published in this
 particular release were obtained. \TODO{A more detailed description, e.g.,
@@ -317,9 +316,8 @@ API key) is required to access the tRNAdb search API at \texttt{https://tdb.bioi
 limited to one request per second and at most 1000 entries are returned per
 request to ensure fair use. Every API response, given the request was
 valid, contains a \texttt{total\_results} field that states the total
-number of sequences matching a request and all relevant results can be
-retrieved paginated via an offset parameter. For requests that match a
-large number of records, and hence constitute bulk retrieval of tRNA sequences, a second API endpoint provides export to tsv, csv, json, or fasta which is available at \texttt{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb identifier every entry is connected to is stable, hence over changing releases, existing identifiers will not change and remain relevant for retrieval purposes. For usage details see the documentation page of the tRNAdb website. \TODO{OpenAPI, /api/v1}
+number of sequences matching a request and all relevant results can be paginated via an offset parameter. For requests that match a
+large number of records, and hence constitute bulk retrieval of tRNA sequences, a second API endpoint provides export to tsv, csv, json, or fasta which is available at \texttt{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb identifier connected to every entry is stable, hence over changing releases, existing identifiers will not change and remain relevant for retrieval purposes. For usage details see the documentation page of the tRNAdb website. \TODO{OpenAPI, /api/v1}
 
 
 \subsection{Website}
@@ -345,7 +343,7 @@ by using the ``Clade'' field of the search page.
 
 Upon a successful search, the user is presented with a paginated list of fitting tRNA sequences with a snapshot of data available for every sequence: origin, organism, amino acid, anticodon and its structurally annotated nucleotide sequence (separated into acceptor stem, D-loop, D-stem, etc.). Every result entry, or every entry matching the current search request, can be stored in a temporary selection which can be committed to persistent storage as a named collection for later access or download. 
 
-A download manager allows to export individual collections, or every saved collection, and offers customizable export options. Export of data in \texttt{tsv}, \texttt{csv}, \texttt{JSON}, and multi line fasta format is supported and every export can be further customized by selecting various fields that are relevant to the individual user (e.g. sequence, structure, annotated sequence, species name, taxonomic lineage, reference, and more). Fasta export supports a customizable sequence identifier, for which a preview is generated.
+A download manager allows exporting of individual collections, or every saved collection, and offers customizable export options. Export of data in \texttt{tsv}, \texttt{csv}, \texttt{JSON}, and multi line fasta format is supported and every export can be further customized by selecting various fields that are relevant to the individual user (e.g. sequence, structure, annotated sequence, species name, taxonomic lineage, reference, and more). Fasta export supports a customizable sequence identifier, for which a preview is generated.
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Webserver_Detail_homo_ala.png}
   \caption{Example for the Details page of a modified human Alanine tRNA\label{Fig:Detail}}
@@ -369,7 +367,7 @@ types of tRNA for candidate identification, followed by alignment and
 quality control for all candidate entries except for the modified mitochondrial RNAs where the published assignment of bases to canonical locations was used\cite{modtRNAbtaurus,humanmtRNA}. See Figure\,\ref{workflow}
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{workflow_figure.pdf}
+  \includegraphics[width=0.47\textwidth]{workflow_figure.pdf}
   \caption{\label{workflow} Workflow for data inclusion. Different
     approaches for data acquisition and pre-filtering for different sources
     of tRNAs as well as common filtering and alignment steps are shown.}
@@ -434,7 +432,7 @@ were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode. Pre
 Modified tRNA sequences, as well as their genomic variants, were obtained
 from the MODOMIC \cite{modomics} database and the Protein Data Bank (PDB)~\cite{pdb2000}. 
 Sequences retrieved from the PDB having only a single modification located at the first or last base, were removed. 
-\PFS{In order display alignments properly}, legacy one letter codes for modifications were retained.  
+\PFS{In order display alignments properly}, legacy one-letter codes for modifications were retained.  
 The dictionary of one letter codes for modifications was extended to include any that were not present in the legacy tRNAdb 2009.
 For these novel modifications, we also identified the name of the compound using the  PDB entry. The InChiKeys and InChis were extracted from PubChem~\cite{pubchem2025} to  check whether the compound was already present in the MODOMIC database. A list of all modifications with the one letter codes used in tRNAdb and MODOMIC \TODO{can be found in the supplement and on the database webpage}.
 Modified mitochondrial tRNA sequences from \emph{H.\ sapiens}~\cite{humanmtRNA} and \emph{B.\ taurus}~\cite{modtRNAbtaurus} where added from the supplement of the respective publications. The included canonical base numberings were directly used for alignment and structural annotation.
@@ -445,7 +443,7 @@ the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective MITOS2 models for
 mitochondrial tRNAs). When an anticodon was annotated, we compared the
 annotated anticodon with the one identified by Infernal (at the center of the
-anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7nt. For the other structural features, we leveraged the maximum length of the respective structural feature in tRNAdb 2009, and allowed a single nucleotide difference in length (resulting in 18 and 28 nt for D and T-loops respectively and 5 nt between D and AC-stem) and discarded a total of \todo{404} tRNAs that did not make one of the four thresholds. As a last filtering step, all entries that were duplicates with respect to sequence and taxonomic ID were unified when necessary, so that every sequence/species pair in the tRNAdb is unique. 
+anticodon loop). To filter tRNAs with suspicious structural features, we also checked the length of the D-loops, AC-loops, T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7nt. For the other structural features, we used the maximum length of the respective structural feature in tRNAdb 2009, allowed a single nucleotide difference in length (resulting in 18 and 28 nt for D and T-loops respectively and 5 nt between D and AC-stem) and discarded a total of \todo{404} tRNAs that did not make one of the four thresholds. As a last filtering step, all entries that were duplicates with respect to sequence and taxonomic ID were unified when necessary, so that every sequence/species pair in the tRNAdb is unique. 
 
 \section{Statistics}
 
@@ -462,7 +460,7 @@ much smaller for unique sequences, see Fig~\ref{Tax}b.
 %If tRNA sequences are shared between species, they can be included multiple times in the tRNAdb. 
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{taxonomicdistributions.pdf}
+  \includegraphics[width=0.45\textwidth]{taxonomicdistributions.pdf}
   \caption{\label{Tax}Number of tRNA sequences per clade. a: mitochondrial tRNAs at kingdom level. b: genomic tRNAs at domain level. Light gray shows number of all sequences, dark gray number of unique sequences.}
 \end{figure}
 
@@ -470,17 +468,17 @@ Mitochondrial tRNAs show a relatively even distribution with respect to
 their abundance, ranging from $14\,692$ entries for Glu to $16\,734$
 entries for Met. The relatively even distribution can also be seen in the unique sequences: Asp has the most with 12\,446, while Ser2 has the least amount of unique sequences with 10\,184. The exception to these even distributions are Leu1 (10\,857 entries, 6\,209 unique sequences) and to a smaller extent Ser1 (12\,979 and 9\,457, resp.), which code for the two amino acids that have two tRNAs in many mitochondria. Mitochondrial tRNA  Lys is the only tRNA utilizing a notable amount of a secondary anticodon (Fig~\ref{Aminoacidamounts}a).
 
-In contrast, genomic tRNAs show a much wider variety in their abundance, with the most abundant being Leu with $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the number of entries as well as the number of unique sequences per amino acid strongly correlates with the number of main (n$> 100$) anticodons an amino acids uses ($\rho > 0.93, p< 10^{-8}$ for both). 
+In contrast, genomic tRNAs show a much wider variety in their abundance. Leu, being the most abundant, has $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the number of entries as well as the number of unique sequences per amino acid strongly correlates with the number of frequent (n$> 100$) anticodons an amino acids uses ($\rho > 0.93, p< 10^{-8}$ for both). 
 
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{MitoandGenomicAminoacidamounts.pdf}
+  \includegraphics[width=0.45\textwidth]{MitoandGenomicAminoacidamounts.pdf}
   \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and anticodon. a) mitochondrial tRNA sequences b) genomic tRNA sequences. Light gray shows number of all sequences, dark gray number of unique sequences.}
 \end{figure}
 
 In comparison to the first version of tRNAdb, we greatly expanded sequences belonging to clades that were either not included before, such as mitchondrial tRNAs from viridiplantae or fungi, or had only very sparse entries, such as archaea and viroidal genomic tRNAs (see Fig \ref{species}). In total, tRNAdb\,2026 contains genomic entries from $6\,086$ species, and mitochondrial entries from $15\,796$ different species.
  \begin{figure}
-  \includegraphics[width=0.5\textwidth]{Speciesdistribution.pdf}
+  \includegraphics[width=0.45\textwidth]{Speciesdistribution.pdf}
   \caption{\label{species}Distribution of species included in the tRNAdb, seperated by clade. a)  mitochondrial b) genomic tRNAs. Light gray shows number species in tRNAdb\,2026 only, dark gray number of species in tRNAdb 2009.}
 \end{figure}
 
@@ -513,7 +511,7 @@ to be rejected, even though these are often of high biological interest. We ther
 
 
 \section{Conflicts of interest}
-The authors declare that they have no competing interests.
+C.L.B. is a co-founder and scientific advisor to Locus Biosciences and a scientific advisor to Quidditas Therapeutics. The other authors declare that they have no competing interests.
 
 \section{Funding}
 This work was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-3105/1 - 533765739,

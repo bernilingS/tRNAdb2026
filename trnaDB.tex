@@ -275,12 +275,6 @@ asynchronous data compilation and transfer via dedicated export threads as
 well as progress reporting of ongoing export jobs via polling.
 
 
-%\OLD{
-%tRNAdb 2.0 was completely reimplemented as a three tier application consisting of a relational database, an API backend, and a web based frontend. This separation enables independent updates, or replacement, of the three main functional components of tRNAdb and an implementation that remains scalable with increasing number of integrated data, or users.
-%
-%We use a MariaDB database \TODO{(Did DENBI help us finance servers?)} for storage of relevant information of tRNA sequences (nucleotide sequence, secondary structure, anticodon, amino acid, etc.) together with taxonomy information and metadata as well as cross linking information to external data sources. The API server is implemented in python using the \texttt{flask} framework. Representation of database entries for retrieval and manipulation is handled via object-relational mapping (ORM) using the \texttt{SQLAlchemy} framework. The web frontend is implemented in HTML, CSS and javascript and utilizes the popular javascript \texttt{Bootsstrap} library. Web documents are served by a python server using the \texttt{flask} framework. Notably, the web frontend uses our API endpoint exclusively for data retrieval highlighting the flexibility of our API endpoint.}
-
-%\subsection{Data Storage, Retrieval, and Updates}
 \subsection{Data model and provenance}
 
 For easy retrieval and global searches, sequences and their most relevant
@@ -288,7 +282,7 @@ data are stored within a single, fully indexed relation enabling efficient
 filtering across all sequence categories, attributes, and selected
 metadata. This includes nucleotide sequence, secondary structure,
 anticodon, amino acid and origin (i.e., genomic DNA, chemically modified RNA, and mitochondrial DNA). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the National Center for Biotechnology Information (NCBI) taxonomy database~\cite{ncbitaxonomy2020}. To facilitate legacy compatibility, the original tRNA dataset~\cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump 2026-06-01, accessed 10 June 2026, to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}~\cite{biopython2009} to resolve their current taxonomic information.
-%together with the \texttt{biopython} \texttt{entrez} package to query NCBI taxonomy API for updated taxonomic information for tRNAdb legacy sequences.
+
 
 The updated relational schema supports a release versioning system which
 separates the legacy dataset and data contained in tRNAdb\,2026
@@ -298,8 +292,8 @@ documented. Additionally, every tRNAdb release is described with a public
 version string that is displayed on the ``Details'' page of individual
 entries, and is also available as an export field. The public version
 string contains a short description how the sequences published in this
-particular release were obtained. \TODO{A more detailed description, e.g.,
-software and data sources, is available on the ``Documentation and Help''
+particular release were obtained. \TODO{A detailed description, including 
+software applied and data sources, is available on the ``Documentation and Help''
 page.}  Sequences in tRNAdb can be filtered by their corresponding release version, allowing users to browse exclusively legacy data, or current releases.
 
 Subsequent releases of the tRNAdb dataset will be published with a corresponding release identifier together with the prior described release metadata. To enable a sustainable update procedure, we implemented a graphical user interface supported pipeline for import, normalization, and duplicate detection for subsequent tRNAdb versions.
@@ -315,8 +309,8 @@ Subsequent releases of the tRNAdb dataset will be published with a corresponding
 \subsection{API and programmatic access}
 
 With this update we provide a new public HTTP interface, accessible by POST
-JSON requests at \url{https://tdb.bioinf.uni-leipzig.de/api}. The API implements \TODO{OpenAPI} specifications and a thorough documentation for users is available on the ``Documentation'' page of the tRNAdb website. Fundamentally, our API supports nearly identical search parameters as the tRNAdb website and allows filtering by any combination of origin, species, clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural motifs, reference (genome accession, external source, publication), and release version.
-\TS{TS: nearly? Is there any difference worth mentioning?}
+JSON requests at \url{https://tdb.bioinf.uni-leipzig.de/api}. The API implements \TODO{OpenAPI} specifications and a thorough documentation for users is available on the ``Documentation'' page of the tRNAdb website. Fundamentally, our API supports identical search parameters as the tRNAdb website and allows filtering by any combination of origin, species, clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural motifs, reference (genome accession, external source, publication), and release version.
+
 For many fields, multiple values can be supplied and entries matching at least one are returned. Individual records can be precisely retrieved by using the stable identifier \texttt{trnadb\_id} which also remained unaltered for the 2009 legacy dataset.
 
 %Internally, POST requests send to the API are parsed, an appropriate SQL statement is executed, and matching entries are returned as JSON.
@@ -337,7 +331,7 @@ The tRNAdb web interface (see Figure~\ref{Fig:Website}) can be found at \url{htt
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Webserver_homo_ala.png}
   \caption{Example of the tRNAdb website, showing the first page of the
-    results for a search for \emph{Homo sapiens} Alanine
+    results for a search for \emph{human} Alanine
     tRNAs\label{Fig:Website}}
 \end{figure}
 The main functionality of the website is the ``Search'' page which allows
@@ -445,7 +439,7 @@ archaeal coverage relative to the legacy dataset.
 Genome sequences of all viruses annotated with the host term ``Bacteria'' were obtained from NCBI Virus~\cite{ncbivirus}, accessed 17 August 2026. Putative tRNA genes
 were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode.
 Predicted tRNAs were retained only if they were 70–90nt in length, had an
-overall tRNAscan-SE \TODO{***inf***} score $>$60, and had both HMM and
+overall tRNAscan-SE Bit Score $>$60, and had both HMM and
 secondary-structure scores $>$10. Predictions with undefined isotypes or
 classified as pseudogenes were excluded. After filtering (see ``Alignment and
 quality control section'' below), $7\,099$ viral tRNA genes from $1\,558$ unique genomes were added to tRNAdb.
@@ -502,7 +496,7 @@ smaller extent Ser1 (12\,979 and 9\,457, resp.), which code for the two amino
 acids that have two tRNAs in many mitochondria. Mitochondrial tRNA-Lys is the
 only tRNA utilizing a notable amount of a secondary anticodon (Fig.~\ref{Aminoacidamounts}a).
 
-In contrast, genomic tRNAs show a much wider variety in their abundance. Leu, being the most abundant, has $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the number of entries as well as the number of unique sequences per amino acid strongly correlates with the number of frequent (n$> 100$) anticodons an amino acids uses ($\rho > 0.93, p< 10^{-8}$ for both).
+In contrast, genomic tRNAs show a much wider variety in their abundance. Leu, being the most abundant, has $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the number of entries as well as the number of unique sequences per amino acid strongly correlates with the number of frequent (n$> 100$) anticodons in use for an amino acids ($\rho > 0.93, p< 10^{-8}$ for both).
 
 
 \begin{figure}
@@ -542,8 +536,7 @@ Alongside a redesigned web interface, we provide a public API and a considerable
 
 However, because most entries in the tRNAdb stem from semi-automatic annotation \TODO{together with manual curation}, fringe cases that deviate from established tRNA properties are likely
 to be rejected, even though these are often of high biological interest. We therefore rely on the community to report such sequences, so they can be incorporated into future releases. This feedback may in turn motivate updated search algorithms capable of capturing a broader range of non-standard tRNAs.
-
-\TODO{To be able to address this, we will povide a form where experts can send us entries of non-standard tRNAs that we can curate and include into the database. Additional statistical analysis can be incorporated into subsequent updates of the database.}%maybe we should think about providing a web interface for people to
+\TODO{To be able to address this, we will povide a web interface where experts can send us entries of non-standard tRNAs that we can curate and include into the database. Additional statistical analysis can be incorporated into subsequent updates of the database.}%maybe we should think about providing a web interface for people to
 %  look at wierd fringe cases? I think we could also mention additional statistical capabilities that can be incorporated with subsequent frontend/API updates - tRNA motifs for searches; species/clade specific anticodon utilization or translation tables derived from the mttrnas, average tRNA counts of tRNA per amino acid per clade, BLAST queries, ...}
 
 

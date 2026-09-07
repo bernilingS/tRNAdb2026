@@ -94,24 +94,27 @@
 \author[2]{Frank J\"{u}hling}
 \author[3,4]{Thomas Spicher\ORCID{0009-0001-8198-5213}}
 \author[5,6]{Ella Cassidy}
+\author[5,11]{Dulce I. Valdivia}
 \author[7]{Maximilian Feussner\ORCID{0009-0000-2803-0496}}
 \author[7]{Chase L. Beisel}
-\author[2]{Joern P\"{u}tz}
-\author[8]{Mario M\"{o}rl\ORCID{0000-0003-0972-9386}}
-\author[1,3,5,6,9,10]{Peter F. Stadler\ORCID{0000-0002-5016-5191}}
-\author[9,10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
+\author[8]{Joern P\"{u}tz}
+\author[9]{Mario M\"{o}rl\ORCID{0000-0003-0972-9386}}
+\author[1,3,5,6,10]{Peter F. Stadler\ORCID{0000-0002-5016-5191}}
+\author[5,10]{Stephan H. Bernhart\ORCID{0000-0002-5928-9449}}
 
 \address[1]{\orgdiv{Max Planck Institute for Mathematics in the Sciences}, \orgaddress{\street{Inselstr 26}, \postcode{04103}, \state{Leipzig}, \country{Germany}}}
 \address[2]{\orgdiv{Inserm, UMR\_S1110,Institute for Translational Medicine and Liver Disease}, \orgname{University of Strasbourg}, \orgaddress{\street{3 Rue Koeberl\'{e}}, \postcode{67000}, \state{Strasbourg}, \country{France}}}
 \address[3]{\orgdiv{Theoretical biochemistry group, Department of Theoretical Chemistry}, \orgname{University of Vienna}, \orgaddress{\street{W\"{a}hringer Str. 17}, \postcode{1090}, \state{Vienna}, \country{Austria}}}
 \address[4]{\orgdiv{UniVie Doctoral School Computer Science (DoCS)}, \orgname{University of Vienna}, \orgaddress{\street{W{\"a}hringer Stra{\ss}e 29}, \postcode{A-1090}, \state{Vienna}, \country{Austria}}}
-\address[5]{\orgdiv{Bioinformatics Group, Department for Computer Science}, \orgname{Leipzig University}, \orgaddress{\street {H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
+\address[5]{\orgdiv{Bioinformatics Group, Department for Computer Science and Interdisciplinary Center for Bioinformatics}, \orgname{Leipzig University}, \orgaddress{\street {H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 \address[6]{\orgdiv{Center for Scalable Data Analytics and Artificial Intelligence}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 \address[7]{\orgdiv{Botnar Institute of Immune Engineering}, \orgname{} \orgaddress{\street{Klingelbergstr. 48}, \postcode{4056}, \state{Basel}, \country{Switzerland}}}
+\address[8]{\orgdiv{Intitute of Molecular and Cell Biology - IPR 9002 CNRS}, \orgname{University of Strasbourg}, \orgaddress{\street{2 All\'{e}e Konrad Roentgen}, \postcode{67084}, \state{Strasbourg}, \country{France}}}
+
 %\address[6]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \postcode{Postcode}, \state{State}, \country{Country}}}
-\address[8]{\orgdiv{Institute of Biochemistry}, \orgname{Leipzig University}, \orgaddress{\street{Johannisallee 23}, \postcode{04103}, \state{Saxony}, \country{Germany}}}
-\address[9]{\orgdiv{Interdisciplinary Center for Bioinformatics - IZBI}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
+\address[9]{\orgdiv{Institute of Biochemistry}, \orgname{Leipzig University}, \orgaddress{\street{Johannisallee 23}, \postcode{04103}, \state{Saxony}, \country{Germany}}}
 \address[10]{\orgdiv{LeiCeM - Leipzig Center of Metabolism}, \orgname{Leipzig University}, \orgaddress{\street{Ritterstr. 26}, \postcode{04109}, \state{Saxony}, \country{Germany}}}
+%\address[11]{\orgdiv{Interdisciplinary Center for Bioinformatics - IZBI}, \orgname{Leipzig University}, \orgaddress{\street{H\"{a}rtelstr. 16-18}, \postcode{04107}, \state{Saxony}, \country{Germany}}}
 
 \corresp[$\ast$]{Corresponding author. \href{email:email-id.com}{email-id.com}}
 
@@ -540,21 +543,21 @@ Alongside a redesigned web interface, we provide a public API and a considerable
 However, because most entries in the tRNAdb stem from semi-automatic annotation \TODO{together with manual curation}, fringe cases that deviate from established tRNA properties are likely
 to be rejected, even though these are often of high biological interest. We therefore rely on the community to report such sequences, so they can be incorporated into future releases. This feedback may in turn motivate updated search algorithms capable of capturing a broader range of non-standard tRNAs.
 
-\TODO{maybe we should think about providing a web interface for people to
-  look at wierd fringe cases? I think we could also mention additional statistical capabilities that can be incorporated with subsequent frontend/API updates - tRNA motifs for searches; species/clade specific anticodon utilization or translation tables derived from the mttrnas, average tRNA counts of tRNA per amino acid per clade, BLAST queries, ...}
+\TODO{To be able to address this, we will povide a form where experts can send us entries of non-standard tRNAs that we can curate and include into the database. Additional statistical analysis can be incorporated into subsequent updates of the database.}%maybe we should think about providing a web interface for people to
+%  look at wierd fringe cases? I think we could also mention additional statistical capabilities that can be incorporated with subsequent frontend/API updates - tRNA motifs for searches; species/clade specific anticodon utilization or translation tables derived from the mttrnas, average tRNA counts of tRNA per amino acid per clade, BLAST queries, ...}
 
 
 \section{Conflicts of interest}
 C.L.B. is a co-founder and scientific advisor to Locus Biosciences and a scientific advisor to Quidditas Therapeutics. The other authors declare that they have no competing interests.
 
 \section{Funding}
-This work was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-3105/1 - 533765739, the Austrian Science Foundation (FWF) SFB F80, the German Federal Ministry of Education and Research (BMBF) through Leipzig RNA Bioinformatics Center (RBC) of the German Network for Bioinformatics Infrastructure (de.NBI) sustained via Forschungszentrum J\"{u}hlich,  (NFB: \# XXXXXXX and \# YYYYYYY).
+This work was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-3105/1 - 533765739, the Austrian Science Fund (FWF) F80 RNAdeco, the German Federal Ministry of Research, Technology and Space (BMFTR) through Leipzig RNA Bioinformatics Center (RBC) of the German Network for Bioinformatics Infrastructure (de.NBI) sustained via Forschungszentrum J\"{u}hlich,  (NFB: \# XXXXXXX and \# YYYYYYY).
 
 \section{Data availability}
 The data underlying the tRNAdb\,2026 are available in public repositories like GtRNAdb, NCBI nucleotide and BV-BRC. \TODO{Links to the sources as well as all other relevant information are provided at the detail pages of the database.}%[repository name, eg, the GenBank Nucleotide Database] at [URL], and can be accessed with [unique identifier, eg, accession number, deposition number].
 
 \section{Author contributions statement}
-{\bf B.J.S.:} Software, Data curation, Writing – original draft, Writing – review \& editing. {\bf S.H.B.:} Conceptualization, Methodology, Investigation, Data curation, Software, Writing – original draft, Writing – review \& editing. {\bf P.F.S.:} Conceptualization, Methodology, Writing – original draft, Writing – review \& editing, Funding acquisition. {\bf E.C.:} Investigation, Writing – original draft, Writing – review \& editing. {\bf M.F.:} Investigation, Writing – review \& editing. {\bf T.S.:} Investigation, Data curation, Writing – review \& editing. {\bf F.J.:} Resources, Data curation, Writing – review \& editing. {\bf M.M.:} Resources, Data curation, Writing – review \& editing. {\bf J.P.:} Resources, Data curation, Writing – review \& editing. {\bf C.L.B.:} Funding acquisition, Writing – review \& editing.
+{\bf B.J.S.:} Software, Data curation, Writing – original draft, Writing – review \& editing. {\bf S.H.B.:} Conceptualization, Methodology, Investigation, Data curation, Software, Writing – original draft, Writing – review \& editing. {\bf P.F.S.:} Conceptualization, Methodology, Writing – original draft, Writing – review \& editing, Funding acquisition. {\bf E.C.:} Investigation, Writing – original draft, Writing – review \& editing. {\bf DIF} Validation, Writing – review \& editing. {\bf M.F.:} Investigation, Writing – review \& editing. {\bf T.S.:} Investigation, Data curation, Writing – review \& editing. {\bf F.J.:} Resources, Data curation, Writing – review \& editing. {\bf M.M.:} Resources, Data curation, Writing – review \& editing. {\bf J.P.:} Resources, Data curation, Writing – review \& editing. {\bf C.L.B.:} Supervision, Writing – review \& editing.
 %BJS developed front and back end of the database. SHB and PFS designed the new scope of the database. SHB, EC, MF, and TS searched and identified new tRNAs, FJ, MM,  and JP provided data and helped porting the database. SHB, TS, and BJS performed data cleansing and data preprocessing. SHB  developed the scripts for automated image generation. PFS, BJS, EC and SHB wrote the manuscript. All authors reviewed the manuscript.
 
 %Must include all authors, identified by initials, for example:

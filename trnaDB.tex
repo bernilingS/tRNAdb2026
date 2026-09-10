@@ -182,81 +182,29 @@ SeC: Selenocysteine, Sup:Supressor, AC: Anticodon, NCBI: National Center for Bio
 
 \maketitle
 
-%\begin{epigraph}
-%Epigraph text. Ximporem qui reperov idempedit modio. Bisto imagnatem quae aceptis
-%nobitae quid eum rae adignis quias-sit vellacc uptatur sunt quis rentis eaquasit alia deliquam
-%rec-to consed unt. Empor sum ratur ressimusdae. Nam fugiae.
-%\source{Epigraph source}
-%\end{epigraph}
-
 \section{Introduction}
-%The introduction introduces the context and summarizes the manuscript. It
-%is importantly to clearly state the contributions of this piece of work.
 
-There has been rising interest in tRNAs, promoted by
-  an increasingly broad portfolio of roles beyond their primary function of
-  mediating the genetic code. Some $10\,000$ publications now link tRNAs with
-  various aspects of cancer, with similar numbers concerning the aspect of
-  evolution of tRNAs and their processing.  A solid, well-curated body of data
-is therefore a key resource for a growing research community.
-Since the publication of the first ``Compilation of tRNA sequences and
-sequences of tRNA genes'' in 2005~\cite{sprinzl:2005}, and its extension as
-the tRNAdb 2009~\cite{juehling:2009}, a number of databases either
-dedicated to, or containing tRNA sequences, have been
-published \cite{gtrnadb, trnadb-ce, modomics}.
+There has been rising interest in tRNAs, promoted by an increasingly broad
+portfolio of roles beyond their primary function of mediating the genetic
+code. Some $10\,000$ publications now link tRNAs with various aspects of
+cancer, with similar numbers concerning the aspect of evolution of tRNAs
+and their processing.  A solid, well-curated body of data is therefore a
+key resource for a growing research community.  Since the publication of
+the first ``Compilation of tRNA sequences and sequences of tRNA genes'' in
+2005~\cite{sprinzl:2005}, and its extension as the tRNAdb
+2009~\cite{juehling:2009}, a number of databases either dedicated to, or
+containing tRNA sequences, have been published \cite{gtrnadb, trnadb-ce,
+  modomics}.
 
 When access to the tRNAdb was interrupted due to technical issues in
-  2024/2025, the data was still widely used. A large number of requests for
-  its continued existence prompted us to re-implemented the tRNAdb on a
-  new, solid technical foundation, and to include an Application Programming Interface (API) for automatic data
-  retrieval. For the present release, we extended its content by leveraging
-  existing nuclear tRNAs from the gtRNA database as well as mitochondrial,
-  archaeal and phage derived tRNAs we identified using MITOS2
-  \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan}, and additional
-  specialized approaches.
-
-
-
-%% This is an example of a new paragraph with a numbered
-%% footnote\footnote{\url{https://www.academic.oup.com/}} and a second
-%% footnote marker.\footnote{Example of footnote text.}
-
-
-
-%\section{Technical stuff about the database}\label{sec2}
-%\todo{Bruno} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-%do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-%minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-%ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-%velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-%cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-%est laborum (refer Section~\ref{sec5}).
-%
-%\subsection{This is an example for second level head - subsection head}\label{subsec1}
-%
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-%
-%\subsubsection{This is an example for third level head - subsubsection head}\label{subsubsec1}
-%
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-%eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. %Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-%
-%\paragraph{This is an example for fourth level head - paragraph head}
-%
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-%
-%\subparagraph{This is an example for fifth level head - subparagraph head}
-%
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
-
-
-
-%\subsubsection{Data acquisition}\label{subsubsec2}
-
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+2024/2025, the data was still widely used. A large number of requests for
+its continued existence prompted us to re-implemented the tRNAdb on a new,
+solid technical foundation, and to include an Application Programming
+Interface (API) for automatic data retrieval. For the present release, we
+extended its content by leveraging existing nuclear tRNAs from the gtRNA
+database as well as mitochondrial, archaeal and phage derived tRNAs we
+identified using MITOS2 \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan},
+and additional specialized approaches.
 
 \section{Implementation}
 
@@ -267,13 +215,12 @@ consisting of a MariaDB relational database, a flask API backend, and a
 CSS, HTML, and javascript based web frontend. This architecture enables
 independent change of individual components in order to ensure simple
 maintenance and future extensions. In contrast to the 2009 implementation
-(exclusively in Java and HTML/CSS), the new release aligns tRNAdb
-with modern software design philosophies. Notably, the tRNAdb website
-utilizes the public API endpoint exclusively for searching and retrieving
-data. To provide reliable download of large datasets, tRNAdb supports
-asynchronous data compilation and transfer via dedicated export threads as
-well as progress reporting of ongoing export jobs via polling.
-
+(exclusively in Java and HTML/CSS), the new release aligns tRNAdb with
+modern software design philosophies. Notably, the tRNAdb website utilizes
+the public API endpoint exclusively for searching and retrieving data. To
+provide reliable download of large datasets, tRNAdb supports asynchronous
+data compilation and transfer via dedicated export threads as well as
+progress reporting of ongoing export jobs via polling.
 
 \subsection{Data model and provenance}
 
@@ -281,61 +228,92 @@ For easy retrieval and global searches, sequences and their most relevant
 data are stored within a single, fully indexed relation enabling efficient
 filtering across all sequence categories, attributes, and selected
 metadata. This includes nucleotide sequence, secondary structure,
-anticodon, amino acid and origin (used as in the legacy database: genomic DNA-based, mitochondrial DNA-based, or RNA-based sequences including modifications). Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information obtained from the National Center for Biotechnology Information (NCBI) taxonomy database~\cite{ncbitaxonomy2020}. To facilitate legacy compatibility, the original tRNA dataset~\cite{juehling:2009} remains unaltered regarding sequence, structure, anticodon, amino acid, references, and tRNAdb identifier. We solely updated the taxonomic assignment, i.e., species names and NCBI taxonomy identifiers, to be consistent with the current NCBI taxonomy database. We used the NCBI taxonomy data dump 2026-06-01, accessed 10 June 2026, to create an updated local taxonomic table and reconciled legacy taxonomic assignments using \texttt{Bio.entrez}~\cite{biopython2009} to resolve their current taxonomic information.
-
+anticodon, amino acid and origin (used as in the legacy database: genomic
+DNA-based, mitochondrial DNA-based, or RNA-based sequences including
+modifications). Every sequence has a taxonomic identifier and a separate
+table holds relevant taxonomic information obtained from the National
+Center for Biotechnology Information (NCBI) taxonomy
+database~\cite{ncbitaxonomy2020}. To facilitate legacy compatibility, the
+original tRNA dataset~\cite{juehling:2009} remains unaltered regarding
+sequence, structure, anticodon, amino acid, references, and tRNAdb
+identifier. We solely updated the taxonomic assignment, i.e., species names
+and NCBI taxonomy identifiers, to be consistent with the current NCBI
+taxonomy database. We used the NCBI taxonomy data dump 2026-06-01, accessed
+10 June 2026, to create an updated local taxonomic table and reconciled
+legacy taxonomic assignments using \texttt{Bio.entrez}~\cite{biopython2009}
+to resolve their current taxonomic information.
 
 The updated relational schema supports a release versioning system which
 separates the legacy dataset and data contained in tRNAdb\,2026
-update. Every entry in tRNAdb has a version identifier indicating the first tRNAdb release it appeared in. For every release, data sources (i.e., origin database and version) and software (with corresponding version) used are
-documented. Additionally, every tRNAdb release is described with a public
-version string that is displayed on the ``Details'' page of individual
-entries, and is also available as an export field. The public version
-string contains a short description how the sequences published in this
-particular release were obtained. A detailed description, including 
-software applied and data sources, is available on the ``Documentation and Help''
-page.  Sequences in tRNAdb can be filtered by their corresponding release version, allowing users to browse exclusively legacy data, or current releases.
+update. Every entry in tRNAdb has a version identifier indicating the first
+tRNAdb release it appeared in. For every release, data sources (i.e.,
+origin database and version) and software (with corresponding version) used
+are documented. Additionally, every tRNAdb release is described with a
+public version string that is displayed on the ``Details'' page of
+individual entries, and is also available as an export field. The public
+version string contains a short description how the sequences published in
+this particular release were obtained. A detailed description, including
+software applied and data sources, is available on the ``Documentation and
+Help'' page.  Sequences in tRNAdb can be filtered by their corresponding
+release version, allowing users to browse exclusively legacy data, or
+current releases.
 
-Subsequent releases of the tRNAdb dataset will be published with a corresponding release identifier together with the prior described release metadata. To enable a sustainable update procedure, we implemented a graphical user interface supported pipeline for import, normalization, and duplicate detection for subsequent tRNAdb versions.
-
-%
-%
-%\OLD{Sequences are stored within three relational tables separated by origin (nuclear DNA, nuclear RNA, mitochondrial DNA). For easy global retrieval, we created a fully indexed materialized view of normalized sequence data which our backend takes advantage of in order to supply relevant data at the API endpoint. Every sequence has a taxonomic identifier and a separate table holds relevant taxonomic information which is provided by NCBI taxonomy. To facilitate legacy compatibility, the original tRNA dataset \cite{juehling:2009} remains unaltered, except for an updated taxonomy assignment which is consistent with the current NCBI taxonomy database.
-%
-%The updated relational schema supports a versioning system which separates the legacy dataset, data contained in tRNAdb 2.0 update, and any data updated in future releases. Every sequence present in tRNAdb has a version identifier attached which links to relevant version information. For every version, data sources and software (and their versions) used are documented. Additionally, every version is equipped with a public version string that is exposed on the ``Details'' page of individual entries, and is also available as an field for export. The public version string contains a short description how the sequences were obtained. \TODO{A more detailed description, e.g. software and datasources is available on the ``Documentation and Help'' page. Sequences in tRNAdb can be filtered by their corresponding version, allowing users to browse exclusively legacy data, or any subsequent release.}
-%
-%Subsequent releases of the tRNAdb dataset will be published with a corresponding updated version identifier together with version metadata. To enable a sustainable future update procedure, we implemented a graphical user interface supported pipeline for import, normalization, and duplicate detection for subsequent tRNAdb versions.}
+Subsequent releases of the tRNAdb dataset will be published with a
+corresponding release identifier together with the prior described release
+metadata. To enable a sustainable update procedure, we implemented a
+graphical user interface supported pipeline for import, normalization, and
+duplicate detection for subsequent tRNAdb versions.
 
 \subsection{API and programmatic access}
 
 With this update we provide a new public HTTP interface, accessible by POST
-JSON requests at \url{https://tdb.bioinf.uni-leipzig.de/api}. The API implements OpenAPI~3.1.0 specifications and a thorough documentation for users is available on the ``Documentation'' page of the tRNAdb website. Fundamentally, our API supports identical search parameters as the tRNAdb website and allows filtering by any combination of origin, species, clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural motifs, reference (genome accession, external source, publication), and release version.
+JSON requests at \url{https://tdb.bioinf.uni-leipzig.de/api}. The API
+implements OpenAPI~3.1.0 specifications and a thorough documentation for
+users is available on the ``Documentation'' page of the tRNAdb
+website. Fundamentally, our API supports identical search parameters as the
+tRNAdb website and allows filtering by any combination of origin, species,
+clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural
+motifs, reference (genome accession, external source, publication), and
+release version.
 
-For many fields, multiple values can be supplied and entries matching at least one are returned. Individual records can be precisely retrieved by using the stable identifier \texttt{trnadb\_id} which also remained unaltered for the 2009 legacy dataset.
+For many fields, multiple values can be supplied and entries matching at
+least one are returned. Individual records can be precisely retrieved by
+using the stable identifier \texttt{trnadb\_id} which also remained
+unaltered for the 2009 legacy dataset.
 
-%Internally, POST requests send to the API are parsed, an appropriate SQL statement is executed, and matching entries are returned as JSON.
 No prior registration, and no personal information (e.g., email address,
-API key) is required to access the tRNAdb search API at \url{https://tdb.bioinf.uni-leipzig.de/api} but user requests are
-limited to one request per second and at most 1000 entries are returned per
-request to ensure fair use. Every API response, given the request was
-valid, contains a \texttt{total\_results} field that states the total
-number of sequences matching a request and all relevant results can be paginated via an offset parameter. For requests that match a
-large number of records, and hence constitute bulk retrieval of tRNA sequences,
-a second API endpoint provides export to TSV, CSV, JSON, or FASTA which is
-available at \url{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb identifier connected to every entry is stable, hence over changing releases, existing identifiers will not change and remain relevant for retrieval purposes. For usage details see the documentation page of the tRNAdb website.
-
+API key) is required to access the tRNAdb search API at
+\url{https://tdb.bioinf.uni-leipzig.de/api} but user requests are limited
+to one request per second and at most 1000 entries are returned per request
+to ensure fair use. Every API response, given the request was valid,
+contains a \texttt{total\_results} field that states the total number of
+sequences matching a request and all relevant results can be paginated via
+an offset parameter. For requests that match a large number of records, and
+hence constitute bulk retrieval of tRNA sequences, a second API endpoint
+provides export to TSV, CSV, JSON, or FASTA which is available at
+\url{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb
+identifier connected to every entry is stable, hence over changing
+releases, existing identifiers will not change and remain relevant for
+retrieval purposes. For usage details see the documentation page of the
+tRNAdb website.
 
 \subsection{Website}
 
-The tRNAdb web interface (see Figure~\ref{Fig:Website}) can be found at \url{https://tdb.bioinf.uni-leipzig.de/}. It provides user-friendly access to the tRNA data stored in our database and can be functionally separated into three subpages: ``Search'', ``Details'', and ``Taxonomy Tree''.
+The tRNAdb web interface (see Figure~\ref{Fig:Website}) can be found at
+\url{https://tdb.bioinf.uni-leipzig.de/}. It provides user-friendly access
+to the tRNA data stored in our database and can be functionally separated
+into three subpages: ``Search'', ``Details'', and ``Taxonomy Tree''.
 \begin{figure}
   \centering
   \includegraphics[width=0.4\textwidth]{Webserver_homo_ala.png}
   \caption{Example of the tRNAdb website, showing the first page of the
-    results for a search for \emph{human} tRNAs for alanine, searching all three origins and using synonyms from NCBI taxonomy. \label{Fig:Website}}
+    results for a search for \emph{human} tRNAs for alanine, searching all
+    three origins and using synonyms from NCBI
+    taxonomy. \label{Fig:Website}}
 \end{figure}
 The main functionality of the website is the ``Search'' page which allows
-users to filter tRNA by organism, origin (genomic DNA-based, mitochondrial DNA-based, or
-RNA-based including modifications), amino acid, anticodon,
+users to filter tRNA by organism, origin (genomic DNA-based, mitochondrial
+DNA-based, or RNA-based including modifications), amino acid, anticodon,
 membership of taxonomic clades, external references (publications, genome
 IDs, external datasources) as well as sequence motifs and structural
 constraints. Species can be filtered precisely via NCBI taxonomy ID as well
@@ -346,33 +324,52 @@ database, is stored and tRNA belonging to a specific clade can be obtained
 by using the ``Clade'' field of the search page.
 
 Upon a successful search, the user is presented with a paginated list of
-matching tRNA sequences with a snapshot of data available for every sequence: origin, organism, amino acid, anticodon and its structurally annotated nucleotide sequence (separated into acceptor stem, D-loop, D-stem, etc.). Every result entry, or every entry matching the current search request, can be stored in a temporary selection which can be committed to persistent storage as a named collection for later access or download.
+matching tRNA sequences with a snapshot of data available for every
+sequence: origin, organism, amino acid, anticodon and its structurally
+annotated nucleotide sequence (separated into acceptor stem, D-loop,
+D-stem, etc.). Every result entry, or every entry matching the current
+search request, can be stored in a temporary selection which can be
+committed to persistent storage as a named collection for later access or
+download.
 
-A download manager allows exporting of individual collections, or every saved collection, and offers customizable export options. Export of data in \texttt{TSV}, \texttt{CSV}, \texttt{JSON}, and multi line FASTA format is supported and every export can be further customized by selecting various fields that are relevant to the individual user (e.g. sequence, structure, annotated sequence, species name, taxonomic lineage, reference, and more). FASTA export supports a customizable sequence identifier, for which a preview is generated.
+A download manager allows exporting of individual collections, or every
+saved collection, and offers customizable export options. Export of data in
+\texttt{TSV}, \texttt{CSV}, \texttt{JSON}, and multi line FASTA format is
+supported and every export can be further customized by selecting various
+fields that are relevant to the individual user (e.g. sequence, structure,
+annotated sequence, species name, taxonomic lineage, reference, and
+more). FASTA export supports a customizable sequence identifier, for which
+a preview is generated.
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{Webserver_Detail_homo_ala.png}
   \caption{Example for the Details page of a \emph{homo sapiens} tRNA for alanine, including modifications\label{Fig:Detail}}
 \end{figure}
-For every tRNA sequence entry in our database, a "Details" page is available
-(see Figure~\ref{Fig:Detail}). This page contains general information (e.g., unique identifier, origin, amino acid, anticodon), taxonomic information, sequence and structure, crosslinking information, and additional metadata if available. Furthermore, a standardized visualization of the secondary structure with a highlighted anticodon is displayed for every entry.  %The visualizations were generated using a custom made script employing R2R\cite{R2R}.
+For every tRNA sequence entry in our database, a "Details" page is
+available (see Figure~\ref{Fig:Detail}). This page contains general
+information (e.g., unique identifier, origin, amino acid, anticodon),
+taxonomic information, sequence and structure, crosslinking information,
+and additional metadata if available. Furthermore, a standardized
+visualization of the secondary structure with a highlighted anticodon is
+displayed for every entry.
 
 We implemented a searchable taxonomy browser which displays an expandable
 tree view of the NCBI taxonomic database. Every node in the taxonomy tree
-is annotated with its scientific name according to the NCBI taxonomy as well as
-its unique NCBI taxonomy ID. The taxonomy browser only displays clades and
-species, for which there are tRNA sequences present in tRNAdb. For every
-entry in the taxonomy browser, the number of tRNA sequences separated by
-origin is displayed. Every
-node in the taxonomy browser contains a link, which allows to search tRNAdb
-for sequences belonging to this clade/species.
+is annotated with its scientific name according to the NCBI taxonomy as
+well as its unique NCBI taxonomy ID. The taxonomy browser only displays
+clades and species, for which there are tRNA sequences present in
+tRNAdb. For every entry in the taxonomy browser, the number of tRNA
+sequences separated by origin is displayed. Every node in the taxonomy
+browser contains a link, which allows to search tRNAdb for sequences
+belonging to this clade/species.
 
 \section{Inclusion of new data}\label{sec3}
 
 To include new data into tRNAdb, we used different approaches for different
 types of tRNA for candidate identification, followed by alignment and
-quality control for all candidate entries except for the modified mitochondrial
-RNAs where the published assignment of bases to canonical locations was
-used \cite{modtRNAbtaurus,humanmtRNA}, see Figure\,\ref{workflow}.
+quality control for all candidate entries except for the modified
+mitochondrial RNAs where the published assignment of bases to canonical
+locations was used \cite{modtRNAbtaurus,humanmtRNA}, see
+Figure\,\ref{workflow}.
 
 \begin{figure}
   \includegraphics[width=0.47\textwidth]{workflow_figure.pdf}
@@ -381,24 +378,25 @@ used \cite{modtRNAbtaurus,humanmtRNA}, see Figure\,\ref{workflow}.
     of tRNAs as well as common filtering and alignment steps are shown.}
 \end{figure}
 
-
 \subsection{Mitochondrial tRNAs}\label{subsecmitotRNA}
 
 To expand the set of mitochondrial tRNAs included in the tRNAdb, a total of
 $16\,630$ mitochondrial genome sequences, as well as their annotations were
-obtained from NCBI Nucleotide~\cite{ncbinucleotide2024}, accessed October 2024. We
-used MITOS2~\cite{mitos2} without detection of proteins and rRNA and the
-refseq89m models on each mitochondrial genome to search for tRNAs. The
-predicted sequences were then compared to the NCBI annotation. All tRNAs
-that matched exactly to the NCBI annotation were added to tRNAdb. In case
-of discrepancies of location, we checked whether the structure of the
-acceptor stem predicted by Infernal 1.1.4~\cite{infernal} passed human
-curation. In the affirmative case, the sequence predicted by MITOS2 was deemed correct and
-included into the database. In case of discrepancies in the assignment of
-the strand (reading direction), we retained the MITOS2 prediction if no
-plausible anticodon could be identified in the anticodon stem and loop of
-the NCBI annotation.  After filtering (see ``Alignment and quality control section'' below), this resulted in 305\,905
-novel predicted mtRNAs that were added to the \texttt{tRNAdb}.
+obtained from NCBI Nucleotide~\cite{ncbinucleotide2024}, accessed October
+2024. We used MITOS2~\cite{mitos2} without detection of proteins and rRNA
+and the refseq89m models on each mitochondrial genome to search for
+tRNAs. The predicted sequences were then compared to the NCBI
+annotation. All tRNAs that matched exactly to the NCBI annotation were
+added to tRNAdb. In case of discrepancies of location, we checked whether
+the structure of the acceptor stem predicted by Infernal
+1.1.4~\cite{infernal} passed human curation. In the affirmative case, the
+sequence predicted by MITOS2 was deemed correct and included into the
+database. In case of discrepancies in the assignment of the strand (reading
+direction), we retained the MITOS2 prediction if no plausible anticodon
+could be identified in the anticodon stem and loop of the NCBI annotation.
+After filtering (see ``Alignment and quality control section'' below), this
+resulted in 305\,905 novel predicted mtRNAs that were added to the
+\texttt{tRNAdb}.
 
 \subsection{Nuclear tRNAs}\label{subsecgenomictRNA}
 Genomic tRNAs were sourced from the GtRNAdb, using the data release from
@@ -412,8 +410,10 @@ decided to further expand tRNAdb in these two areas.
 \subsection{Archaeal tRNAs}
 
 Archaeal genomes were sourced from the Bacterial and Viral Bioinformatics
-Resource Center (BV-BRC) database~\cite{bvbrc2022}, accessed October 2024. Only high-quality genomes were retained for further analysis, and genome quality was assessed by CheckM2 ($\geq$85\% complete,
-$<$5\% contaminated)~\cite{checkm2}. These archaeal genomes cover a broad
+Resource Center (BV-BRC) database~\cite{bvbrc2022}, accessed October
+2024. Only high-quality genomes were retained for further analysis, and
+genome quality was assessed by CheckM2 ($\geq$85\% complete, $<$5\%
+contaminated)~\cite{checkm2}. These archaeal genomes cover a broad
 taxonomic range and include all major archaeal superphyla (Asgard, DPANN,
 TACK, and Euryarchaeota).  We did not rely on the BV-BRC annotation of tRNA
 genes, as we found it inconsistent with predictions using the most
@@ -427,60 +427,75 @@ tRNAs were identified using the SeC-specific covariance model, since it has
 an atypical secondary structure~\cite{tRNAscan}. As independent validation,
 all tRNAscan predictions were re-scored with Infernal~\cite{infernal}
 against tRNAinf-arch and tRNAinf-arch-SeC models. After filtering (see
-``Alignment and quality control section'' below),
-$21\,127$ tRNA genes from 228 unique archaeal genomes were added, of which
-214 were not represented in the 2009 tRNAdb, substantially expanding
-archaeal coverage relative to the legacy dataset.
-
+``Alignment and quality control section'' below), $21\,127$ tRNA genes from
+228 unique archaeal genomes were added, of which 214 were not represented
+in the 2009 tRNAdb, substantially expanding archaeal coverage relative to
+the legacy dataset.
 
 \subsection{Phage tRNAs}
-Genome sequences of all viruses annotated with the host term ``Bacteria'' were obtained from NCBI Virus~\cite{ncbivirus}, accessed 17 August 2026. Putative tRNA genes
-were identified using tRNAscan-SE v2.0.12 \cite{tRNAscan} in bacterial mode.
-Predicted tRNAs were retained only if they were 70–90nt in length, had an
-overall tRNAscan-SE Bit Score $>$60, and had both HMM and
-secondary-structure scores $>$10. Predictions with undefined isotypes or
-classified as pseudogenes were excluded. After filtering (see ``Alignment and
-quality control section'' below), $7\,099$ viral tRNA genes from $1\,558$ unique genomes were added to tRNAdb.
-
+Genome sequences of all viruses annotated with the host term ``Bacteria''
+were obtained from NCBI Virus~\cite{ncbivirus}, accessed 17 August
+2026. Putative tRNA genes were identified using tRNAscan-SE v2.0.12
+\cite{tRNAscan} in bacterial mode.  Predicted tRNAs were retained only if
+they were 70–90nt in length, had an overall tRNAscan-SE Bit Score $>$60,
+and had both HMM and secondary-structure scores $>$10. Predictions with
+undefined isotypes or classified as pseudogenes were excluded. After
+filtering (see ``Alignment and quality control section'' below), $7\,099$
+viral tRNA genes from $1\,558$ unique genomes were added to tRNAdb.
 
 \subsection{tRNAs sequences including modifications}\label{subsecmodifiedtRNA}
 Modified tRNA sequences, as well as their genomic variants, were obtained
-from the MODOMICS \cite{modomics} database and the Protein Data Bank (PDB)~\cite{pdb2000}.
-Sequences retrieved from the PDB having only a single modification located at the first or last base were not included into the database.
-In order to display alignments properly, legacy one-letter codes for modifications were retained.
-The dictionary of one-letter codes for modifications was extended to include any that were not present in the legacy tRNAdb 2009.
-For these novel modifications, we also identified the compound name
-using the  PDB entry. The InChiKeys and InChis were extracted from
-PubChem~\cite{pubchem2025} to  check whether the compound was already present
-in the MODOMICS database. A list of all modifications with the one-letter codes
-used in tRNAdb and MODOMICS can be found in the supplement and on the database webpage.
-Mature mitochondrial tRNA sequences from \emph{H.\ sapiens}~\cite{humanmtRNA} and \emph{B.\ taurus}~\cite{modtRNAbtaurus} were added from the supplement of the respective publications. The included canonical base numberings were used directly for alignment and structural annotation.
+from the MODOMICS \cite{modomics} database and the Protein Data Bank
+(PDB)~\cite{pdb2000}.  Sequences retrieved from the PDB having only a
+single modification located at the first or last base were not included
+into the database.  In order to display alignments properly, legacy
+one-letter codes for modifications were retained.  The dictionary of
+one-letter codes for modifications was extended to include any that were
+not present in the legacy tRNAdb 2009.  For these novel modifications, we
+also identified the compound name using the PDB entry. The InChiKeys and
+InChis were extracted from PubChem~\cite{pubchem2025} to check whether the
+compound was already present in the MODOMICS database. A list of all
+modifications with the one-letter codes used in tRNAdb and MODOMICS can be
+found in the supplement and on the database webpage.  Mature mitochondrial
+tRNA sequences from \emph{H.\ sapiens}~\cite{humanmtRNA} and \emph{B.\
+  taurus}~\cite{modtRNAbtaurus} were added from the supplement of the
+respective publications. The included canonical base numberings were used
+directly for alignment and structural annotation.
 
 \subsection{Alignment and quality control}
 For all novel sequences, we used Infernal~\cite{infernal} to align them to
 the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective MITOS2 models for
-mitochondrial tRNAs). When an anticodon was annotated, we compared it to the one identified by Infernal (at the center of the
-anticodon loop). To filter tRNAs with suspicious structural features, we also
-checked the length of the D-loops, AC-loops, and T-loops, as well as the number of unpaired bases between D-stem and AC-stem. For the AC-loop, we used a strict length of 7 nt. For the other structural features, we used the maximum length of the respective structural feature in tRNAdb 2009, allowed a single nucleotide difference in length (resulting in 18 and 28 nt for D and T-loops respectively and 5 nt between D and AC-stem) and discarded a total of 404 tRNAs that did not make one of the four thresholds. As a last filtering step, all entries that were duplicates with respect to sequence and taxonomic ID were unified when necessary, so that every sequence/species pair in the tRNAdb is unique.
+mitochondrial tRNAs). When an anticodon was annotated, we compared it to
+the one identified by Infernal (at the center of the anticodon loop). To
+filter tRNAs with suspicious structural features, we also checked the
+length of the D-loops, AC-loops, and T-loops, as well as the number of
+unpaired bases between D-stem and AC-stem. For the AC-loop, we used a
+strict length of 7 nt. For the other structural features, we used the
+maximum length of the respective structural feature in tRNAdb 2009, allowed
+a single nucleotide difference in length (resulting in 18 and 28 nt for D
+and T-loops respectively and 5 nt between D and AC-stem) and discarded a
+total of 404 tRNAs that did not make one of the four thresholds. As a last
+filtering step, all entries that were duplicates with respect to sequence
+and taxonomic ID were unified when necessary, so that every
+sequence/species pair in the tRNAdb is unique.
 
 \section{Statistics}
 
-
-The database lists $330\,261$ mitochondrial tRNA entries
-comprising $219\,388$ unique sequences. The vast majority of these
-originate in metazoa (see Fig.~\ref{Tax}a), which reflects the distribution
-of mitochondrial genomes at the NCBI. The genomic part of the database
+The database lists $330\,261$ mitochondrial tRNA entries comprising
+$219\,388$ unique sequences. The vast majority of these originate in
+metazoa (see Fig.~\ref{Tax}a), which reflects the distribution of
+mitochondrial genomes at the NCBI. The genomic part of the database
 contains a total of $228\,955$ entries comprising $93\,257$ unique
 sequences. The majority, precisely $149\,749$ entries, are bacterial
 tRNAs. However, the difference of genomic tRNA representation in tRNAdb is
 much smaller for unique sequences, see Fig.~\ref{Tax}b.
-%This may be due to many bacterial strains sharing tRNA sequences.
-%If tRNA sequences are shared between species, they can be included multiple times in the tRNAdb.
 
 \begin{figure}
   \includegraphics[width=0.45\textwidth]{taxonomicdistributions.pdf}
-  \caption{\label{Tax}Number of tRNA sequences per clade. a: mitochondrial tRNAs at kingdom level. b: genomic tRNAs at domain level. Light gray shows number of all sequences, dark gray number of unique sequences.}
+  \caption{\label{Tax}Number of tRNA sequences per clade. a: mitochondrial
+    tRNAs at kingdom level. b: genomic tRNAs at domain level. Light gray
+    shows number of all sequences, dark gray number of unique sequences.}
 \end{figure}
 
 Mitochondrial tRNAs show a relatively even distribution with respect to
@@ -489,73 +504,99 @@ entries for Met. The relatively even distribution can also be seen in the
 unique sequences: Asp has the most with 12\,446, while Ser2 has the least
 amount of unique sequences with 10\,184. The exception to these even
 distributions are Leu1 (10\,857 entries, 6\,209 unique sequences) and to a
-smaller extent Ser1 (12\,979 and 9\,457, resp.), which code for the two amino
-acids that have two tRNAs in many mitochondria. Mitochondrial tRNA-Lys is the
-only tRNA with a notable amount of two different anticodons (Fig.~\ref{Aminoacidamounts}a).
+smaller extent Ser1 (12\,979 and 9\,457, resp.), which code for the two
+amino acids that have two tRNAs in many mitochondria. Mitochondrial
+tRNA-Lys is the only tRNA with a notable amount of two different anticodons
+(Fig.~\ref{Aminoacidamounts}a).
 
-In contrast, genomic tRNAs show a much wider variety in their abundance. Leu, being the most abundant, has $23\,995$ entries and $10\,233$ unique sequences. Besides the non-standard Suppressor and SeC tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique sequences), while Phe and Trp have the fewest unique sequences with $2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the number of entries as well as the number of unique sequences per amino acid strongly correlates with the number of frequent (n$> 100$) anticodons in use for an amino acid ($\rho > 0.93, p< 10^{-8}$ for both).
-
+In contrast, genomic tRNAs show a much wider variety in their
+abundance. Leu, being the most abundant, has $23\,995$ entries and
+$10\,233$ unique sequences. Besides the non-standard Suppressor and SeC
+tRNAs, His has the fewest entries with $5\,290$ ($2\,305$ unique
+sequences), while Phe and Trp have the fewest unique sequences with
+$2\,093$ (in $5\,855$ and $5\,579$ entries, respectively). Notably, many
+genomic tRNAs (Asn, Asp, Cys, His, Phe, Trp, Tyr) show a clear preference
+for one codon (see Fig.~\ref{Aminoacidamounts}b). Not surprisingly, the
+number of entries as well as the number of unique sequences per amino acid
+strongly correlates with the number of frequent (n$> 100$) anticodons in
+use for an amino acid ($\rho > 0.93, p< 10^{-8}$ for both).
 
 \begin{figure}
   \includegraphics[width=0.4\textwidth]{MitoandGenomicAminoacidamounts.pdf}
-  \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and anticodon. a) mitochondrial tRNA sequences b) genomic tRNA sequences. Light gray shows number of all sequences, dark gray number of unique sequences.}
+  \caption{\label{Aminoacidamounts}Distribution of tRNAs per amino acid and
+    anticodon. a) mitochondrial tRNA sequences b) genomic tRNA
+    sequences. Light gray shows number of all sequences, dark gray number
+    of unique sequences.}
 \end{figure}
 
 In comparison to the first version of tRNAdb, we greatly expanded sequences
-belonging to clades that were either not included before, such as mitchondrial
-tRNAs from viridiplantae or fungi, or had only very sparse entries, such as
-archaea and viroidal genomic tRNAs (see Fig.~\ref{species}). In total, tRNAdb\,2026 contains genomic entries from $6\,086$ species, and mitochondrial entries from $15\,796$ different species.
+belonging to clades that were either not included before, such as
+mitchondrial tRNAs from viridiplantae or fungi, or had only very sparse
+entries, such as archaea and viroidal genomic tRNAs (see
+Fig.~\ref{species}). In total, tRNAdb\,2026 contains genomic entries from
+$6\,086$ species, and mitochondrial entries from $15\,796$ different
+species.
  \begin{figure}
   \includegraphics[width=0.4\textwidth]{Speciesdistribution.pdf}
-  \caption{\label{species}Distribution of species included in the tRNAdb, seperated by clade. a)  mitochondrial b) genomic tRNAs. Light gray shows number species in tRNAdb\,2026 only, dark gray number of species in tRNAdb 2009.}
+  \caption{\label{species}Distribution of species included in the tRNAdb,
+    seperated by clade. a) mitochondrial b) genomic tRNAs. Light gray shows
+    number species in tRNAdb\,2026 only, dark gray number of species in
+    tRNAdb 2009.}
 \end{figure}
-
-
-%\OLD{
-%The tRNAdb website provides user-friendly access to the tRNA data stored in our database and can be functionally separated into three subpages: ``Search'', ``Details'', and ``Taxonomy Tree''.
-%
-%The main functionality of the website is the ``search´´ page which allows users to filter tRNA by organism, origin (e.g., nuclear DNA, nuclear RNA, mitochondrial DNA) amino acid, anticodon, taxonomy family, external references (publications, genome IDs, external datasources) as well as sequence motifs and structural constraints. Species can be filtered precisely via NCBI taxonomy ID as well as their scientific species name and species synonyms as annotated in the NCBI taxonomy database. Amino acids, hence tRNA transporting specific amino acids, can be filtered by their universal three letter code. Filtering by anticodon supports ambiguous "wobble base" of the third base of the anticodon when the user supplies only two anticodon nucleotides. For every species with tRNA present in tRNAdb, their taxonomic lineage as described in NCBI taxonomy is stored and tRNA belonging to a specific clade can be obtained by using the ``Clade´´ field of the search page.
-%
-%Upon a successful search, the user is presented with a paginated list of fitting tRNA sequences with a snapshot of data available for every sequence: origin, organism, amino acid, anticodon and its structurally annotated nucleotide sequence (separated into acceptor stem, D-loop, D-stem, etc.). Multi-level sorting of entries matching a search request is possible, i.e., results can be sorted by each present field (e.g., ascending by organism name, descending by amino acid). Every result entry, or every entry matching the current search request, can be stored in a temporary selection which, via the prominent "Add Selection to Download", can be committed to persistent storage for later access or download. Committed sequences are saved under a chosen collection name, or tag. These colletions can be viewed in a download manager and for every collection, the number of bookmarked entries is displayed. A limited preview for every collection is available upon clicking the corresponding collection in the download manager.
-%
-%The download manager allows to download individual collections, or every saved collection, and offers customizable export options. Export of data in \texttt{.tsv}, \texttt{.csv}, and multi line fasta format is supported and every export can be further customized by selecting the various fields that are relevant to the user (e.g. sequence, structure, annotated sequence, species name, taxonomic lineage, reference, etc.). Fasta export supports a customizable sequence identifier for which a preview is generated.
-%
-%For every tRNA sequence entry in our database, a "Details" page can be displayed (via clicking an entry in the search results list). This page contains general information (e.g., unique identifier, origin, amino acid, anticodon), taxonomic information (e.g., species, NCBI taxonomy ID, EMBL code, synonyms and taxonomic lineage), sequence and structure, crosslinking information (e.g., position, strand, genome accession, linking information to third party resources, tRNAscan score), and additional metadata if available. Furthermore, a visualization of the secondary structure with a highlighted anticodon is displayed for every entry. The visualizations were generated using \TODO{CUSTOM RNA-Vis thingy}.
-%
-%We implemented a searchable taxonomy browser which displays an expandable tree view of the NCBI taxonomic database. Every node in the taxonomy tree is annotated with its \TODO{official} NCBI name as well as its NCBI taxonomy ID. The taxonomy browser only displays clades and species, for which there are tRNA sequences present in tRNAdb. For every entry in the taxonomy browser, the number of tRNA sequences separated by origin (nuclear DNA, nuclear RNA, mitochondrial DNA) is displayed. \TODO{Every node in the taxonomy browser contains a button which allows to search tRNAdb for sequences belonging to this clade/species.}}
-
 
 \section{Conclusion}
 
-%Some Conclusions here.
-The updated tRNAdb has been substantially expanded by an 11-fold increase in available tRNA sequences and its infrastructure was considerably modernized.
-Alongside a redesigned web interface, we provide a public API and a considerable increase in the number of included entries. Among these new entries now are modified mitochondrial tRNAs and, for the first time, mitochondrial tRNAs from plants and fungi. tRNAdb thus continues to serve as an important resource for the tRNA community.
+The updated tRNAdb has been expanded 11-fold and its infrastructure was
+modernized throughout.  Alongside a redesigned web interface, it now
+provides a public API and a considerable increase in the number of included
+entries. Among these new entries now are modified mitochondrial tRNAs and,
+for the first time, mitochondrial tRNAs from plants and fungi. tRNAdb thus
+continues to serve as an important resource for the tRNA community.
 
-However, because most entries in the tRNAdb stem from semi-automatic annotation, fringe cases that deviate from established tRNA properties are likely
-to be rejected, even though these are often of high biological interest. We therefore rely on the community to report such sequences, so they can be incorporated into future releases. This feedback may in turn motivate updated search algorithms capable of capturing a broader range of non-standard tRNAs.
-To be able to address this, we povide a web interface where experts can send us entries of non-standard tRNAs that we can curate and include into the database.% Additional statistical analysis can be incorporated into subsequent updates of the database.}%maybe we should think about providing a web interface for people to
-%  look at wierd fringe cases? I think we could also mention additional statistical capabilities that can be incorporated with subsequent frontend/API updates - tRNA motifs for searches; species/clade specific anticodon utilization or translation tables derived from the mttrnas, average tRNA counts of tRNA per amino acid per clade, BLAST queries, ...}
-
+However, because most entries in the tRNAdb stem from semi-automatic
+annotation, fringe cases that deviate from established tRNA properties are
+likely to be rejected, even though these are often of high biological
+interest. We therefore rely on the community to report such sequences, so
+they can be incorporated into future releases. This feedback may in turn
+motivate updated search algorithms capable of capturing a broader range of
+non-standard tRNAs.  To address such cases, we provide a web interface
+where experts can submit entries of non-standard tRNAs that we will curate
+and include into the database.
 
 \section{Conflicts of interest}
-C.L.B. is a co-founder and scientific advisor to Locus Biosciences and a scientific advisor to Quidditas Therapeutics. The other authors declare that they have no competing interests.
+C.L.B. is a co-founder and scientific advisor to Locus Biosciences and a
+scientific advisor to Quidditas Therapeutics. The other authors declare
+that they have no competing interests.
 
 \section{Funding}
-This work was funded in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-3105/1 - 533765739, the Austrian Science Fund (FWF) F80 RNAdeco, the German Federal Ministry of Research, Technology and Space (BMFTR) through Leipzig RNA Bioinformatics Center (RBC) of the German Network for Bioinformatics Infrastructure (de.NBI) sustained via Forschungszent\-rum J\"{u}hlich.%  (NFB: \# XXXXXXX and \# YYYYYYY).
+This work was funded in part by the Deutsche Forschungsgemeinschaft (DFG,
+German Research Foundation) under Germany's Excellence Strategy -
+EXC-3105/1 - 533765739, the Austrian Science Fund (FWF) F80 RNAdeco, the
+German Federal Ministry of Research, Technology and Space (BMFTR) through
+Leipzig RNA Bioinformatics Center (RBC) of the German Network for
+Bioinformatics Infrastructure (de.NBI) sustained via Forschungszent\-rum
+J\"{u}hlich.
 
 \section{Data availability}
-The data underlying the tRNAdb\,2026 are available in public repositories like GtRNAdb, NCBI nucleotide and BV-BRC. Links to the sources as well as all other relevant information are provided at the detail pages of the webpage  \url{https://tdb.bioinf.uni-leipzig.de/}.%[repository name, eg, the GenBank Nucleotide Database] at [URL], and can be accessed with [unique identifier, eg, accession number, deposition number].
+The data underlying the tRNAdb\,2026 are available in public repositories
+like GtRNAdb, NCBI nucleotide and BV-BRC. Links to the sources as well as
+all other relevant information are provided at the detail pages of the
+webpage \url{https://tdb.bioinf.uni-leipzig.de/}.
 
 \section{Author contributions statement}
-{\bf B.J.S.:} Software, Data curation, Writing – original draft, Writing – review \& editing. {\bf S.H.B.:} Conceptualization, Methodology, Investigation, Data curation, Software, Writing – original draft, Writing – review \& editing. {\bf P.F.S.:} Conceptualization, Methodology, Writing – original draft, Writing – review \& editing, Funding acquisition. {\bf E.C.:} Investigation, Writing – original draft, Writing – review \& editing. {\bf D.I.F} Validation, Writing – review \& editing. {\bf M.F.:} Investigation, Writing – review \& editing. {\bf T.S.:} Investigation, Data curation, Writing – review \& editing. {\bf F.J.:} Resources, Data curation, Writing – review \& editing. {\bf M.M.:} Resources, Data curation, Writing – review \& editing. {\bf J.P.:} Resources, Data curation, Writing – review \& editing. {\bf C.L.B.:} Supervision, Writing – review \& editing.
-%BJS developed front and back end of the database. SHB and PFS designed the new scope of the database. SHB, EC, MF, and TS searched and identified new tRNAs, FJ, MM,  and JP provided data and helped porting the database. SHB, TS, and BJS performed data cleansing and data preprocessing. SHB  developed the scripts for automated image generation. PFS, BJS, EC and SHB wrote the manuscript. All authors reviewed the manuscript.
-
-%Must include all authors, identified by initials, for example:
-%S.R. and D.A. conceived the experiment(s),  S.R. conducted the experiment(s), S.R. and D.A. analyzed the results.  S.R. and D.A. wrote and reviewed the manuscript.
-
-%\section{Acknowledgments}
-%The authors thank the anonymous reviewers for their valuable suggestions.
-%This work is supported in part by funds from the National Science Foundation (NSF: \# 1636933 and \# 1920920).
+\textbf{B.J.S.:} Software, Data curation, Writing – original draft, Writing
+– review \& editing. \textbf{S.H.B.:} Conceptualization, Methodology,
+Investigation, Data curation, Software, Writing – original draft, Writing –
+review \& editing. \textbf{P.F.S.:} Conceptualization, Methodology, Writing
+– original draft, Writing – review \& editing, Funding
+acquisition. \textbf{E.C.:} Investigation, Writing – original draft,
+Writing – review \& editing. \textbf{D.I.F} Validation, Writing – review \&
+editing. \textbf{M.F.:} Investigation, Writing – review \&
+editing. \textbf{T.S.:} Investigation, Data curation, Writing – review \&
+editing. \textbf{F.J.:} Resources, Data curation, Writing – review \&
+editing. \textbf{M.M.:} Resources, Data curation, Writing – review \&
+editing. \textbf{J.P.:} Resources, Data curation, Writing – review \&
+editing. \textbf{C.L.B.:} Supervision, Writing – review \& editing.
 
 
 \bibliographystyle{oup-plain}
@@ -563,828 +604,3 @@ The data underlying the tRNAdb\,2026 are available in public repositories like G
 
 \end{document}
 
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEMPLATE SHIT BELOW %%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%\subsubsection{Level three heading}
-%
-%\paragraph{Level four heading}
-%
-%\subparagraph{Level five heading}
-%
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-%
-%
-%\section{Equations}\label{sec4}
-%
-%Equations in \LaTeX{} can either be inline or set as display equations. For
-%inline equations use the \verb+$...$+ commands. Eg: the equation
-%$H\psi = E \psi$ is written via the command \verb+$H \psi = E \psi$+.
-%
-%For display equations (with auto generated equation numbers)
-%one can use the equation or eqnarray environments:
-%\begin{equation}
-%\|\tilde{X}(k)\|^2 \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q},\label{eq1}
-%\end{equation}
-%where,
-%\begin{align}
-%D_\mu &=  \partial_\mu - ig \frac{\lambda^a}{2} A^a_\mu \nonumber \\
-%F^a_{\mu\nu} &= \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^a_\nu.\label{eq2}
-%\end{align}
-%Notice the use of \verb+\nonumber+ in the align environment at the end
-%of each line, except the last, so as not to produce equation numbers on
-%lines where no equation numbers are required. The \verb+\label{}+ command
-%should only be used at the last line of an align environment where
-%\verb+\nonumber+ is not used.
-%\begin{equation}
-%Y_\infty = \left( \frac{m}{\textrm{GeV}} \right)^{-3}
-%    \left[ 1 + \frac{3 \ln(m/\textrm{GeV})}{15}
-%    + \frac{\ln(c_2/5)}{15} \right].
-%\end{equation}
-%The class file also supports the use of \verb+\mathbb{}+, \verb+\mathscr{}+ and
-%\verb+\mathcal{}+ commands. As such \verb+\mathbb{R}+, \verb+\mathscr{R}+
-%and \verb+\mathcal{R}+ produces $\mathbb{R}$, $\mathscr{R}$ and $\mathcal{R}$
-%respectively (refer Subsubsection~\ref{subsubsec3}).
-%
-%
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-%eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-%eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-%Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-%eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-%
-%
-%\section{Tables}\label{sec5}
-%
-%Tables can be inserted via the normal table and tabular environment. To put
-%footnotes inside tables one has to Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. use the additional ``tablenotes" environment
-%enclosing the tabular environment. The footnote appears just below the table
-%itself (refer Tables~\ref{tab1} and \ref{tab2}).
-%
-%
-%\begin{verbatim}
-%\begin{table}[t]
-%\begin{center}
-%\begin{minipage}{<width>}
-%\caption{<table-caption>\label{<table-label>}}%
-%\begin{tabular}{@{}llll@{}}
-%\toprule
-%column 1 & column 2 & column 3 & column 4\\
-%\midrule
-%row 1 & data 1 & data 2          & data 3 \\
-%row 2 & data 4 & data 5$^{1}$ & data 6 \\
-%row 3 & data 7 & data 8      & data 9$^{2}$\\
-%\botrule
-%\end{tabular}
-%\begin{tablenotes}%
-%\item Source: Example for source.
-%\item[$^{1}$] Example for a 1st table footnote.
-%\item[$^{2}$] Example for a 2nd table footnote.
-%\end{tablenotes}
-%\end{minipage}
-%\end{center}
-%\end{table}
-%\end{verbatim}
-%
-%
-%Lengthy tables which do not fit within textwidth should be set as rotated tables. For this, we need to use \verb+\begin{sidewaystable}...+ \verb+\end{sidewaystable}+ instead of\break \verb+\begin{table}...+ \verb+\end{table}+ environment.
-%
-%
-%\begin{table}[!t]
-%\caption{Caption text\label{tab1}}%
-%\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}llll@{\extracolsep\fill}}
-%\toprule
-%column 1 & column 2  & column 3 & column 4\\
-%\midrule
-%row 1    & data 1   & data 2  & data 3  \\
-%row 2    & data 4   & data 5$^{1}$  & data 6  \\
-%row 3    & data 7   & data 8  & data 9$^{2}$  \\
-%\botrule
-%\end{tabular*}
-%\begin{tablenotes}%
-%\item Source: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote
-%\item[$^{1}$] Example for a first table footnote.
-%\item[$^{2}$] Example for a second table footnote.
-%\end{tablenotes}
-%\end{table}
-%
-%\begin{table*}[t]
-%\caption{Example of a lengthy table which is set to full textwidth.\label{tab2}}
-%\tabcolsep=0pt%%
-%\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
-%\toprule%
-%& \multicolumn{3}{@{}c@{}}{Element 1$^{1}$} & \multicolumn{3}{@{}c@{}}{Element 2$^{2}$} \\
-%\cline{2-4}\cline{5-7}%
-%Project & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
-%\midrule
-%Element 3  & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$\\
-%Element 4  & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$\\
-%\botrule
-%\end{tabular*}
-%\begin{tablenotes}%
-%\item Note: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote
-%\item[$^{1}$] Example for a first table footnote.
-%\item[$^{2}$] Example for a second table footnote.\vspace*{6pt}
-%\end{tablenotes}
-%\end{table*}
-%
-%\begin{sidewaystable}%[!p]
-%\caption{Tables which are too long to fit, should be written using the ``sidewaystable" environment as shown here\label{tab3}}
-%\tabcolsep=0pt%
-%\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
-%\toprule%
-%& \multicolumn{3}{@{}c@{}}{Element 1$^{1}$}& \multicolumn{3}{@{}c@{}}{Element$^{2}$} \\
-%\cline{2-4}\cline{5-7}%
-%Projectile & Energy     & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
-%\midrule
-%Element 3 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
-%Element 4 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
-%\botrule
-%\end{tabular*}
-%\begin{tablenotes}%
-%\item Note: This is an example of a table footnote this is an example of a table footnote this is an example of a table footnote this is an example of a table footnote this is an example of a table footnote
-%\item[$^{1}$] This is an example of a table footnote
-%\end{tablenotes}
-%\end{sidewaystable}
-%
-%
-%\section{Figures}\label{sec6}
-%
-%As per display \LaTeX\ standards one has to use eps images for \verb+latex+ compilation and \verb+pdf/jpg/png+ images for
-%\verb+pdflatex+ compilation. This is one of the major differences between \verb+latex+
-%and \verb+pdflatex+. The images should be single-page documents. The command for inserting images
-%for \verb+latex+ and \verb+pdflatex+ can be generalized. The package used to insert images in \verb+latex/pdflatex+ is the
-%graphicx package. Figures can be inserted via the normal figure environment as shown in the below example:
-%
-%
-%\begin{figure}[!t]%
-%\centering
-%{\color{black!20}\rule{213pt}{37pt}}
-%\caption{This is a widefig. This is an example of a long caption this is an example of a long caption  this is an example of a long caption this is an example of a long caption}\label{fig1}
-%\figalttext[Figure alt-text short description needs to be provided here]{Figure alt-text long description needs to be provided here}%
-%\end{figure}
-%
-%\begin{figure*}[!t]%
-%\centering
-%{\color{black!20}\rule{\textwidth}{74pt}}
-%\caption{This is a widefig. This is an example of a long caption this is an example of a long caption  this is an example of a long caption this is an example of a long caption}\label{fig2}
-%\end{figure*}
-%
-%
-%\begin{verbatim}
-%\begin{figure}[t]
-%        \centering\includegraphics{<eps-file>}
-%        \caption{<figure-caption>}
-%        \label{<figure-label>}
-%\end{figure}
-%\end{verbatim}
-%
-%Test text here.
-%
-%For sample purposes, we have included the width of images in the
-%optional argument of \verb+\includegraphics+ tag. Please ignore this.
-%Lengthy figures which do not fit within textwidth should be set in rotated mode. For rotated figures, we need to use \verb+\begin{sidewaysfigure}+ \verb+...+ \verb+\end{sidewaysfigure}+ instead of the \verb+\begin{figure}+ \verb+...+ \verb+\end{figure}+ environment.
-%
-%\begin{sidewaysfigure}%
-%\centering
-%{\color{black!20}\rule{\hsize}{102pt}}
-%\caption{This is an example for a sideways figure. This is an example of a long caption this is an example of a long caption  this is an example of a long caption this is an example of a long caption}\label{fig3}
-%\end{sidewaysfigure}
-%
-%
-%
-%\section{Algorithms, Program codes and Listings}\label{sec7}
-%
-%Packages \verb+algorithm+, \verb+algorithmicx+ and \verb+algpseudocode+ are used for setting algorithms in latex.
-%For this, one has to use the below format:
-%
-%
-%\begin{verbatim}
-%\begin{algorithm}
-%\caption{<alg-caption>}\label{<alg-label>}
-%\begin{algorithmic}[1]
-%. . .
-%\end{algorithmic}
-%\end{algorithm}
-%\end{verbatim}
-%
-%
-%You may need to refer to the above-listed package documentations for more details before setting an \verb+algorithm+ environment.
-%To set program codes, one has to use the \verb+program+ package. We need to use the \verb+\begin{program}+ \verb+...+
-%\verb+\end{program}+ environment to set program codes.
-%
-%\begin{algorithm}[!t]
-%\caption{Calculate $y = x^n$}\label{algo1}
-%\begin{algorithmic}[1]
-%\Require $n \geq 0 \vee x \neq 0$
-%\Ensure $y = x^n$
-%\State $y \Leftarrow 1$
-%\If{$n < 0$}
-%        \State $X \Leftarrow 1 / x$
-%        \State $N \Leftarrow -n$
-%\Else
-%        \State $X \Leftarrow x$
-%        \State $N \Leftarrow n$
-%\EndIf
-%\While{$N \neq 0$}
-%        \If{$N$ is even}
-%            \State $X \Leftarrow X \times X$
-%            \State $N \Leftarrow N / 2$
-%        \Else[$N$ is odd]
-%            \State $y \Leftarrow y \times X$
-%            \State $N \Leftarrow N - 1$
-%        \EndIf
-%\EndWhile
-%\end{algorithmic}
-%\end{algorithm}
-%
-%Similarly, for \verb+listings+, one has to use the \verb+listings+ package. The \verb+\begin{lstlisting}+ \verb+...+ \verb+\end{lstlisting}+ environment is used to set environments similar to the \verb+verbatim+ environment. Refer to the \verb+lstlisting+ package documentation for more details on this.
-%
-%
-%\begin{minipage}{\hsize}%
-%\lstset{language=Pascal}% Set your language (you can change the language for each code-block optionally)
-%\begin{lstlisting}[frame=single,framexleftmargin=-1pt,framexrightmargin=-17pt,framesep=12pt,linewidth=0.98\textwidth]
-%for i:=maxint to 0 do
-%begin
-%{ do nothing }
-%end;
-%Write('Case insensitive ');
-%Write('Pascal keywords.');
-%\end{lstlisting}
-%\end{minipage}
-%
-%
-%\section{Cross referencing}\label{sec8}
-%
-%Environments such as figure, table, equation, and align can have a label
-%declared via the \verb+\label{#label}+ command. For figures and table
-%environments one should use the \verb+\label{}+ command inside or just
-%below the \verb+\caption{}+ command.  One can then use the
-%\verb+\ref{#label}+ command to cross-reference them. As an example, consider
-%the label declared for Figure \ref{fig1} which is
-%\verb+\label{fig1}+. To cross-reference it, use the command
-%\verb+ Figure \ref{fig1}+, for which it comes up as
-%``Figure~\ref{fig1}".
-%
-%\subsection{Details on reference citations}\label{subsec3}
-%
-%With standard numerical .bst files, only numerical citations are possible.
-%With an author-year .bst file, both numerical and author-year citations are possible.
-%
-%If author-year citations are selected, \verb+\bibitem+ must have one of the following forms:
-%
-%
-%\begin{verbatim}
-%\bibitem[Jones et al.(1990)]{key}...
-%\bibitem[Jones et al.(1990)Jones,
-%                Baker, and Williams]{key}...
-%\bibitem[Jones et al., 1990]{key}...
-%\bibitem[\protect\citeauthoryear{Jones,
-%                Baker, and Williams}
-%                {Jones et al.}{1990}]{key}...
-%\bibitem[\protect\citeauthoryear{Jones et al.}
-%                {1990}]{key}...
-%\bibitem[\protect\astroncite{Jones et al.}
-%                {1990}]{key}...
-%\bibitem[\protect\citename{Jones et al., }
-%                1990]{key}...
-%\harvarditem[Jones et al.]{Jones, Baker, and
-%                Williams}{1990}{key}...
-%\end{verbatim}
-%
-%
-%This is either to be made up manually, or to be generated by an
-%appropriate .bst file with BibTeX. Then,
-%
-%
-%\begin{verbatim}
-%                    Author-year mode
-%                        || Numerical mode
-%\citet{key} ==>>  Jones et al. (1990)
-%                        || Jones et al. [21]
-%\citep{key} ==>> (Jones et al., 1990) || [21]
-%\end{verbatim}
-%
-%
-%\noindent
-%Multiple citations as normal:
-%
-%
-%\begin{verbatim}
-%\citep{key1,key2} ==> (Jones et al., 1990;
-%                         Smith, 1989)||[21,24]
-%        or (Jones et al., 1990, 1991)||[21,24]
-%        or (Jones et al., 1990a,b)   ||[21,24]
-%\end{verbatim}
-%
-%
-%\noindent
-%\verb+\cite{key}+ is the equivalent of \verb+\citet{key}+ in author-year mode
-%and  of \verb+\citep{key}+ in numerical mode. Full author lists may be forced with
-%\verb+\citet*+ or \verb+\citep*+, e.g.
-%
-%
-%\begin{verbatim}
-%\citep*{key} ==>> (Jones, Baker, and Mark, 1990)
-%\end{verbatim}
-%
-%
-%\noindent
-%Optional notes as:
-%
-%
-%\begin{verbatim}
-%\citep[chap. 2]{key}     ==>>
-%        (Jones et al., 1990, chap. 2)
-%\citep[e.g.,][]{key}     ==>>
-%        (e.g., Jones et al., 1990)
-%\citep[see][pg. 34]{key} ==>>
-%        (see Jones et al., 1990, pg. 34)
-%\end{verbatim}
-%
-%
-%\noindent
-%(Note: in standard LaTeX, only one note is allowed, after the ref.
-%Here, one note is like the standard, two make pre- and post-notes.)
-%
-%
-%\begin{verbatim}
-%\citealt{key}   ==>> Jones et al. 1990
-%\citealt*{key}  ==>> Jones, Baker, and
-%                        Williams 1990
-%\citealp{key}   ==>> Jones et al., 1990
-%\citealp*{key}  ==>> Jones, Baker, and
-%                        Williams, 1990
-%\end{verbatim}
-%
-%
-%\noindent
-%Additional citation possibilities (both author-year and numerical modes):
-%
-%
-%\begin{verbatim}
-%\citeauthor{key}       ==>> Jones et al.
-%\citeauthor*{key}      ==>> Jones, Baker, and
-%                                Williams
-%\citeyear{key}         ==>> 1990
-%\citeyearpar{key}      ==>> (1990)
-%\citetext{priv. comm.} ==>> (priv. comm.)
-%\citenum{key}          ==>> 11
-%                            [non-superscripted]
-%\end{verbatim}
-%
-%
-%\noindent
-%Note: full author lists depend on whether the bib style supports them;
-%if not, the abbreviated list is printed even when full is requested.
-%
-%\noindent
-%For names like della Robbia at the start of a sentence, use
-%
-%
-%\begin{verbatim}
-%\Citet{dRob98}      ==>> Della Robbia (1998)
-%\Citep{dRob98}      ==>> (Della Robbia, 1998)
-%\Citeauthor{dRob98} ==>> Della Robbia
-%\end{verbatim}
-%
-%
-%\noindent
-%The following is an example for \verb+\cite{...}+: \cite{rahman2019centroidb}. Another example for \verb+\citep{...}+: \citep{bahdanau2014neural,imboden2018cardiorespiratory,motiian2017unified,murphy2012machine,ji20123d}.
-%Sample cites here \cite{krizhevsky2012imagenet,horvath2018dna} and \cite{pyrkov2018quantitative}, \cite{wang2018face}, \cite{lecun2015deep,zhang2018fine,ravi2016deep}.
-%
-%
-%\section{Lists}\label{sec9}
-%
-%List in \LaTeX{} can be of three types: numbered, bulleted and unnumbered. The ``enumerate'' environment produces a numbered list, the
-%``itemize'' environment produces a bulleted list and the ``unlist''
-%environment produces an unnumbered list.
-%In each environment, a new entry is added via the \verb+\item+ command.
-%\begin{enumerate}[1.]
-%\item This is the 1st item
-%
-%\item Enumerate creates numbered lists, itemize creates bulleted lists and
-%unnumerate creates unnumbered lists.
-%\begin{enumerate}[b.]
-%\item Second level numbered list. Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%
-%\item Second level numbered list. Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%\begin{enumerate}[ii.]
-%\item Third level numbered list. Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%
-%\item Third level numbered list. Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%\end{enumerate}
-%
-%\item Second level numbered list. Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%
-%\item Second level numbered list. Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%\end{enumerate}
-%
-%\item Enumerate creates numbered lists, itemize creates bulleted lists and
-%description creates unnumbered lists.
-%
-%\item Numbered lists continue.
-%\end{enumerate}
-%Lists in \LaTeX{} can be of three types: enumerate, itemize and description.
-%In each environment, a new entry is added via the \verb+\item+ command.
-%\begin{itemize}
-%\item First level bulleted list. This is the 1st item
-%
-%\item First level bulleted list. Itemize creates bulleted lists and description creates unnumbered lists.
-%\begin{itemize}
-%\item Second level dashed list. Itemize creates bulleted lists and description creates unnumbered lists.
-%
-%\item Second level dashed list. Itemize creates bulleted lists and description creates unnumbered lists.
-%
-%\item Second level dashed list. Itemize creates bulleted lists and description creates unnumbered lists.
-%\end{itemize}
-%
-%\item First level bulleted list. Itemize creates bulleted lists and description creates unnumbered lists.
-%
-%\item First level bulleted list. Bullet lists continue.
-%\end{itemize}
-%
-%\noindent
-%Example for unnumbered list items:
-%
-%\begin{unlist}
-%\item Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text.
-%
-%\item Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text.
-%
-%\item sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text. Sample unnumberd list text.
-%\end{unlist}
-%
-%\begin{boxtext}[Box title]
-%Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text.
-%
-%\section{Box subheading level one}
-%Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text.
-%
-%\subsection{Box subheading level two}
-%Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text.
-%
-%\subsubsection{Shoulder heading}
-%Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text.
-%
-%Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text. Sample text box text.
-%\end{boxtext}
-%
-%
-%\section{Examples for theorem-like environments}\label{sec10}
-%
-%For theorem-like environments, we require the \verb+amsthm+ package. There are three types of predefined theorem styles - \verb+thmstyleone+, \verb+thmstyletwo+ and \verb+thmstylethree+   (check your journal's instructions page in case a specific style is required).
-%
-%\medskip
-%\noindent\begin{tabular}{|l|p{0.6\columnwidth}|}
-%\hline
-%\verb+thmstyleone+ & Numbered, theorem head in bold font and theorem text in italic style \\\hline
-%\verb+thmstyletwo+ & Numbered, theorem head in roman font and theorem text in italic style \\\hline
-%\verb+thmstylethree+ & Numbered, theorem head in bold font and theorem text in roman style \\\hline
-%\end{tabular}
-%
-%
-%\begin{theorem}[Theorem subhead]\label{thm1}
-%Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text.
-%Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text.
-%Example theorem text.
-%\end{theorem}
-%
-%Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-%amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue.
-%
-%\begin{proposition}
-%Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text.
-%Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text.
-%\end{proposition}
-%
-%Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-%viverra fermentum felis. Donec nonummy pellentesque ante.
-%
-%\begin{example}
-%Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem.
-%\end{example}
-%
-%Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-%viverra fermentum felis. Donec nonummy pellentesque ante.
-%
-%\begin{remark}
-%Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem.
-%\end{remark}
-%
-%Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
-%amet, consectetuer adipiscing elit. In hac habitasse platea dictumst.
-%
-%\begin{definition}[Definition sub head]
-%Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text.
-%\end{definition}
-%
-%Apart from the above styles, we have the \verb+\begin{proof}+ \verb+...+ \verb+\end{proof}+ environment - with the proof head in italic style and the body text in roman font with an open square at the end of each proof environment.
-%
-%\begin{proof}Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text.
-%\end{proof}
-%
-%Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-%pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-%vitae ornare odio metus a mi.
-%
-%\begin{proof}[Proof of Theorem~{\upshape\ref{thm1}}]
-%Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text.
-%\end{proof}
-%
-%\noindent
-%For a quote environment, one has to use\newline \verb+\begin{quote}...\end{quote}+
-%\begin{quote}
-%Quoted text example. Aliquam porttitor quam a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
-%convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
-%\end{quote}
-%Donec congue. Maecenas urna mi, suscipit in, placerat ut, vestibulum ut, massa. Fusce ultrices nulla et nisl (refer Figure~\ref{fig3}). Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam ligula arcu,
-%elementum a, venenatis quis, sollicitudin sed, metus. Donec nunc pede, tincidunt in, venenatis vitae, faucibus vel (refer Table~\ref{tab3}).
-%
-%\section{Conclusion}
-%
-%Some Conclusions here.
-%
-%\section{Conflicts of interest}
-%The authors declare that they have no competing interests.
-%
-%\section{Funding}
-%This work is supported in part by funds from the National Funding Body (NFB: \# XXXXXXX and \# YYYYYYY).
-%
-%\section{Data availability}
-%The data underlying this article are available in [repository name, eg, the GenBank Nucleotide Database] at [URL], and can be accessed with [unique identifier, eg, accession number, deposition number].
-%
-%\section{Author contributions statement}
-%
-%Must include all authors, identified by initials, for example:
-%S.R. and D.A. conceived the experiment(s),  S.R. conducted the experiment(s), S.R. and D.A. analysed the results.  S.R. and D.A. wrote and reviewed the manuscript.
-%
-%\section{Acknowledgments}
-%The authors thank the anonymous reviewers for their valuable suggestions. This work is supported in part by funds from the National Science Foundation (NSF: \# 1636933 and \# 1920920).
-%
-%
-%\begin{thebibliography}{10}
-%
-%\bibitem[Bahdanau et al.(2014)]{bahdanau2014neural}
-%Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
-%\newblock Neural machine translation by jointly learning to align and translate.
-%\newblock {\em arXiv preprint arXiv:1409.0473}, 2014.
-%
-%\bibitem[Horvath and Raj(2018)]{horvath2018dna}
-%Steve Horvath and Kenneth Raj.
-%\newblock Dna methylation-based biomarkers and the epigenetic clock theory of ageing.
-%\newblock {\em Nature Reviews Genetics}, 19(6):371, 2018.
-%
-%\bibitem[Imboden et al.(2018)]{imboden2018cardiorespiratory}
-%Mary~T Imboden, Matthew~P Harber, Mitchell~H Whaley, W~Holmes Finch, Derron~L Bishop, and Leonard~A Kaminsky.
-%\newblock Cardiorespiratory fitness and mortality in healthy men and women.
-%\newblock {\em Journal of the American College of Cardiology}, 72(19):2283--2292, 2018.
-%
-%\bibitem[Ji et al.(2012)]{ji20123d}
-%Shuiwang Ji, Wei Xu, Ming Yang, and Kai Yu.
-%\newblock 3d convolutional neural networks for human action recognition.
-%\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}, 35(1):221--231, 2012.
-%
-%\bibitem[Krizhevsky et al.(2012)]{krizhevsky2012imagenet}
-%Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-%\newblock Imagenet classification with deep convolutional neural networks.
-%\newblock In {\em Advances in Neural Information Processing Systems}, pages 1097--1105, 2012.
-%
-%\bibitem[LeCun et al.(2015)]{lecun2015deep}
-%Yann LeCun, Yoshua Bengio, and Geoffrey Hinton.
-%\newblock Deep learning.
-%\newblock {\em Nature}, 521(7553):436, 2015.
-%
-%\bibitem[Motiian et al.(2017)]{motiian2017unified}
-%Saeid Motiian, Marco Piccirilli, Donald~A Adjeroh, and Gianfranco Doretto.
-%\newblock Unified deep supervised domain adaptation and generalization.
-%\newblock In {\em Proceedings of the IEEE International Conference on Computer Vision}, pages 5715--5725, 2017.
-%
-%\bibitem[Murphy(2012)]{murphy2012machine}
-%Kevin~P Murphy.
-%\newblock {\em Machine learning: A probabilistic perspective}.
-%\newblock MIT press, 2012.
-%
-%\bibitem[American College of Sports Medicine et al.(2013)]{american2013acsm}
-%American~College of~Sports~Medicine et~al.
-%\newblock {\em ACSM's guidelines for exercise testing and prescription}.
-%\newblock Lippincott Williams \& Wilkins, 2013.
-%
-%\bibitem[Pyrkov et al.(2018)]{pyrkov2018quantitative}
-%Timothy~V Pyrkov, Evgeny Getmantsev, Boris Zhurov, Konstantin Avchaciov, Mikhail Pyatnitskiy, Leonid Menshikov, Kristina Khodova, Andrei~V Gudkov, and Peter~O Fedichev.
-%\newblock Quantitative characterization of biological age and frailty based on locomotor activity records.
-%\newblock {\em Aging (Albany NY)}, 10(10):2973, 2018.
-%
-%\bibitem[Rahman and Adjeroh(2019)]{rahman2019centroidb}
-%Syed~Ashiqur Rahman and Donald Adjeroh.
-%\newblock Centroid of age neighborhoods: A generalized approach to estimate biological age.
-%\newblock In {\em 2019 IEEE EMBS International Conference on Biomedical \& Health Informatics (BHI)}, pages 1--4. IEEE, 2019.
-%
-%\bibitem[Rav{\`\i} et al.(2016)]{ravi2016deep}
-%Daniele Rav{\`\i}, Charence Wong, Fani Deligianni, Melissa Berthelot, Javier Andreu-Perez, Benny Lo, and Guang-Zhong Yang.
-%\newblock Deep learning for health informatics.
-%\newblock {\em IEEE {J}ournal of {B}iomedical and {H}ealth {I}nformatics}, 21(1):4--21, 2016.
-%
-%\bibitem[Wang et al.(2018)]{wang2018face}
-%Zongwei Wang, Xu~Tang, Weixin Luo, and Shenghua Gao.
-%\newblock Face aging with identity-preserved conditional generative adversarial networks.
-%\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 7939--7947, 2018.
-%
-%\bibitem[Zhang et al.(2018)]{zhang2018fine}
-%Ke~Zhang, Na~Liu, Xingfang Yuan, Xinyao Guo, Ce~Gao, and Zhenbing Zhao.
-%\newblock Fine-grained age estimation in the wild with attention {LSTM} networks.
-%\newblock {\em arXiv preprint arXiv:1805.10445}, 2018.
-%
-%\end{thebibliography}
-%
-%%UNCOMMENT THE BELOW TWO LINES IN CASE YOU NEED NUMBERED FORMAT.
-%%\bibliographystyle{oup-plain}
-%%\bibliography{reference}
-%
-%%UNCOMMENT THE BELOW TWO LINES IN CASE YOU NEED AUTHOR YEAR FORMAT.
-%%\bibliographystyle{oup-abbrvnat}
-%%\bibliography{reference}
-%
-%%% sample for biography with author's image
-%\begin{biography}{{\color{black!20}\rule{77pt}{57pt}}}{\author{Author Name.} This is sample author biography text. The values provided in the optional argument are meant for sample purposes. There is no need to include the width and height of an image in the optional argument for live articles. This is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text.}
-%\end{biography}
-%
-%%% sample for biography without author's image
-%\begin{biography}{}{\author{Author Name.} This is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text this is sample author biography text.}
-%\end{biography}
-%
-%%%%%%%%%%%%%%%
-%
-%\begin{appendices}
-%
-%\section{Section title of first appendix}\label{sec11}
-%
-%Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-%pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-%vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
-%a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
-%urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
-%
-%\subsection{Subsection title of first appendix}\label{subsec4}
-%
-%Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-%pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-%vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
-%a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
-%urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
-%
-%\subsubsection{Subsubsection title of first appendix}\label{subsubsec3}
-%
-%Example for an unnumbered figure:
-%
-%\begin{figure}[!h]
-%\centering
-%{\color{black!20}\rule{85pt}{92pt}}
-%\end{figure}
-%
-%Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
-%venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
-%quam, in hendrerit risus eros eget felis.
-%
-%\section{Section title of second appendix}\label{sec12}%
-%
-%Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
-%venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
-%quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla
-%facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et
-%vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
-%
-%\begin{figure}[b]
-%\centering
-%{\color{black!20}\rule{217pt}{120pt}}
-%\caption{This is an example for appendix figure\label{fig4}}
-%\end{figure}
-%
-%\begin{table}[t]%
-%\begin{center}
-%\begin{minipage}{.52\columnwidth}
-%\caption{This is an example of Appendix table showing food requirements of army, navy and airforce\label{tab4}}%
-%\tabcolsep16pt
-%\begin{tabular}{@{\extracolsep\fill}lcc@{}}%
-%\toprule
-%col1 head & col2 head & col3 head \\
-%\midrule
-%col1 text & col2 text & col3 text \\
-%col1 text & col2 text & col3 text \\
-%col1 text & col2 text & col3 text \\
-%\botrule
-%\end{tabular}
-%\end{minipage}
-%\end{center}
-%\end{table}
-%
-%\subsection{Subsection title of second appendix}\label{subsec5}
-%
-%Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non odio.
-%Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce sed justo
-%eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor. Donec
-%pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin et quam.
-%Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent sapien turpis,
-%fermentum vel, eleifend faucibus, vehicula eu, lacus.
-%
-%Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non odio.
-%Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce sed justo
-%eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor. Donec
-%pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin et quam.
-%Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent sapien turpis,
-%fermentum vel, eleifend faucibus, vehicula eu, lacus.
-%
-%\subsubsection{Subsubsection title of second appendix}\label{subsubsec4}
-%
-%Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
-%felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
-%vehicula augue eu neque.
-%
-%
-%Example for an equation inside the appendix:
-%\begin{align}
-% p &= \frac{\gamma^{2} - (n_{C} -1)H}{(n_{C} - 1) + H - 2\gamma}, \label{1eq:hybobo:pfromgH} \\
-% \theta &= \frac{(\gamma - H)^{2}(\gamma - n_{C} -1)^{2}}{(n_{C} - 1 + H - 2\gamma)^{2}} \label{2eq:hybobo:tfromgH}\; .
-%\end{align}
-%
-%\section{Example of another appendix section}\label{sec13}%
-%
-%Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
-%pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
-%vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
-%a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
-%urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris
-%\begin{equation}
-%\mathcal{L} = i \bar{\psi} \gamma^\mu D_\mu \psi
-%    - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi.
-%\label{eq26}
-%\end{equation}
-%
-%Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-%viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
-%nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
-%bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
-%pellentesque felis eu massa.
-%
-%Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-%viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
-%nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
-%bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
-%pellentesque felis eu massa.
-%
-%Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-%viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
-%nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
-%bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
-%pellentesque felis eu massa.
-%
-%Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
-%viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
-%nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
-%bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
-%pellentesque felis eu massa. Donec
-%bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
-%pellentesque felis eu massa.
-%
-%%% Example for unnumbered table inside appendix
-%\begin{table}
-%\begin{center}
-%\begin{minipage}{.52\columnwidth}
-%\caption{}{%
-%\begin{tabular}{@{\extracolsep\fill}lcc}%
-%\toprule
-%col1 head & col2 head & col3 head \\
-%\midrule
-%col1 text & col2 text & col3 text \\
-%col1 text & col2 text & col3 text \\
-%col1 text & col2 text & col3 text \\
-%\botrule
-%\end{tabular}}{}
-%\end{minipage}
-%\end{center}
-%\end{table}
-%
-%\end{appendices}
-%
-%
-%
-%\end{document}
-%%As a constantly increasing number of complete genomes is published, it becomes necessary to transfer existing sequence compilations to state-of-the-art IT infrastructure to cope with the challenges of the post-genomic era. One of the most abundant groups of nucleic acids are tRNA molecules, being present in all types of cells and organelles. Unique features of these molecules include (i) the high degree of structural conservation, (ii) the plethora of cellular factors tRNAs interact with, and (iii) the largest diversity and highest density of nucleoside modifications found in nature. Furthermore, with respect to phylogeny, tRNAs offer a unique complexity: since each cell and eukaryotic organelle has a cohort of related but distinct tRNA species, phylogenetic analyses permit an integrated view on an entire set of tRNAs that underwent coevolution, rather than being restricted to comparison of a single RNA species. Hence, a tRNA database must fulfil specific criteria in order to address these features. The tRNAdb, with one of the largest numbers of entries among RNA databases, is not only an excellent model system for implementing and validating algorithms and processes of automated nucleic acid data transfer, but also for the development of novel sequence analysis tools (1). In its re-structured version, the tRNAdb meets the demands of present-day web-based interfaces and provides a basis for integration of structure-function relationships and additional information on evolution and phylogeny.

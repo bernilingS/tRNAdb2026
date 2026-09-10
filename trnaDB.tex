@@ -308,7 +308,7 @@ Subsequent releases of the tRNAdb dataset will be published with a corresponding
 \subsection{API and programmatic access}
 
 With this update we provide a new public HTTP interface, accessible by POST
-JSON requests at \url{https://tdb.bioinf.uni-leipzig.de/api}. The API implements \TODO{OpenAPI} specifications and a thorough documentation for users is available on the ``Documentation'' page of the tRNAdb website. Fundamentally, our API supports identical search parameters as the tRNAdb website and allows filtering by any combination of origin, species, clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural motifs, reference (genome accession, external source, publication), and release version.
+JSON requests at \url{https://tdb.bioinf.uni-leipzig.de/api}. The API implements OpenAPI~3.1.0 specifications and a thorough documentation for users is available on the ``Documentation'' page of the tRNAdb website. Fundamentally, our API supports identical search parameters as the tRNAdb website and allows filtering by any combination of origin, species, clade, NCBI taxonomy ID, amino acid, anticodon, sequence and structural motifs, reference (genome accession, external source, publication), and release version.
 
 For many fields, multiple values can be supplied and entries matching at least one are returned. Individual records can be precisely retrieved by using the stable identifier \texttt{trnadb\_id} which also remained unaltered for the 2009 legacy dataset.
 
@@ -321,7 +321,7 @@ valid, contains a \texttt{total\_results} field that states the total
 number of sequences matching a request and all relevant results can be paginated via an offset parameter. For requests that match a
 large number of records, and hence constitute bulk retrieval of tRNA sequences,
 a second API endpoint provides export to TSV, CSV, JSON, or FASTA which is
-available at \url{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb identifier connected to every entry is stable, hence over changing releases, existing identifiers will not change and remain relevant for retrieval purposes. For usage details see the documentation page of the tRNAdb website. \TODO{OpenAPI, /api/v1}
+available at \url{https://tdb.bioinf.uni-leipzig.de/export}. Note that the unique tRNAdb identifier connected to every entry is stable, hence over changing releases, existing identifiers will not change and remain relevant for retrieval purposes. For usage details see the documentation page of the tRNAdb website.
 
 
 \subsection{Website}

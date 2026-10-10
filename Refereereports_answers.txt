@@ -1,0 +1,88 @@
+
+
+Referee: 1
+
+Comments for the Author
+The manuscript introduces an updated version of tRNAdb, which is a valuable resource, and it is
+great to see the database being updated and maintained. The manuscript is clearly written and easy
+to follow. It can be recommended for publication after the following minor points are addressed.
+
+Minor comments
+
+1. It would be useful to provide more cross-links from tRNAdb to external resources. For example,
+https://tdb.bioinf.uni-leipzig.de/results/trna/12100 states that the sequence is from GtRNAdb 2.0,
+but there is no link to the corresponding GtRNAdb entry. More generally, individual pages could link
+to the relevant source databases wherever possible. For example,
+https://tdb.bioinf.uni-leipzig.de/results/trna/240000 could link to NCBI Taxonomy and to the GenBank
+record NC_000866.4. This would make it much easier to navigate between tRNAdb and the underlying
+data sources.
+This is a good idea and we implemented it already. 
+
+2. I encountered an issue when using the taxonomy tree. I expanded the tree to reveal cellular
+organisms and viruses and clicked the search icon next to viruses, expecting to retrieve all viral
+sequences. Instead, the search returned “Your query did not return any results.” This appears to
+happen because the “Release” dropdown retains the value selected during a previous search. When
+starting a new search from the taxonomy tree, this setting should probably reset to “All releases”. 
+
+
+3. The database filter in the API appears to accept only exact lowercase values (trna, trna_rna and
+mttrna). Other spellings or capitalisations are silently ignored, causing the API to return all data
+sources rather than an error. For example, trna_rna returns 750 records, whereas tRNA_RNA returns
+the entire database. This is particularly confusing because tRNA_RNA is the form used in the API’s
+own responses. The same issue affects exports and can therefore result in users unknowingly
+retrieving incorrect datasets.
+
+4. What is the planned release frequency for tRNAdb? Some of the underlying analyses already appear
+to be approximately two years old. For example, the archaeal genomes were analysed as of October
+2024. It would be useful to explain how frequently new releases are expected. Could this process be
+automated, or does a new release require substantial manual review?
+
+We did the analysis after downoading the data, so the analysis is largely about one year old. While largely automatized, many steps need human review in special cases (which are not infrequent). We are continously adding data at the moment, and we plan to do so and also expect funding for it for at least the next decade.
+
+
+5. The Terms of Use for tRNAdb (https://tdb.bioinf.uni-leipzig.de/tou) appear unusually restrictive
+for a biological sequence database. In particular, they explicitly prohibit use of the database in
+commercial R&D pipelines. This is difficult to understand given that much of the underlying
+information consists of naturally occurring tRNA sequences obtained from existing public resources.
+For example, GtRNAdb sequences are also available through RNAcentral under CC0 and can therefore be
+freely reused, including commercially. It seems particularly problematic if sequences already
+available under CC0 effectively become subject to additional restrictions when accessed through
+tRNAdb. I would encourage the authors to reconsider the non-commercial restriction or, at minimum,
+justify its necessity. The licensing terms should also be discussed explicitly in the Data
+Availability section. 
+
+We can only pass the least permissive license from our resources. However, sequences are usually linked to their source, where any commercial pipeline should have no problem retrieving them if the license allows. 
+
+6. The font in Figure 3 is too small to read comfortably. For example, I was unable to read the text
+describing the quality filters for Archaea. The figure should be revised so that all labels are
+legible at normal publication size.
+
+We somewhat increased the font, but as the figure is relatively big, it cannot get any bigger without compromising the overall layout. However, we provide a scalable pdf that can bes zoomed indefinetly, and hope that this helps in readability 
+ 
+Referee: 2
+
+Comments for the Author
+It is a nice effort to extend the seminal Sprinzl database.
+The authors should comment on whether the technical difficulties in the previous years that led to
+interruptions can now be excluded.
+The connection to database was interrupted because the host (Leipzig university) deemed it to insecure to be open to the www. The legacy database was implemented in 2009 in a framework that was ancient even then. While we cannot guarantee that there won't be secority failures for our modern implementation, we hope that it will last at least 15 more years. 
+
+The authors should also comment on what distinguishes tRNAdb from other tRNA databases.
+
+This is a little hard at the moment, since we are aware that 2 other tRNA databases (t-psi-C and gtRNAdb) will recieve  major updates shortly. At the moment, we have the most complete collection of mitochondrial tRNAs, as well as an API, and a different, sequence centric  way to present and provide our data. Furthermore, we are located in europe, in contrast to gtRNAdb. 
+
+The "modern" design appears intuitive to someone who designed it. This reviewer finds to color
+scheme of the 4 bases is very busy and begs the question if that is what the few among us with
+colorblindness can be using on a regular basis.
+There is a misunderstanding of what "design" means. We tried to mainly leave the legacy UI as well as the color scheme intact, as it has worked well in the past. Modern design is referring to the back-end of the database.  
+
+The usability of the modified sequences remains questionable since there is the addition of
+additional letters yet the identity of the chemical modification cannot be deduced. That needs to be
+amended since tRNAs are the most modified RNAs in a cell, and the interest in the biology of these
+modifications is increasing.
+
+While there are explanations for the single one letter codes, we do appreciate that it would be useful to have more information immeadiately, so we will implement a mouse over for the sequences showing the name, modomics number/link and structure of the compound described by the one letter code.
+
+In some of the Figures the font is too small to read. The question being do Figures 1, 2 and 5 have
+to be part of the manuscript?
+We did try to increase the fonts were possible, and we provide fully scalable figures. We thought all figures need to be part of the manscript, yes. 

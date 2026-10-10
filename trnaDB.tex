@@ -90,11 +90,11 @@
 
 \title[tRNA database 2]{tRNA database 2026, extended compilation of tRNA sequences and tRNA genes }
 
-\author[1,*]{Bruno J. Schmidt}
+\author[1,*]{Bruno J. Schmidt\ORCID{0000-0002-8808-5410}}
 \author[2]{Frank J\"{u}hling}
 \author[3,4]{Thomas Spicher\ORCID{0009-0001-8198-5213}}
-\author[5,6]{Ella Cassidy}
-\author[5,11]{Dulce I. Valdivia}
+\author[5,6]{Ella Cassidy\ORCID{0009-0004-5570-8601}}
+\author[5,11]{Dulce I. Valdivia\ORCID{0000-0002-7702-652X}}
 \author[7]{Maximilian Feussner\ORCID{0009-0000-2803-0496}}
 \author[7]{Chase L. Beisel}
 \author[8]{Joern P\"{u}tz}
@@ -445,7 +445,7 @@ viral tRNA genes from $1\,558$ unique genomes were added to tRNAdb.
 
 \subsection{tRNAs sequences including modifications}\label{subsecmodifiedtRNA}
 Modified tRNA sequences, as well as their genomic variants, were obtained
-from the MODOMICS \cite{modomics} database and the Protein Data Bank
+from the\TODO{T-Psi-C \cite{tpsic}} database and the Protein Data Bank
 (PDB)~\cite{pdb2000}.  Sequences retrieved from the PDB having only a
 single modification located at the first or last base were not included
 into the database.  In order to display alignments properly, legacy
@@ -458,11 +458,11 @@ compound was already present in the MODOMICS database. A list of all
 modifications with the one-letter codes used in tRNAdb and MODOMICS can be
 found in the supplement and on the database webpage.  Mature mitochondrial
 tRNA sequences from \emph{H.\ sapiens}~\cite{humanmtRNA} and \emph{B.\
-  taurus}~\cite{modtRNAbtaurus} were added from the supplement of the
+  taurus}~\cite{modtRNAbtaurus} \TODO{and cytosolic tRNA sequences from \emph{S. aureus}~\cite{Saureus}} were added from the supplement of the
 respective publications. The included canonical base numberings were used
 directly for alignment and structural annotation.
 
-\subsection{Alignment and quality control}
+\subsection{Alignment \TODO{quality control and structure}}
 For all novel sequences, we used Infernal~\cite{infernal} to align them to
 the respective tRNA covariance models (eukaryotic, bacterial or archaeal
 models from tRNAscan for nuclear tRNAs, the respective MITOS2 models for
@@ -479,11 +479,11 @@ total of 404 tRNAs that did not make one of the four thresholds. As a last
 filtering step, all entries that were duplicates with respect to sequence
 and taxonomic ID were unified when necessary, so that every
 sequence/species pair in the tRNAdb is unique.
-
+\TODO{To provide a measure about the relative stability of the canonical structure compared to other structures the seqeunce might adopt, we used the ViennaRNA package~\cite{viennarna} to compute the frequency of the canonical (unmodified) structure in the ensembl as well as the ensemble defect, a measure of how different the structures of the thermodynamical ensemble are to the canonical structure.}
 \section{Statistics}
 
-The database lists $330\,261$ mitochondrial tRNA entries comprising
-$219\,388$ unique sequences. The vast majority of these originate in
+The database lists $336\,430$ mitochondrial tRNA entries comprising
+$223\,895$ unique sequences. The vast majority of these originate in
 metazoa (see Fig.~\ref{Tax}a), which reflects the distribution of
 mitochondrial genomes at the NCBI. The genomic part of the database
 contains a total of $228\,955$ entries comprising $93\,257$ unique
@@ -561,7 +561,7 @@ they can be incorporated into future releases. This feedback may in turn
 motivate updated search algorithms capable of capturing a broader range of
 non-standard tRNAs.  To address such cases, we provide a web interface
 where experts can submit entries of non-standard tRNAs that we will curate
-and include into the database.
+and include into the database. 
 
 \section{Conflicts of interest}
 C.L.B. is a co-founder and scientific advisor to Locus Biosciences and a
@@ -604,3 +604,4 @@ editing. \textbf{C.L.B.:} Supervision, Writing – review \& editing.
 
 \end{document}
 
+\TODO{}

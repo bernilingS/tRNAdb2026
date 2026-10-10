@@ -1,0 +1,116 @@
+Dear Dr Schmidt,
+
+Thank you for giving us the opportunity to consider your manuscript.
+
+The referees' comments were generally positive and, in principle, we would be pleased to publish it.
+However, before we can accept the manuscript we ask that you consider the points raised by the
+referees, which you will find below in this email. Please either answer them in a revised version or
+explain why they are not relevant. The revised manuscript may be subject to another round of reviews
+by the same and/or additional referees.
+
+The referees' reports are confidential and should not be made publicly available without the express
+permission of the Editors.
+
+Detailed instructions for submitting your revised manuscript are provided below and
+here: https://academic.oup.com/nar/pages/author-guidelines#section-13-5.
+Please read these instructions carefully as they differ from the original submission instructions
+and any error will delay the review of your manuscript. When you submit your revised manuscript, you
+should provide a concise point-by-point response to the referees' comments. Any text in the
+manuscript that you change or add in response to referee or Editor comments should be marked in red
+font.
+
+You MUST upload a graphical abstract with your revised manuscript. See guidelines here:
+https://academic.oup.com/nar/pages/author-guidelines#section-13-6-3
+
+Please upload the revised version by 06-Oct-2026 or contact me if you need more time.
+
+You may also click the below link to start the revision process (or continue the process if you have
+already started your revision) for your manuscript. If you use the below link you will not be
+required to login to ScholarOne Manuscripts.
+
+*** PLEASE NOTE: This is a two-step process. After clicking on the link, you will be directed to a
+webpage to confirm. ***
+
+https://mc.manuscriptcentral.com/nar?URL_MASK=0a7666f0cd6346d895f259f9eed038ad
+
+
+We look forward to receiving your revised manuscript.
+Yours sincerely,
+
+
+Prof. Daniel Rigden
+Executive Editor,
+NAR Database Issue
+
+Professor of Bioinformatics
+Department of Biochemistry, Cell and Systems Biology              
+Institute of Systems, Molecular and Integrative Biology
+University of Liverpool
+
+Referee: 1
+
+Comments for the Author
+The manuscript introduces an updated version of tRNAdb, which is a valuable resource, and it is
+great to see the database being updated and maintained. The manuscript is clearly written and easy
+to follow. It can be recommended for publication after the following minor points are addressed.
+
+Minor comments
+
+1. It would be useful to provide more cross-links from tRNAdb to external resources. For example,
+https://tdb.bioinf.uni-leipzig.de/results/trna/12100 states that the sequence is from GtRNAdb 2.0,
+but there is no link to the corresponding GtRNAdb entry. More generally, individual pages could link
+to the relevant source databases wherever possible. For example,
+https://tdb.bioinf.uni-leipzig.de/results/trna/240000 could link to NCBI Taxonomy and to the GenBank
+record NC_000866.4. This would make it much easier to navigate between tRNAdb and the underlying
+data sources.
+
+2. I encountered an issue when using the taxonomy tree. I expanded the tree to reveal cellular
+organisms and viruses and clicked the search icon next to viruses, expecting to retrieve all viral
+sequences. Instead, the search returned “Your query did not return any results.” This appears to
+happen because the “Release” dropdown retains the value selected during a previous search. When
+starting a new search from the taxonomy tree, this setting should probably reset to “All releases”. 
+
+3. The database filter in the API appears to accept only exact lowercase values (trna, trna_rna and
+mttrna). Other spellings or capitalisations are silently ignored, causing the API to return all data
+sources rather than an error. For example, trna_rna returns 750 records, whereas tRNA_RNA returns
+the entire database. This is particularly confusing because tRNA_RNA is the form used in the API’s
+own responses. The same issue affects exports and can therefore result in users unknowingly
+retrieving incorrect datasets.
+
+4. What is the planned release frequency for tRNAdb? Some of the underlying analyses already appear
+to be approximately two years old. For example, the archaeal genomes were analysed as of October
+2024. It would be useful to explain how frequently new releases are expected. Could this process be
+automated, or does a new release require substantial manual review?
+
+5. The Terms of Use for tRNAdb (https://tdb.bioinf.uni-leipzig.de/tou) appear unusually restrictive
+for a biological sequence database. In particular, they explicitly prohibit use of the database in
+commercial R&D pipelines. This is difficult to understand given that much of the underlying
+information consists of naturally occurring tRNA sequences obtained from existing public resources.
+For example, GtRNAdb sequences are also available through RNAcentral under CC0 and can therefore be
+freely reused, including commercially. It seems particularly problematic if sequences already
+available under CC0 effectively become subject to additional restrictions when accessed through
+tRNAdb. I would encourage the authors to reconsider the non-commercial restriction or, at minimum,
+justify its necessity. The licensing terms should also be discussed explicitly in the Data
+Availability section. 
+
+6. The font in Figure 3 is too small to read comfortably. For example, I was unable to read the text
+describing the quality filters for Archaea. The figure should be revised so that all labels are
+legible at normal publication size.
+
+Referee: 2
+
+Comments for the Author
+It is a nice effort to extend the seminal Sprinzl database.
+The authors should comment on whether the technical difficulties in the previous years that led to
+interruptions can now be excluded.
+The authors should also comment on what distinguishes tRNAdb from other tRNA databases.
+The "modern" design appears intuitive to someone who designed it. This reviewer finds to color
+scheme of the 4 bases is very busy and begs the question if that is what the few among us with
+colorblindness can be using on a regular basis.
+The usability of the modified sequences remains questionable since there is the addition of
+additional letters yet the identity of the chemical modification cannot be deduced. That needs to be
+amended since tRNAs are the most modified RNAs in a cell, and the interest in the biology of these
+modifications is increasing.
+In some of the Figures the font is too small to read. The question being do Figures 1, 2 and 5 have
+to be part of the manuscript?
+

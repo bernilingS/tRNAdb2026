@@ -74,14 +74,14 @@ This is a little hard at the moment, since we are aware that 2 other tRNA databa
 The "modern" design appears intuitive to someone who designed it. This reviewer finds to color
 scheme of the 4 bases is very busy and begs the question if that is what the few among us with
 colorblindness can be using on a regular basis.
-There is a misunderstanding of what "design" means. We tried to mainly leave the legacy UI as well as the color scheme intact, as it has worked well in the past. Modern design is referring to the back-end of the database.  
+There is a misunderstanding of what "design" means. We tried to mainly leave the legacy UI as well as the color scheme intact, as it has worked well in the past. Modern design is referring to the back-end of the database. Still, the suggestions regarding the coloring scheme are valid and we included a "High Contrast" mode that can be turned on and off from the top of relevant pages. This high contrast mode renders nucleotide characters in black on white and disables the colored boxes for regions.  
 
 The usability of the modified sequences remains questionable since there is the addition of
 additional letters yet the identity of the chemical modification cannot be deduced. That needs to be
 amended since tRNAs are the most modified RNAs in a cell, and the interest in the biology of these
 modifications is increasing.
 
-While there are explanations for the single one letter codes, we do appreciate that it would be useful to have more information immeadiately, so we will implement a mouse over for the sequences showing the name, modomics number/link and structure of the compound described by the one letter code.
+While there are explanations for the single one letter codes, we do appreciate that it would be useful to have more information immeadiately, so we have implemented a mouse over for the sequences showing the name, nucleotide of origin and the pubchem structure of the compound described by the one letter code. The mouseover is also available for the structure image. Additionally, we prominently linked the .pdf that explains every modified nucleotide letter code more prominently on the results pages for modified tRNAs. 
 
 In some of the Figures the font is too small to read. The question being do Figures 1, 2 and 5 have
 to be part of the manuscript?

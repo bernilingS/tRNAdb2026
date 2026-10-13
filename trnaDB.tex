@@ -342,7 +342,7 @@ a preview is generated.
 \begin{figure}
 %  \includegraphics[width=0.45\textwidth]{Webserver_Detail_homo_ala.png}
   \includegraphics[width=0.45\textwidth]{Webserver_Detail_homo_ala_hover_structure.png}
-  \caption{Example for the Details page of a \emph{homo sapiens} tRNA for alanine, including modifications\label{Fig:Detail}}
+  \caption{Example for the Details page of a \emph{homo sapiens} tRNA for alanine, including modifications. \TODO{Mouse-over shows information to the modified nucleotide 6-hydro-1-methyladenosine-5'-monophosphate.} \label{Fig:Detail}}
 \end{figure}
 For every tRNA sequence entry in our database, a "Details" page is
 available (see Figure~\ref{Fig:Detail}). This page contains general
@@ -352,7 +352,7 @@ and additional metadata if available. Furthermore, a standardized
 visualization of the secondary structure with a highlighted anticodon is
 displayed for every entry.
 
-\TODO{Modified bases are displayed using an expanded legacy one letter code. We implemented a mouse-over for the sequences and the structure image which shows the name, unmodified nucleotide of origin, and the PubChem~\cite{pubchem2025} structure of the compound described by the one letter code.}
+\TODO{Modified bases are displayed using an expanded legacy one letter code. We implemented a mouse-over for the sequences and the structure image which shows the name, unmodified nucleotide of origin, and the PubChem~\cite{pubchem2025} structure of the compound described by the one letter code (see Figure~\ref{Fig:Detail}).}
 
 We implemented a searchable taxonomy browser which displays an expandable
 tree view of the NCBI taxonomic database. Every node in the taxonomy tree
@@ -447,7 +447,7 @@ viral tRNA genes from $1\,558$ unique genomes were added to tRNAdb.
 
 \subsection{tRNAs sequences including modifications}\label{subsecmodifiedtRNA}
 Modified tRNA sequences, as well as their genomic variants, were obtained
-from the \TODO{T-Psi-C \cite{tpsic} database, the MODOMICS \cite{modomics} database,} and the Protein Data Bank
+from the \TODO{T-Psi-C~\cite{tpsic} database, the MODOMICS~\cite{modomics} database,} and the Protein Data Bank
 (PDB)~\cite{pdb2000}.  Sequences retrieved from the PDB having only a
 single modification located at the first or last base were not included
 into the database.  In order to display alignments properly, legacy

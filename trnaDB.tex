@@ -147,7 +147,7 @@
   integrates publicly available tRNA annotations and sequences generated
   using contemporary prediction pipelines followed by semiautomated
   curation to ensure annotation quality and consistency. In addition,
-  cross-references to external resources such as GtRNAdb facilitate
+  cross-references to external resources such as gtRNAdb facilitate
   interoperability with existing tRNA annotation frameworks. A modern
   web-based frontend provides intuitive and efficient access to
   tRNAdb\,2026, while an API enables automated data retrieval and
@@ -167,7 +167,7 @@
 \keywords{tRNA sequence, tRNA structure, database, tRNA modifications}
 
 \keywords[Abbreviations]{%Ala: Alanine, Arg: Arginine, Asn: Asparagine, Asp: Aspartic acid, Cys: Cysteine, Glu: Glutamic acid, Gln: Glutamine, Gly: Glycine, His: Histidine, Ile: Isoleucine, Leu: Leucine, Lys: Lysine, Met: Methionine, Phe: Phenylalanine, Pro: Proline, Ser: Serine,  Thr: Threonine, Trp: Tryptophan, Tyr: Tyrosine, Val: Valine,
-SeC: Selenocysteine, Sup:Supressor, AC: Anticodon, NCBI: National Center for Biotechnology Information, API: Application Programming Interface, PDB: Protein Data Bank, BV-BRC: Bacterial and Viral Bioinformatics Resource Center}
+SeC: Selenocysteine, Sup:Supressor, AC: Anticodon, NCBI: National Center for Biotechnology Information, API: Application Programming Interface, PDB: Protein Data Bank, BV-BRC: Bacterial and Viral Bioinformatics Resource Center,\TODO{mtRNA: mitochondrial tRNA}}
 
 %\otherabstract[Additional Abstract]{Use this element for elements such as Graphical abstract, Lay summary, Translated abstract etc. Que cum aut etum qui ium dolupta ssequia autati odis demporepe ad et es alit rem repudaerae min et volorum re volupta nobit volectur aut fuga.}
 %
@@ -202,9 +202,10 @@ its continued existence prompted us to re-implemented the tRNAdb on a new,
 solid technical foundation, and to include an Application Programming
 Interface (API) for automatic data retrieval. For the present release, we
 extended its content by leveraging existing nuclear tRNAs from the gtRNA
-database as well as mitochondrial, archaeal and phage derived tRNAs we
+database as well as mitochondrial \TODO{(mtRNA)}, archaeal and phage derived tRNAs we
 identified using MITOS2 \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan},
-and additional specialized approaches.
+and additional specialized approaches. \TODO{Located in europe, tRNAdb\,2026
+ contains the most complete collection of mtRNA sequences and structures to date.}
 
 \section{Implementation}
 
@@ -260,9 +261,7 @@ current releases.
 
 Subsequent releases of the tRNAdb dataset will be published with a
 corresponding release identifier together with the prior described release
-metadata. To enable a sustainable update procedure, we implemented a
-graphical user interface supported pipeline for import, normalization, and
-duplicate detection for subsequent tRNAdb versions.
+metadata. To enable a sustainable, \TODO{continuous} update procedure, we implemented a graphical user interface supported pipeline for import, normalization, and duplicate detection for subsequent tRNAdb versions.
 
 \subsection{API and programmatic access}
 
@@ -351,6 +350,8 @@ taxonomic information, sequence and structure, crosslinking information,
 and additional metadata if available. Furthermore, a standardized
 visualization of the secondary structure with a highlighted anticodon is
 displayed for every entry.
+
+\TODO{Modified bases are displayed using an expanded legacy one letter code. We implemented a mouse-over in the sequences and the structure image showing the name, nucleotide of origin and the PubChem~\cite{pubchem2025} structure of the compound described by the one letter code.}
 
 We implemented a searchable taxonomy browser which displays an expandable
 tree view of the NCBI taxonomic database. Every node in the taxonomy tree
@@ -445,7 +446,7 @@ viral tRNA genes from $1\,558$ unique genomes were added to tRNAdb.
 
 \subsection{tRNAs sequences including modifications}\label{subsecmodifiedtRNA}
 Modified tRNA sequences, as well as their genomic variants, were obtained
-from the\TODO{T-Psi-C \cite{tpsic}} database and the Protein Data Bank
+from the \TODO{T-Psi-C \cite{tpsic}} database and the Protein Data Bank
 (PDB)~\cite{pdb2000}.  Sequences retrieved from the PDB having only a
 single modification located at the first or last base were not included
 into the database.  In order to display alignments properly, legacy

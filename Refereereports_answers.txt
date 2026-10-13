@@ -25,7 +25,7 @@ REPLY: This is a great comment. We started implementing a comprehensive crosslin
 	framework for this already, and included links to the genome databases, 
 	RNACentral, gtRNAdb, PDB, MODOMICS, etc. where it was possible and feasible without 
 	extensive manual curation. As gtRNAdb is currently undergoing major updates 
-	and maintenance at the moment, we will introduce more comprehensive crosslinking to 
+	and maintenance, we will introduce more comprehensive crosslinking to 
 	its resources as soon as it is fully available again. 
 
 2. I encountered an issue when using the taxonomy tree. I expanded the tree

@@ -23,10 +23,10 @@ easier to navigate between tRNAdb and the underlying data sources.
 
 REPLY: This is a great comment. We started implementing a comprehensive crosslinking 
 	framework for this already, and included links to the genome databases, 
-	RNACentral, gtRNAdb and MODOMICS where it was possible and feasible without 
+	RNACentral, gtRNAdb, PDB, MODOMICS, etc. where it was possible and feasible without 
 	extensive manual curation. As gtRNAdb is currently undergoing major updates 
 	and maintenance at the moment, we will introduce more comprehensive crosslinking to 
-	its resources as soon as it is fully available again and published. 
+	its resources as soon as it is fully available again. 
 
 2. I encountered an issue when using the taxonomy tree. I expanded the tree
 to reveal cellular organisms and viruses and clicked the search icon next
@@ -87,12 +87,17 @@ authors to reconsider the non-commercial restriction or, at minimum,
 justify its necessity. The licensing terms should also be discussed
 explicitly in the Data Availability section.
 
-REPLY: This is a very valid point. Legally, we can only pass on the least
-       permissive license of all our resources. At this moment, this  is
-       T-psi-C, which may however change when the new version of T-psi-C is
-       out. However, sequences are usually linked to their source,
-       where any commercial pipeline should have no problem retrieving them
-       if the respective license allows.
+REPLY: This is a very valid point and we appreciate that this was brought up.
+       Our intend was to keep the data we provide free and public, and have 
+       resources built on this data be available to the academic community.
+       We can see how this more restrictive licensing type can also impact
+       members of the research community down the line. Still, T-Psi-C provides its
+       data under a similar license to CC BY 4.0 and to avoid a mixed license
+       for individual records, we decided to change our license to CC BY 4.0.
+       Still, with the extended crosslinking, tRNAdb users should be able to
+       also obtain the sequences from their original datasource if they
+       require to obtain the data with less strict licensing terms.
+
 
 6. The font in Figure 3 is too small to read comfortably. For example, I
 was unable to read the text describing the quality filters for Archaea. The
@@ -102,7 +107,7 @@ publication size.
 REPLY: We somewhat increased the font, but as the figure is relatively big,
        it cannot get any bigger without compromising the overall
        layout. However, the figure is provided with high DPI as a scalable 
-       .pdf or high resolution png that can be zoomed, and hope that this 
+       .pdf or high resolution png that can be zoomed, and we hope that this 
        helps in readability.
  
 Referee: 2
@@ -113,11 +118,11 @@ It is a nice effort to extend the seminal Sprinzl database.  The authors
 should comment on whether the technical difficulties in the previous years
 that led to interruptions can now be excluded.
 
-REPLY:	 We thank the reviewer for his kind words. The connection to database
-	 was interrupted because the host (Leipzig university) deemed it to
+REPLY:	 We thank the referee for his kind words. The connection to the database
+	 was interrupted because the host (Leipzig University) deemed it too
 	 insecure to be open to the www. The legacy database was implemented
 	 in 2009 in a framework that was outdated even then. While we cannot
-	 guarantee that there won't be any security concerns for our modern
+	 guarantee that there won't be any security issues for our modern
 	 implementation, at the moment the underlying packages are still
 	 updated regularly, and we hope that it will last at least 15 more
 	 years.
@@ -134,7 +139,7 @@ REPLY: This is a little hard at the moment, since we are aware that 2 other
        easily for a variety of metadata (taxonomy, taxonomic group, references, ...) and export
        user-defined custom datasets. Furthermore, we are located in Europe, in contrast to gtRNAdb. 
 
-In the introduction, we added:
+       In the introduction, we added:
        "Located in europe, tRNAdb 2026 contains the most complete collection
        of mtRNA sequences and structures to date."
 
@@ -161,17 +166,17 @@ modification cannot be deduced. That needs to be amended since tRNAs are
 the most modified RNAs in a cell, and the interest in the biology of these
 modifications is increasing.
 
-REPLY: While there are explanations for the single one letter codes, we do
-       appreciate that it would be useful to have more information
-       immeadiately, so we have implemented a mouse-over for the sequences
-       showing the name, nucleotide of origin and the pubchem structure of
-       the compound described by the one letter code. The mouse-over is
-       also available for the structure image. Additionally, we prominently
-       linked the .pdf that explains every modified nucleotide letter code
-       more prominently on the results pages for modified tRNAs.
+REPLY: While there are explanations for the single one letter codes, we 
+       agree that it would be useful to have more information regarding the 
+       modified nucleotides immeadiately. We have implemented a mouse-over 
+       for the sequences which shows the name, nucleotide of origin, and 
+       the pubchem structure of the compound described by the one letter code. 
+       The mouse-over feature is also available for the structure image of modified 
+       tRNA entries. Additionally, we linked the .pdf that explains every modified 
+       nucleotide letter code more prominently on the results pages for modified tRNAs.
 
-We added a paragraph in the website description:
-       "Modified bases are displayed using an expanded legacy one letter code. 
+        We also added a paragraph in the website description section:
+        "Modified bases are displayed using an expanded legacy one letter code. 
 	We implemented a mouse-over for the sequences and the structure image 
 	which shows the name, unmodified nucleotide of origin, and the 
 	PubChem~\cite{pubchem2025} structure of the compound described 

@@ -1,0 +1,151 @@
+\begin{thebibliography}{10}
+
+\bibitem{trnadb-ce}
+Takashi Abe, Toshimichi Ikemura, Yasuo Ohara, Hiroshi Uehara, Makoto Kinouchi,
+  Shigehiko Kanaya, Yuko Yamada, Akira Muto, and Hachiro Inokuchi.
+\newblock {tRNADB-CE}: {tRNA} gene database curated manually by experts.
+\newblock {\em Nucleic Acids Res.}, 37:D163--D168, 2009.
+
+\bibitem{pdb2000}
+Helen~M. Berman, John Westbrook, Zukang Feng, Gary Gilliland, T.~N. Bhat, Helge
+  Weissig, Ilya~N. Shindyalov, and Philip~E. Bourne.
+\newblock The protein data bank.
+\newblock {\em Nucleic Acids Research}, 28(1):235--242, 01 2000.
+
+\bibitem{gtrnadb}
+Patricia~P. Chan and Todd~M. Lowe.
+\newblock {GtRNAdb} 2.0: an expanded database of transfer {RNA} genes
+  identified in complete and draft genomes.
+\newblock {\em Nucleic Acids Research}, 44(D1):D184--D189, 01 2016.
+
+\bibitem{tRNAscan}
+Patricia P Chan, Brian Y Lin, Allysia J Mak, and Todd M Lowe.
+\newblock {tRNAscan-SE} 2.0: improved detection and functional classification
+  of transfer {RNA} genes.
+\newblock {\em Nucleic Acids Research}, 49(16):9077--9096, 09 2021.
+
+\bibitem{checkm2}
+Alex Chklovski, Donovan~H. Parks, Ben~J. Woodcroft, and Gene~W. Tyson.
+\newblock {CheckM2}: a rapid, scalable and accurate tool for assessing
+  microbial genome quality using machine learning.
+\newblock {\em Nature Methods}, 20(8):1203--1212, 2023.
+
+\bibitem{biopython2009}
+Peter J.~A. Cock, Tiago Antao, Jeffrey~T. Chang, Brad~A. Chapman, Cymon~J. Cox,
+  Andrew Dalke, Iddo Friedberg, Thomas Hamelryck, Frank Kauff, Bartek
+  Wilczynski, and Michiel J.~L. de~Hoon.
+\newblock Biopython: freely available python tools for computational molecular
+  biology and bioinformatics.
+\newblock {\em Bioinformatics}, 25(11):1422--1423, 06 2009.
+
+\bibitem{mitos2}
+Alexander Donath, Frank J{\"u}hling, Marwa Al-Arab, Stephan~H Bernhart,
+  Franziska Reinhardt, Peter~F Stadler, Martin Middendorf, and Matthias Bernt.
+\newblock Improved annotation of protein-coding genes boundaries in metazoan
+  mitochondrial genomes.
+\newblock {\em Nucleic acids research}, 47(20):10543--10552, 2019.
+
+\bibitem{Saureus}
+Jose~R Jaramillo-Ponce, Philippe Wolff, Virginie Marchand, Yuri Motorin,
+  Maximilian Kohl, Béatrice Chane-Woon-Ming, Hiroki Kanazawa, Aila
+  Ruiz-Paterson, Caroline Paulus, Johana Chicher, Marine Lenon, Martina
+  Krämer, Anne-Sophie Gribling-Burrer, Constantinos Stathopoulos, Redmond
+  Smyth, Mark Helm, Pascale Romby, and Stefano Marzi.
+\newblock Comprehensive post-transcriptional modification profiles in
+  individual staphylococcus aureus trna species.
+\newblock {\em Nucleic Acids Research}, 54(14):gkag757, 08 2026.
+
+\bibitem{juehling:2009}
+Frank J{\"u}hling, Mario M{\"o}rl, Roland~K Hartmann, Mathias Sprinzl, Peter~F
+  Stadler, and J{\"o}rn P{\"u}tz.
+\newblock \texttt{tRNAdb} 2009: compilation of {tRNA} sequences and {tRNA}
+  genes.
+\newblock {\em Nucleic Acids Res.}, 37:D159--D162, 2009.
+
+\bibitem{pubchem2025}
+Sunghwan Kim, Jie Chen, Tiejun Cheng, Asta Gindulyte, Jia He, Siqian He,
+  Qingliang Li, Benjamin A Shoemaker, Paul A Thiessen, Bo~Yu, Leonid
+  Zaslavsky, Jian Zhang, and Evan E Bolton.
+\newblock {PubChem} 2025 update.
+\newblock {\em Nucleic Acids Research}, 53(D1):D1516--D1525, 01 2025.
+
+\bibitem{viennarna}
+Ronny Lorenz, Stephan~H Bernhart, Christian H{\"o}ner~zu Siederdissen, Hakim
+  Tafer, Christoph Flamm, Peter~F Stadler, and Ivo~L Hofacker.
+\newblock Viennarna package 2.0.
+\newblock {\em Algorithms for molecular biology}, 6:1--14, 2011.
+
+\bibitem{ncbivirus}
+{National Center for Biotechnology Information}.
+\newblock {NCBI Virus}.
+\newblock \url{https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/}, 2004.
+\newblock Accessed: 17 August 2026.
+
+\bibitem{infernal}
+Eric~P. Nawrocki and Sean~R. Eddy.
+\newblock Infernal 1.1: 100-fold faster {RNA} homology searches.
+\newblock {\em Bioinformatics}, 29(22):2933--2935, 2013.
+
+\bibitem{bvbrc2022}
+Robert Olson, Rida Assaf, Thomas Brettin, Neal Conrad, Clark Cucinell, James J
+  Davis, Don Dempsey, Allan Dickerman, Emily M Dietrich, Ronald W Kenyon,
+  Mehmet Kuscuoglu, Elliot Lefkowitz, Jian Lu, Dustin Machi, Catherine Macken,
+  Chunhong Mao, Anna Niewiadomska, Marcus Nguyen, Gary J Olsen, and Rick
+  Stevens.
+\newblock Introducing the bacterial and viral bioinformatics resource center
+  ({BV-BRC}): a resource combining {PATRIC}, {IRD} and {ViPR}.
+\newblock {\em Nucleic Acids Research}, 51:D678--D689, 11 2022.
+
+\bibitem{tpsic}
+MP~Sajek, T~Woźniak, M~Sprinzl, J~Jaruzelska, and J~Barciszewski.
+\newblock T-psi-c: user friendly database of trna sequences and structures.
+\newblock {\em Nucleic Acids Res.}, 48, (D1), 2020.
+
+\bibitem{ncbinucleotide2024}
+Eric Sayers, Jeffrey Beck, Evan Bolton, J.~Brister, Jessica Chan, Ryan Connor,
+  Michael Feldgarden, Anna M Fine, Kathryn Funk, Jinna Hoffman, Sivakumar
+  Kannan, Christopher Kelly, William Klimke, Sunghwan Kim, Stacy Lathrop, Aron
+  Marchler-Bauer, Terence D Murphy, Chris O’Sullivan, Erin Schmieder, and
+  Kim D Pruitt.
+\newblock Database resources of the national center for biotechnology
+  information in 2025.
+\newblock {\em Nucleic Acids Research}, 53:D20--D29, 11 2024.
+
+\bibitem{ncbitaxonomy2020}
+Conrad Schoch, Stacy Ciufo, Carol Hotton, Sivakumar Kannan, Rogneda
+  Khovanskaya, Detlef Leipe, Richard McVeigh, Kathleen O’Neill, Barbara
+  Robbertse, Shobha Sharma, Vladimir Soussov, John Sullivan, Lu~Sun, Sean
+  Turner, and Ilene Karsch-Mizrachi.
+\newblock {NCBI} taxonomy: A comprehensive update on curation, resources and
+  tools.
+\newblock {\em Database}, 2020, 08 2020.
+
+\bibitem{modomics}
+Dominik Sordyl, Etienne Boileau, Agata Bernat, Satyabrata Maiti, Sunandan
+  Mukherjee, S~Naeim Moafinejad, Masoud~Amiri Farsani, Anastasiya Shavina,
+  Andrea Cappannini, Giada Agostini, Silvestro~G Conticello, Filip Stefaniak,
+  Christoph Dieterich, Elżbieta Purta, and Janusz~M Bujnicki.
+\newblock {MODOMICS}: a database of {RNA} modifications and related
+  information. 2025 update and 20th anniversary.
+\newblock {\em Nucleic Acids Research}, 54(D1):D219--D225, 01 2026.
+
+\bibitem{sprinzl:2005}
+Mathias Sprinzl and Konstantin~S. Vassilenko.
+\newblock Compilation of {tRNA} sequences and sequences of {tRNA} genes.
+\newblock {\em Nucleic Acids Research}, 33(suppl\_1):D139--D140, 01 2005.
+
+\bibitem{modtRNAbtaurus}
+Takeo Suzuki and Tsutomu Suzuki.
+\newblock A complete landscape of post-transcriptional modifications in
+  mammalian mitochondrial {tRNAs}.
+\newblock {\em Nucleic Acids Research}, 42(11):7346--7357, 06 2014.
+
+\bibitem{humanmtRNA}
+Takeo Suzuki, Yuka Yashiro, Ittoku Kikuchi, Yuma Ishigami, Hironori Saito,
+  Ikuya Matsuzawa, Shunpei Okada, Mari Mito, Shintaro Iwasaki, Ding Ma, Xuewei
+  Zhao, Kana Asano, Huan Lin, Yohei Kirino, Yuriko Sakaguchi, and Tsutomu
+  Suzuki.
+\newblock Complete chemical structures of human mitochondrial {tRNAs}.
+\newblock {\em Nature Communications}, 11:4269, 2020.
+
+\end{thebibliography}

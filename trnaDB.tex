@@ -94,7 +94,7 @@
 \author[2]{Frank J\"{u}hling}
 \author[3,4]{Thomas Spicher\ORCID{0009-0001-8198-5213}}
 \author[5,6]{Ella Cassidy\ORCID{0009-0004-5570-8601}}
-\author[5,11]{Dulce I. Valdivia\ORCID{0000-0002-7702-652X}}
+\author[5]{Dulce I. Valdivia\ORCID{0000-0002-7702-652X}}
 \author[7]{Maximilian Feussner\ORCID{0009-0000-2803-0496}}
 \author[7]{Chase L. Beisel}
 \author[8]{Joern P\"{u}tz}
@@ -204,7 +204,7 @@ Interface (API) for automatic data retrieval. For the present release, we
 extended its content by leveraging existing nuclear tRNAs from the gtRNA
 database as well as mitochondrial \TODO{(mt-tRNA)}, archaeal and phage derived tRNAs we
 identified using MITOS2 \cite{mitos2}, tRNAscan-SE 2.0.12 \cite{tRNAscan},
-and additional specialized approaches. \TODO{Located in europe, tRNAdb\,2026
+and additional specialized approaches. \TODO{Located in Europe, tRNAdb\,2026
  contains the most complete collection of mt-tRNA sequences and structures to date.}
 
 \section{Implementation}
@@ -342,7 +342,7 @@ a preview is generated.
 \begin{figure}
 %  \includegraphics[width=0.45\textwidth]{Webserver_Detail_homo_ala.png}
   \includegraphics[width=0.45\textwidth]{Webserver_Detail_homo_ala_hover_structure.png}
-  \caption{Example for the Details page of a \emph{homo sapiens} tRNA for alanine, including modifications. \TODO{Mouse-over shows information to the modified nucleotide 6-hydro-1-methyladenosine-5'-monophosphate.} \label{Fig:Detail}}
+  \caption{Example for the Details page of a \emph{homo sapiens} tRNA for alanine, including modifications. \TODO{Mouse-over shows information about the modified nucleotide 6-hydro-1-methyladenosine-5'-monophosphate.} \label{Fig:Detail}}
 \end{figure}
 For every tRNA sequence entry in our database, a "Details" page is
 available (see Figure~\ref{Fig:Detail}). This page contains general
@@ -358,11 +358,11 @@ We implemented a searchable taxonomy browser which displays an expandable
 tree view of the NCBI taxonomic database. Every node in the taxonomy tree
 is annotated with its scientific name according to the NCBI taxonomy as
 well as its unique NCBI taxonomy ID. The taxonomy browser only displays
-clades and species, for which there are tRNA sequences present in
+\TODO{taxonomic groups}, for which there are tRNA sequences present in
 tRNAdb. For every entry in the taxonomy browser, the number of tRNA
 sequences separated by origin is displayed. Every node in the taxonomy
 browser contains a link, which allows to search tRNAdb for sequences
-belonging to this clade/species.
+belonging to this \TODO{taxon}.
 
 \section{Inclusion of new data}\label{sec3}
 
